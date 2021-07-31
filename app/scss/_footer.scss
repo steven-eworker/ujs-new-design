@@ -1,0 +1,112 @@
+.site-footer {
+    background-color: $primary;
+    padding: 60px 0px;
+
+    @include breakpoint-down(small) {
+        padding: 28px 30px 54px;
+    }
+
+    .footer-links {
+        margin-top: 30px;
+
+        h4 {
+            font-weight: bold;
+            color: $secondary;
+        }
+
+        ul {
+            margin-top: 8px;
+            list-style-type: none;
+            padding-left: 0;
+
+            li {
+                margin-top: 14px;
+            }
+
+            a {
+                color: $white;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .advert {
+        @include breakpoint-down(small) {
+            display: flex;
+        }
+
+        a {
+            display: inline-block;
+            width: 47%;
+            height: auto;
+            position: relative;
+
+            @include breakpoint-down(small) {
+                flex-basis: 50%;
+            }
+
+            img {
+                border-radius: 8px;
+                width: 100%;
+            }
+
+            &:first-child {
+                margin-right: 30px;
+
+                @include breakpoint-down(small) {
+                    margin-right: 10px;
+                }
+            }
+
+            .text {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+                z-index: 1;
+                font-size: 14px;
+                color: $success;
+                border: 1px solid $success;
+                filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.05));
+                border-radius: 8px;
+                padding: 8px 16px;
+
+                @include breakpoint-down(small) {
+                    top: 0;
+                    right: 0;
+                    left: unset;
+                    font-size: 12px;
+                    line-height: 8px;
+                    background: $success;
+                    color: $white;
+                    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                    border-radius: 0px 5px;
+                }
+            }
+        }
+    }
+
+    .sponsored {
+        @include breakpoint-down(small) {
+            margin-top: 26px;
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 56px;
+        font-size: 14px;
+        color: $white;
+        opacity: 0.5;
+    }
+
+    .social-links {
+        text-align: center;
+
+        a {
+            margin-right: 10px;
+            color: $white;
+            opacity: 0.5;
+            font-size: 24px;
+        }
+    }
+}

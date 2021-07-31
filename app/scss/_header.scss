@@ -1,28 +1,155 @@
-.site-header{
-    padding:20px 0px;
-    .navbar-brand{
-        img{
-            max-height: 55px;
-        }
+.site-header {
+    padding: 0;
+
+    @include breakpoint-down(small) {
+        padding: 14px;
+        box-shadow: 0px 5px 27px rgba(0, 0, 0, 0.25);
+        border-radius: 0px 0px 5px 5px;
     }
-    .dropdown-toggle{
-        &::after{
-            content: none;
+
+    .navbar-toggler {
+        border: none;
+        box-shadow: none;
+        position: relative;
+
+        .navbar-toggler-icon {
+            background: none;
+
+            img {
+                transition: all 300ms ease-in-out;
+
+                &:last-child {
+                    margin-top: 5px;
+                }
+            }
         }
-    }
-    .navbar-nav{
-        .nav-item{
-            margin-right: 60px;
-            .nav-link{
-                color: $primary;
-                .fas{
-                    font-size: 14px;
-                    margin-left: 10px;
+
+
+        &[aria-expanded="true"] {
+            img {
+                transform: rotate(225deg);
+
+                &:first-child {
+                    position: absolute;
+                    top: 18px;
+                    left: 32%;
+                }
+
+                &:last-child {
+                    transform: rotate(130deg);
+                    position: absolute;
+                    right: 25%;
+                    top: 13px;
                 }
             }
         }
     }
-    .cta{
+
+    .navbar-brand {
+        padding: 0;
+
+        img {
+            max-height: 55px;
+        }
+    }
+
+    .dropdown-toggle {
+        &::after {
+            content: none;
+        }
+    }
+
+    .navbar-collapse {
+        @include breakpoint-down(small) {
+            padding-top: 35px;
+            padding-bottom: 80px;
+        }
+    }
+
+    .navbar-nav {
+        @include breakpoint-down(small) {
+            margin-left: 10px;
+        }
+
+        .nav-item {
+            padding: 42px 36px;
+
+            @include breakpoint-down(small) {
+                padding: 15px 0px;
+            }
+
+            .nav-link {
+                color: $primary;
+                z-index: 1;
+
+                .fas {
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+
+                &:before {
+                    content: "";
+                    background: rgba(60, 61, 107, 0.05);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    opacity: 0;
+                }
+
+                &.show {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            .dropdown-menu {
+                border-radius: 0px 8px 8px 8px;
+                top: 97%;
+                width: 150%;
+                padding: 15px 0px;
+
+                li {
+                    padding: 15px 36px;
+
+                    &:hover {
+                        background-color: rgba(60, 61, 107, 0.05);
+                    }
+                }
+
+                .dropdown-item {
+                    font-weight: 500;
+                    color: $primary;
+
+                    &:hover {
+                        background-color: unset;
+                    }
+                }
+            }
+
+            &:last-child {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    .cta {
         padding: 12px 30px;
+        color: $white;
+        background-color: $success;
+        border: 1px solid $success;
+
+        @include breakpoint-down(small) {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-color: $white;
+            color: $success;
+        }
     }
 }
