@@ -1,0 +1,28 @@
+body {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.btn{
+    border: 2px solid;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    transition: all 250ms ease-in-out;
+}
+
+.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+    font-weight: 500;
+    &:checked, &:hover, &:active{
+        color: $white;
+        background-color: $primary;
+        border-color: $primary;
+    }
+}

@@ -1,0 +1,28 @@
+.site-header{
+    padding:20px 0px;
+    .navbar-brand{
+        img{
+            max-height: 55px;
+        }
+    }
+    .dropdown-toggle{
+        &::after{
+            content: none;
+        }
+    }
+    .navbar-nav{
+        .nav-item{
+            margin-right: 60px;
+            .nav-link{
+                color: $primary;
+                .fas{
+                    font-size: 14px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .cta{
+        padding: 12px 30px;
+    }
+}

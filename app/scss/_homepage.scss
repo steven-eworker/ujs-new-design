@@ -1,0 +1,250 @@
+.home {
+    .banner {
+        padding: 200px 20vw;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .main-heading {
+            font-size: 48px;
+            line-height: 56px;
+            font-weight: 900;
+            color: $white;
+            text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .cta-box {
+            margin-top: 36px;
+
+            .btn {
+                padding: 15px 40px;
+                margin: 0px 15px;
+            }
+
+            .cta-transparent {
+                color: $white;
+                border-color: $white;
+
+                &:hover {
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+
+            .cta-white {
+                color: $primary;
+                border-color: $white;
+                background-color: $white;
+
+                &:hover {
+                    background-color: $primary;
+                    color: $white;
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+
+    .jobs {
+        padding-top: 74px;
+        padding-bottom: 100px;
+        background-color: $light-bg;
+
+        .intro {
+            .browse {
+                border: none;
+
+                i {
+                    margin-left: 10px;
+                }
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        .job-list {
+            .job-item {
+                padding: 18px 30px;
+                border-radius: 8px;
+                margin-top: 26px;
+                background: #FFFFFF;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+
+                .img {
+                    margin-right: 30px;
+
+                    img {
+                        width: 85px;
+                        height: 85px;
+                        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                        border-radius: 8px;
+                    }
+                }
+
+                .tag {
+                    display: inline-block;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    line-height: 16px;
+                    box-sizing: border-box;
+                    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.05));
+                    padding: 6px 14px;
+                    margin-left: 20px;
+                    margin-bottom: 0.5rem;
+                }
+
+
+                .copy {
+                    .title {
+                        display: inline-block;
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 28px;
+                        color: $primary;
+                    }
+
+                    .desc {
+                        color: $grey;
+                    }
+
+                    .location {
+                        text-decoration: none;
+                        color: $primary;
+                    }
+                }
+
+                .cta-box {
+                    .btn {
+
+                        &.tag {
+                            color: $primary;
+                            border: 1px solid $primary;
+                            margin-left: 30px;
+                            margin-right: 30px;
+                            padding: 6px 14px;
+
+                            &:last-child {
+                                margin-right: 80px;
+                            }
+                        }
+
+                        &:hover {
+                            background: $primary;
+                            color: $white;
+                        }
+                    }
+
+                    .star-box {
+                        .star {
+                            margin-bottom: 16px;
+
+                            i {
+                                font-size: 24px;
+                                color: $yellow;
+                            }
+                        }
+
+                        p {
+                            color: $grey;
+                        }
+                    }
+                }
+
+                &.advert {
+                    background-color: $primary;
+
+                    .tag {
+                        color: $secondary;
+                        border: 1px solid $secondary;
+                    }
+
+                    .copy {
+                        .title {
+                            color: $white;
+                        }
+                    }
+
+                    .cta-box {
+                        .btn {
+                            color: $secondary;
+                            border-color: $secondary;
+                            padding: 15px 50px;
+
+                            &:hover {
+                                background: $secondary;
+                                color: $primary;
+                            }
+                        }
+                    }
+
+                }
+
+                &.loading-grey {
+                    .copy {
+
+                        .title,
+                        .desc,
+                        .location {
+                            background: $primary;
+                            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                            border-radius: 8px;
+                        }
+
+                        .title {
+                            width: 414px;
+                            height: 24px;
+                            opacity: 0.35;
+                        }
+
+                        .desc {
+                            width: 170px;
+                            height: 18px;
+                            opacity: 0.25;
+                        }
+
+                        .location {
+                            width: 225px;
+                            height: 18px;
+                            opacity: 0.25;
+                        }
+                    }
+                    .cta-box{
+                        .tags{
+
+                            .btn {
+                                &.tag {
+                                    background-color: $primary;
+                                    width: 167px;
+                                    height: 29px;
+                                    opacity: 0.25;
+                                }
+                            }
+                        }
+                        .star-box{
+                            .star{
+                                i{
+
+                                    color: $primary;
+                                    opacity: 0.25;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .all-jobs{
+            margin-top: 50px;
+            text-align: center;
+            .btn{
+                padding: 14px 40px;
+                i{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
