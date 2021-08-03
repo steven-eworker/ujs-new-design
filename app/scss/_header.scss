@@ -97,6 +97,9 @@
                     left: 0;
                     z-index: -1;
                     opacity: 0;
+                    @include breakpoint-down(small){
+                        background: $white;
+                    }
                 }
 
                 &.show {
@@ -113,8 +116,21 @@
                 width: 150%;
                 padding: 15px 0px;
 
+                @include breakpoint-down(small){
+                    border: none;
+                    list-style-type: disc;
+                    width: 100%;
+                }
+
                 li {
                     padding: 15px 36px;
+                    @include breakpoint-down(small){
+                        padding: 0;
+                        margin: 15px 34px;
+                        &::marker{
+                            color: $secondary;
+                        }
+                    }
 
                     &:hover {
                         background-color: rgba(60, 61, 107, 0.05);
