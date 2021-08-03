@@ -1,0 +1,127 @@
+.banner {
+    &.job-listing {
+        padding: 38px 0px;
+        text-align: left;
+
+        .main-heading {
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+}
+
+.job-listing {
+    .job-list {
+        .job-item {
+            &:first-child {
+                margin-top: 0;
+            }
+
+            .details {
+                width: 60%;
+
+                .title {
+                    font-size: 18px;
+                }
+            }
+
+            .cta-box {
+                .star-box {
+                    .date {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .filters {
+        .results-count {
+            font-size: 16px;
+            line-height: 19px;
+            color: $primary;
+            opacity: 0.5;
+        }
+
+        .form {
+            .field-item {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+                padding: 25px 30px;
+                margin-bottom: 15px;
+
+                .accordion-button {
+                    color: $primary;
+                    font-size: 18px;
+                    line-height: 21px;
+                    background: none;
+                    box-shadow: unset;
+                    padding: 0;
+
+                    &::after {
+                        background-image: url('../images/angle-up.svg');
+                        transform: rotate(-180deg);
+                    }
+
+                    &:not(.collapsed) {
+                        &:after {
+                            transform: rotate(-360deg);
+                        }
+                    }
+                }
+
+
+                &.green {
+                    text-align: center;
+                    padding: 0px;
+
+                    a {
+                        width: 100%;
+                        display: block;
+                        padding: 15px 50px;
+                        background: $success;
+                        color: $white;
+                        border: 1px solid $success;
+                        box-sizing: border-box;
+                        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                        border-radius: 8px;
+
+                        &:hover {
+                            background: $white;
+                            color: $success;
+                        }
+                    }
+                }
+
+                .accordion-header {
+                    color: $primary;
+                    font-size: 18px;
+                    line-height: 21px;
+                    background: none;
+                    box-shadow: unset;
+                    padding: 0;
+                }
+
+                .confirmation {
+                    padding-top: 20px;
+
+                    label {
+                        color: $primary;
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+
+                    input[type="checkbox"] {
+                        border: 1px solid $primary;
+                        box-sizing: border-box;
+                        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                        border-radius: 8px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
