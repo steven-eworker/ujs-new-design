@@ -3,9 +3,20 @@
         padding: 38px 0px;
         text-align: left;
 
+        @include breakpoint-down(small) {
+            text-align: center;
+            background-size: auto;
+            background-position: 77% 10%;
+        }
+
         .main-heading {
             font-size: 36px;
             line-height: 42px;
+
+            @include breakpoint-down(small) {
+                font-size: 24px;
+                line-height: 28px;
+            }
         }
     }
 }
@@ -20,12 +31,26 @@
             .details {
                 width: 60%;
 
+                @include breakpoint-down(small) {
+                    width: 100%;
+                }
+
                 .title {
                     font-size: 18px;
+                }
+
+                .copy {
+                    width: 100%;
                 }
             }
 
             .cta-box {
+                .tags {
+                    @include breakpoint-down(small) {
+                        flex-direction: row !important;
+                    }
+                }
+
                 .star-box {
                     .date {
                         font-size: 14px;
@@ -37,6 +62,29 @@
     }
 
     .filters {
+        @include breakpoint-down(small) {
+            opacity: 0;
+            z-index: -5;
+            position: fixed;
+            bottom: 6%;
+            left: 0;
+            width: 100%;
+            background: #F8F9FA;
+            padding: 35px 26px;
+            transition: all 250ms ease-in-out;
+
+            &.open {
+                opacity: 1;
+                z-index: 5;
+            }
+        }
+
+        .title {
+            @include breakpoint-down(small) {
+                display: none !important;
+            }
+        }
+
         .results-count {
             font-size: 16px;
             line-height: 19px;
@@ -63,6 +111,10 @@
                     .cta {
                         padding: 15px 30px;
                         background: $white;
+
+                        @include breakpoint-down(small) {
+                            padding: 15px 38px;
+                        }
 
                         &:hover {
                             color: $white;
@@ -226,6 +278,9 @@
                     outline: none;
                     opacity: 0;
                     z-index: -2;
+                    @include breakpoint-down(small){
+                        padding-left: 30px;
+                    }
                 }
 
                 .list-options {
@@ -235,6 +290,11 @@
                     margin-left: -36px;
                     list-style-type: none;
                     text-align: left;
+
+                    @include breakpoint-down(small) {
+                        max-height: 100px;
+                        overflow-y: scroll;
+                    }
 
                     li {
                         margin-bottom: 16px;
@@ -273,7 +333,8 @@
                 a {
                     color: $primary;
                 }
-                &.current{
+
+                &.current {
                     background: rgba(60, 61, 107, 0.15);
                 }
             }
@@ -283,14 +344,35 @@
         .next {
             position: relative;
 
+            @include breakpoint-down(small) {
+                border: 1px solid #E2E2E9;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+            }
+
+            span {
+                @include breakpoint-down(small) {
+                    display: none;
+                }
+            }
+
             i {
                 position: absolute;
                 top: 32%;
+
+                @include breakpoint-down(small) {
+                    font-size: 18px;
+                }
             }
         }
 
         .prev {
             padding-right: 24px;
+
+            @include breakpoint-down(small) {
+                padding: 18px 22px 28px 28px;
+            }
+
             i {
                 left: 12px;
             }
@@ -298,9 +380,51 @@
 
         .next {
             padding-left: 24px;
+
+            @include breakpoint-down(small) {
+                padding: 12px 18px 30px 30px;
+            }
+
             i {
                 right: 20px;
             }
+        }
+    }
+
+    .mob-triggers {
+        position: fixed !important;
+        bottom: -2px;
+        left: 0;
+        width: 100%;
+        z-index: 7;
+        background: $white;
+
+        .filter-trigger,
+        .results-count {
+            display: inline-block;
+            width: 48%;
+            text-align: center;
+            padding: 24px 0;
+            margin: 0;
+        }
+
+        .filter-trigger {
+            border-right: 1px solid #E2E2E9;
+
+            &.opened {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+
+            i {
+                margin-left: 6px;
+                transition: all 250ms ease-in-out;
+            }
+        }
+
+        .results-count {
+            color: rgba(60, 61, 107, 0.5);
         }
     }
 }
