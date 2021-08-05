@@ -1,0 +1,49 @@
+.job-detail {
+    &.banner {
+        .location {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: $white;
+        }
+
+        .copy {
+            margin-left: 20px;
+        }
+    }
+
+    &.jobs {
+        .intro {
+            .browse {
+                i {
+                    margin-left: unset;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .list-sec {
+            background: $white;
+            border: 1px solid #E2E2E9;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-top: 20px;
+        }
+
+        .list-title {
+            list-style-type: none;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 40px;
+            padding: 0;
+
+            &.detail, p {
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 40px;
+                color: rgba(60, 61, 107, 0.65);;
+            }
+        }
+    }
+}
