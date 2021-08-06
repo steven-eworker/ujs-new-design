@@ -1144,7 +1144,9 @@ a::before {
   color: rgba(60, 61, 107, 0.5);
 }
 
-.job-detail.banner .location {
+.job-detail.banner .location,
+.job-detail.banner .title,
+.job-detail.banner .date {
   display: block;
   margin-bottom: 0.5rem;
   color: #ffffff;
@@ -1152,6 +1154,11 @@ a::before {
 
 .job-detail.banner .copy {
   margin-left: 20px;
+}
+
+.job-detail.jobs .intro .title {
+  font-size: 24px;
+  margin-top: 25px;
 }
 
 .job-detail.jobs .intro .browse i {
@@ -1171,6 +1178,66 @@ a::before {
   margin-top: 20px;
 }
 
+.job-detail.jobs .list-sec.detail {
+  color: rgba(60, 61, 107, 0.65);
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: normal;
+}
+
+.job-detail.jobs .list-sec.form {
+  padding: 30px;
+}
+
+.job-detail.jobs .list-sec.form .form-control {
+  color: rgba(60, 61, 107, 0.65);
+  padding: 15px 20px;
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+
+.job-detail.jobs .list-sec.form ::-webkit-input-placeholder {
+  color: rgba(60, 61, 107, 0.65);
+}
+
+.job-detail.jobs .list-sec.form :-ms-input-placeholder {
+  color: rgba(60, 61, 107, 0.65);
+}
+
+.job-detail.jobs .list-sec.form ::-ms-input-placeholder {
+  color: rgba(60, 61, 107, 0.65);
+}
+
+.job-detail.jobs .list-sec.form ::placeholder {
+  color: rgba(60, 61, 107, 0.65);
+}
+
+.job-detail.jobs .list-sec.form .col-md-6 .form-control:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.job-detail.jobs .list-sec.form .submit {
+  background: #0AD188;
+  color: #ffffff;
+  border: 1px solid #0AD188;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 15px 0;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.job-detail.jobs .list-sec.form .submit:hover {
+  background: #ffffff;
+  color: #0AD188;
+}
+
 .job-detail.jobs .list-title {
   list-style-type: none;
   font-weight: 500;
@@ -1179,11 +1246,200 @@ a::before {
   padding: 0;
 }
 
-.job-detail.jobs .list-title.detail, .job-detail.jobs .list-title p {
+.job-detail.jobs .list-title.detail,
+.job-detail.jobs .list-title p,
+.job-detail.jobs .list-title a {
   font-weight: normal;
   font-size: 16px;
   line-height: 40px;
   color: rgba(60, 61, 107, 0.65);
+}
+
+.job-detail.jobs .list-title.detail .heading {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.job-detail.jobs .list-title.detail .tag {
+  border: 1px solid rgba(60, 61, 107, 0.65);
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.05));
+          filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.05));
+  border-radius: 8px;
+}
+
+.job-detail.jobs .main-content {
+  margin-right: 22px;
+}
+
+.job-detail.jobs .sidebar {
+  margin-top: 33px;
+  margin-left: 22px;
+  text-align: center;
+}
+
+.job-detail.jobs .sidebar .button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 15px 0;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.job-detail.jobs .sidebar .button i {
+  margin-right: 10px;
+}
+
+.job-detail.jobs .sidebar .button.green {
+  background: #0AD188;
+  color: #ffffff;
+  border: 1px solid #0AD188;
+}
+
+.job-detail.jobs .sidebar .button.green:hover {
+  background: #ffffff;
+  color: #0AD188;
+}
+
+.job-detail.jobs .sidebar .button.yellow {
+  background: #ffffff;
+  color: #EFAC00;
+  border: 1px solid #EFAC00;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.job-detail.jobs .sidebar .button.yellow:hover {
+  background: #EFAC00;
+  color: #ffffff;
+}
+
+.job-detail.jobs .sidebar .button.blue {
+  background: #ffffff;
+  border: 1px solid rgba(60, 61, 107, 0.15);
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.job-detail.jobs .sidebar .button.blue:hover {
+  background: #3C3D6B;
+  color: #ffffff;
+}
+
+.job-detail.jobs .sidebar .share-text {
+  color: rgba(60, 61, 107, 0.5);
+  font-size: 14px;
+  line-height: 16px;
+  margin: 34px 0;
+  position: relative;
+  background: rgba(60, 61, 107, 0.15);
+  height: 1px;
+}
+
+.job-detail.jobs .sidebar .share-text span {
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  top: -10px;
+}
+
+.job-detail.jobs .sidebar .copy {
+  position: relative;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.job-detail.jobs .sidebar .copy input {
+  border: 1px solid #E2E2E9;
+  background: #F8F9FA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 16px 32px 16px 16px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.job-detail.jobs .sidebar .copy .copy-cta {
+  position: absolute;
+  right: 14px;
+  top: 30%;
+  color: #3C3D6B;
+}
+
+.job-detail.jobs .sidebar .social {
+  margin-top: 10px;
+}
+
+.job-detail.jobs .sidebar .social .icon {
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 11px 30px;
+}
+
+.job-detail.jobs .sidebar .social .icon:not(:last-child) {
+  margin-right: 5px;
+}
+
+.job-detail.jobs .sidebar .social .icon.linkedin {
+  background: #0077B5;
+}
+
+.job-detail.jobs .sidebar .social .icon.twitter {
+  background: #1DA1F2;
+}
+
+.job-detail.jobs .sidebar .social .icon.facebook {
+  background: #425F9C;
+}
+
+.job-detail.jobs .sidebar .social .icon i {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.job-detail.jobs .sidebar .contact-info {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.job-detail.jobs .sidebar .contact-info p {
+  color: rgba(60, 61, 107, 0.5);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.job-detail.jobs .sidebar .contact-info a {
+  display: block;
+  color: #3C3D6B;
+  word-break: break-all;
+}
+
+.job-detail.jobs .sidebar .contact-info a:first-child {
+  margin-top: 12px;
+}
+
+.job-detail.jobs .sidebar .contact-info a:last-child {
+  margin-top: 8px;
+}
+
+.job-detail.jobs .sidebar .contact-info a i {
+  margin-right: 10px;
 }
 
 .site-footer {

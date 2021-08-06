@@ -1,6 +1,9 @@
 .job-detail {
     &.banner {
-        .location {
+
+        .location,
+        .title,
+        .date {
             display: block;
             margin-bottom: 0.5rem;
             color: $white;
@@ -13,6 +16,11 @@
 
     &.jobs {
         .intro {
+            .title {
+                font-size: 24px;
+                margin-top: 25px;
+            }
+
             .browse {
                 i {
                     margin-left: unset;
@@ -29,7 +37,54 @@
             border-radius: 8px;
             padding: 25px 30px;
             margin-top: 20px;
+
+            &.detail {
+                color: rgba(60, 61, 107, 0.65);
+                font-size: 16px;
+                line-height: 25px;
+                font-weight: normal;
+            }
+
+            &.form {
+                padding: 30px;
+
+                .form-control {
+                    color: rgba(60, 61, 107, 0.65);
+                    padding: 15px 20px;
+                    appearance: auto;
+                }
+
+                ::placeholder {
+                    color: rgba(60, 61, 107, 0.65);
+                }
+
+                .col-md-6 {
+                    .form-control:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .submit {
+                    background: $success;
+                    color: $white;
+                    border: 1px solid $success;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    padding: 15px 0;
+                    font-weight: 900;
+                    font-size: 18px;
+                    line-height: 21px;
+                    letter-spacing: 0.5px;
+                    transition: all 250ms ease-in-out;
+
+                    &:hover {
+                        background: $white;
+                        color: $success;
+                    }
+                }
+            }
         }
+
 
         .list-title {
             list-style-type: none;
@@ -38,11 +93,192 @@
             line-height: 40px;
             padding: 0;
 
-            &.detail, p {
+            &.detail,
+            p,
+            a {
                 font-weight: normal;
                 font-size: 16px;
                 line-height: 40px;
-                color: rgba(60, 61, 107, 0.65);;
+                color: rgba(60, 61, 107, 0.65);
+            }
+
+            &.detail {
+                .heading {
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                }
+
+                .tag {
+                    border: 1px solid rgba(60, 61, 107, 0.65);
+                    padding: 5px 10px;
+                    box-sizing: border-box;
+                    filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.05));
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        .main-content {
+            margin-right: 22px;
+        }
+
+        .sidebar {
+            margin-top: 33px;
+            margin-left: 22px;
+            text-align: center;
+
+            .button {
+                box-sizing: border-box;
+                border-radius: 8px;
+                padding: 15px 0;
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.5px;
+                transition: all 250ms ease-in-out;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                &.green {
+                    background: $success;
+                    color: $white;
+                    border: 1px solid $success;
+
+                    &:hover {
+                        background: $white;
+                        color: $success;
+                    }
+                }
+
+                &.yellow {
+                    background: $white;
+                    color: $yellow;
+                    border: 1px solid $yellow;
+                    margin-top: 10px;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+
+                    &:hover {
+                        background: $yellow;
+                        color: $white
+                    }
+                }
+
+                &.blue {
+                    background: $white;
+                    border: 1px solid rgba(60, 61, 107, 0.15);
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 21px;
+
+                    &:hover {
+                        background: $primary;
+                        color: $white;
+                    }
+                }
+            }
+
+            .share-text {
+                color: rgba(60, 61, 107, 0.5);
+                font-size: 14px;
+                line-height: 16px;
+                margin: 34px 0;
+                position: relative;
+                background: rgba(60, 61, 107, 0.15);
+                height: 1px;
+
+                span {
+                    background: #fff;
+                    padding: 10px;
+                    position: relative;
+                    top: -10px;
+                }
+            }
+
+            .copy {
+                position: relative;
+                padding: 0;
+                margin-top: 10px;
+
+                input {
+                    border: 1px solid #E2E2E9;
+                    background: #F8F9FA;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    padding: 16px 32px 16px 16px;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+
+                .copy-cta {
+                    position: absolute;
+                    right: 14px;
+                    top: 30%;
+                    color: $primary;
+                }
+            }
+
+            .social {
+                margin-top: 10px;
+
+                .icon {
+                    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                    border-radius: 8px;
+                    color: $white;
+                    padding: 11px 30px;
+
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+
+                    &.linkedin {
+                        background: #0077B5;
+                    }
+
+                    &.twitter {
+                        background: #1DA1F2;
+                    }
+
+                    &.facebook {
+                        background: #425F9C;
+                    }
+
+                    i {
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+                }
+
+            }
+
+            .contact-info {
+                margin-top: 25px;
+                text-align: left;
+                p {
+                    color: rgba(60, 61, 107, 0.5);
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                }
+                a{
+                    display: block;
+                    color: $primary;
+                    word-break: break-all;
+                    &:first-child{
+                        margin-top: 12px;
+                    }
+                    &:last-child{
+                        margin-top: 8px;
+                    }
+                    i{
+                        margin-right: 10px;
+                    }
+                }
             }
         }
     }
