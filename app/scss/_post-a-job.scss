@@ -1,0 +1,363 @@
+.post-a-job {
+    &.jobs {
+        h2 {
+            i {
+                margin-right: 10px;
+            }
+        }
+
+        .sidebar {
+            margin: 0;
+            margin-right: 22px;
+
+            .skip {
+                a {
+                    border-radius: 8px;
+                    border: 1px solid $primary;
+                    display: block;
+                    width: 100%;
+                    padding: 15px 0;
+                }
+            }
+
+            .create {
+                padding: 0;
+                text-align: left;
+
+                .create-item {
+                    z-index: 5;
+                    position: relative;
+
+                    &:not(:first-child):before {
+                        content: '';
+                        width: 2px;
+                        height: 128%;
+                        background: #E2E2E9;
+                        bottom: 42px;
+                        position: absolute;
+                        left: 22px;
+                        z-index: -1;
+                    }
+
+                    &:nth-child(3):before {
+                        bottom: 39px;
+                    }
+
+                    &.active {
+                        .number {
+                            color: $white;
+                            background: $success;
+                        }
+
+                        &:not(:first-child):before {
+                            background: $success;
+                            bottom: 42px;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 50px;
+                    }
+
+                    .number {
+                        display: inline-block;
+                        margin-right: 20px;
+                        padding: 11px 18px;
+                        border-radius: 50%;
+                        color: rgba(60, 61, 107, 0.5);
+                        background: #E2E2E9;
+
+                    }
+
+                    h2 {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: rgba(60, 61, 107, 0.5);
+                    }
+
+                }
+            }
+        }
+
+        .main-content {
+            .form {
+                margin-top: 0;
+                &.submit{
+                    padding: 0;
+                }
+
+                &.list-sec {
+                    &:not(:first-child) {
+                        margin-top: 15px;
+                    }
+
+                    .form-control {
+                        margin-bottom: 20px;
+                        color: $primary;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .toggle-box {
+                        padding-top: 20px;
+                    }
+
+                    h3 {
+                        padding: 16px 0;
+                        color: $primary;
+                        position: relative;
+                        font-weight: 900;
+                        font-size: 18px;
+                        line-height: 21px;
+                        i{
+                            margin-right: 10px;
+                        }
+                    }
+
+                    .row {
+                        margin: 0;
+                        padding: 0;
+
+                        &.toggles {
+                            text-align: center;
+
+                            .col-md-6 {
+                                padding: 16px 0;
+                                color: rgba(60, 61, 107, 0.5);
+                                position: relative;
+
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background: transparent;
+                                    left: 0;
+                                }
+
+                                &.active {
+                                    border-bottom: 1px solid $primary;
+                                    color: $primary;
+                                }
+
+                            }
+                        }
+
+                        .col {
+                            &:first-child {
+                                padding-left: 0;
+                            }
+
+                            &:last-child {
+                                padding-right: 0;
+                            }
+                        }
+
+                        .visa {
+                            padding-left: 0;
+
+                            .checkmark {
+                                left: unset;
+                                right: -60%;
+                            }
+                        }
+                    }
+
+                    input[type="radio"],
+                    input[type="checkbox"] {
+                        opacity: 0;
+
+                        &:checked+.checkmark {
+                            background: $success;
+
+                            &::after {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    input[type="radio"]+.checkmark {
+                        border-radius: 50%;
+                    }
+
+                    .checkmark {
+                        display: inline-block;
+                        background: #FFFFFF;
+                        border: 1px solid rgba(0, 0, 0, 0.35);
+                        box-sizing: border-box;
+                        border-radius: 8px;
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        left: 0;
+                        top: -4px;
+
+                        &:after {
+                            display: none;
+                            content: "\2713\0020";
+                            position: absolute;
+                            left: 8px;
+                            top: 4px;
+                            color: #fff;
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    label {
+                        color: rgba(60, 61, 107, 0.5);
+                        font-size: 18px;
+                        line-height: 21px;
+                        position: relative;
+                        padding-left: 42px;
+                        cursor: pointer;
+                    }
+
+                    .apply {
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        padding: 15px 0;
+                        color: rgba(60, 61, 107, 0.5);
+                        background: #E2E2E9;
+                        box-sizing: border-box;
+                        border-radius: 8px;
+                    }
+                }
+
+                .label {
+                    margin-bottom: 20px;
+                }
+
+                h2,
+                .accordion-button {
+                    color: $primary;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+
+                .accordion {
+                    .accordion-button {
+                        padding-left: 0;
+                        padding-right: 0;
+                        padding-bottom: 0;
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+                        background: none;
+
+                        &:after {
+                            background: none;
+                            content: 'HIDE';
+                            transform: unset;
+                            margin-right: 20px;
+                        }
+
+                        &.collapsed {
+                            &:after {
+                                content: 'SHOW';
+                            }
+                        }
+                    }
+
+                    .accordion-body {
+                        background: $white;
+
+                        .job-detail {
+                            padding: 0;
+                        }
+
+                        .acc {
+                            img {
+                                width: 80%;
+                                height: auto;
+                            }
+                        }
+
+                        .col-md-3 {
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .job-detail {
+                            background: none;
+                        }
+
+                        .main-content {
+                            .list-sec {
+                                padding: 16px;
+                                background: rgba(0, 0, 0, 0.05);
+
+                                &:not(:first-child) {
+                                    margin-top: 14px;
+                                }
+                            }
+                        }
+
+                        .sidebar {
+                            padding: 16px;
+                            margin: 0;
+                            background: rgba(0, 0, 0, 0.05);
+
+                            .button {
+                                padding: 10px 0;
+                                font-size: 12px;
+                                line-height: 14px;
+
+                                i {
+                                    margin-right: 5px;
+                                }
+                            }
+
+                            .share-text {
+                                font-size: 10px;
+                                line-height: 12px;
+                            }
+
+                            .copy {
+                                input {
+                                    padding: 12px 40px 12px 12px;
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                }
+                            }
+
+                            .social {
+                                .icon {
+                                    padding: 6px 12px;
+
+                                    i {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+
+                            .contact-info {
+                                p {
+                                    font-size: 10px;
+                                    line-height: 12px;
+                                }
+
+                                a {
+                                    font-size: 12px;
+                                    line-height: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

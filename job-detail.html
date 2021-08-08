@@ -72,7 +72,7 @@
                 <div class="d-flex justify-content-start align-items-center job-item">
                     <div class="d-flex justify-content-start align-items-center details">
                         <div class="img">
-                            <img src="images/transparent-placeholder.png" alt="">
+                            <img class="d-none d-sm-block" src="images/transparent-placeholder.png" alt="">
                             <h3 class="title d-block d-sm-none">Full time Urologist needed in beautiful
                                 Oregon</h3>
                         </div>
@@ -92,27 +92,33 @@
                 <div class="row">
                     <div class="col-md-8 main-content">
                         <div class="d-flex justify-content-between align-items-center intro">
-                            <a href="#" class="btn browse d-none d-sm-block"><i class="fas fa-arrow-left"></i> Back</a>
+                            <a href="#" class="btn browse"><i class="fas fa-arrow-left"></i> Back</a>
                         </div>
                         <div class="row list-sec">
                             <div class="col-md-4">
                                 <ul class="list-title">
                                     <li>Job Title</li>
+                                    <li class="detail d-block d-sm-none">Full time Urologist needed in beautiful Oregon</li>
                                     <li>Employer</li>
+                                    <li class="detail d-block d-sm-none"><a href="#" class="heading">UJS Health System</a></li>
                                     <li>Type of Practice</li>
+                                    <li class="detail d-block d-sm-none"><a href="#" class="tag">Hospital Employed</a></li>
                                     <li>Location</li>
+                                    <li class="detail d-block d-sm-none">Bend, Oregon</li>
                                     <li>Subspecialty</li>
+                                    <li class="detail d-block d-sm-none"><a href="#" class="tag">Neurology</a></li>
                                     <li>Visa Candidates Accepted</li>
+                                    <li class="detail d-block d-sm-none">Yes</li>
                                 </ul>
                             </div>
-                            <div class="col-md-8">
-                                <ul class="list-title detail">
-                                    <li>Full time Urologist needed in beautiful Oregon</li>
-                                    <li><a href="#" class="heading">UJS Health System</a></li>
-                                    <li><a href="#" class="tag">Hospital Employed</a></li>
-                                    <li>Bend, Oregon</li>
-                                    <li><a href="#" class="tag">Neurology</a></li>
-                                    <li>Yes</li>
+                            <div class="col-md-8 d-none d-sm-block">
+                                <ul class="list-title">
+                                    <li class="detail">Full time Urologist needed in beautiful Oregon</li>
+                                    <li class="detail"><a href="#" class="heading">UJS Health System</a></li>
+                                    <li class="detail"><a href="#" class="tag">Hospital Employed</a></li>
+                                    <li class="detail">Bend, Oregon</li>
+                                    <li class="detail"><a href="#" class="tag">Neurology</a></li>
+                                    <li class="detail">Yes</li>
                                 </ul>
                             </div>
                         </div>
@@ -136,7 +142,11 @@
                                 amet. Ipsum a arcu cursus vitae. Neque ornare aenean euismod elementum nisi quis.</p>
                         </div>
                         <div class="row list-sec detail">
-                            <iframe width="560" height="446" src="https://www.youtube.com/embed/4eiKspBoJ0A"
+                            <iframe class="d-none d-md-block" width="560" height="446" src="https://www.youtube.com/embed/4eiKspBoJ0A"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                                <iframe class="d-block d-md-none" width="560" height="164" src="https://www.youtube.com/embed/4eiKspBoJ0A"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
@@ -174,8 +184,23 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-3 sidebar">
-                        <div class="row list-sec">
+                    <div class="col-md-3 job-listing job-detail sidebar">
+                        <div class="mob-triggers title d-block d-sm-none">
+                            <a class="filter-trigger" href="javascript:void(0)">
+                                <i class="fas fa-envelope"></i>
+                                <i class="fas fa-envelope-open toggle"></i>
+                                <span>Apply</span>
+                            </a>
+                            <p class="results-count">
+                                <a href="#">
+                                    <i class="far fa-star star"></i>
+                                </a>
+                                <a class="filter-trigger" href="javascript:void(0)">
+                                    <i class="fas fa-share-alt"></i>
+                                </a>
+                            </p>
+                        </div>
+                        <div class="row list-sec filters">
                             <button class="button green"><i class="fas fa-envelope"></i>Apply</button>
                             <button class="button yellow"><i class="far fa-star"></i>Add to Favorites</button>
                             <p class="share-text"><span>Share OR COPY</span></p>
@@ -189,8 +214,24 @@
                                 <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
                                 <a href="#" class="icon facebook"><i class="fab fa-facebook"></i></a>
                             </div>
-                            <div class="contact-info">
+                            <div class="d-flex justify-content-between mob-social social">
+                                <a href="#" class="icon linkedin"><i class="fab fa-linkedin"></i><span>Share on Linkedin</span></a>
+                                <a href="#" class="icon twitter"><i class="fab fa-twitter"></i><span>Share on Twitter</span></a>
+                                <a href="#" class="icon facebook"><i class="fab fa-facebook"></i><span>Share on Facebook</span></a>
+                            </div>
+                            <div class="contact-info d-none d-md-block">
                                 <p>Contact information</p>
+                                <a href="#"><i class="fas fa-user"></i>Rachel Lucy</a>
+                                <a href="mailto:rachel@urologyjobsearch.com"><i class="fas fa-envelope"></i>rachel@urologyjobsearch.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mob sidebar d-block d-md-none">
+                        <div class="d-flex justify-content-start align-items-center intro">
+                            <h2 class="title">Contact information</h2>
+                        </div>
+                        <div class="row list-sec">
+                            <div class="contact-info">
                                 <a href="#"><i class="fas fa-user"></i>Rachel Lucy</a>
                                 <a href="mailto:rachel@urologyjobsearch.com"><i class="fas fa-envelope"></i>rachel@urologyjobsearch.com</a>
                             </div>
@@ -254,6 +295,7 @@
     </main>
 
     <script src="dist/bootstrap5/bootstrap.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/qkuo0xyra9a3nkzqcx58cza2dil7u2haiqreab0luj086q8w/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="app/js/script.js"></script>
 </body>
 
