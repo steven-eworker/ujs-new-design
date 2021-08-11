@@ -33,7 +33,17 @@ if( toggles != undefined ){
             toggleDivs.forEach(function(div){
                 div.style.display = 'none';
             });
-            document.getElementById(targetDiv).style.display = 'block';
+            var divFocus = document.getElementById(targetDiv);
+            divFocus.style.display = 'block';
+            if( divFocus.classList.contains('pay') ){
+                if( divFocus.classList.contains('now') ){
+                    document.querySelector('.submit.pay-now').style.display = 'block';
+                    document.querySelector('.submit.pay-later').style.display = 'none';
+                } else {
+                    document.querySelector('.submit.pay-now').style.display = 'none';
+                    document.querySelector('.submit.pay-later').style.display = 'block';
+                }
+            }
             btn.target.classList.add('active');
         })
     })

@@ -20,7 +20,7 @@
     <main>
         <header class="container navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="images/ujs-logo.png" alt="UJS Logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="images/ujs-logo.png" alt="UJS Logo"></a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown"
                                 aria-expanded="false">About<i class="fas fa-angle-down"></i></a>
                             <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
                                 <li><a class="dropdown-item" href="#">Contact Us</a></li>
                             </ul>
                         </li>
@@ -62,7 +62,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <a href="#" class="btn btn-outline-primary me-2 cta">Post a Job</a>
+                    <a href="post-a-job.html" class="btn btn-outline-primary me-2 cta">Post a Job</a>
                 </div>
             </div>
         </header>
@@ -135,7 +135,7 @@
                                     </select>
                                 </div>
                                 <div class="col form-control">
-                                    <label class="visa">Visa Candidates accepted?<input type="radio" name="confirmation"
+                                    <label class="visa">Visa Candidates accepted?<input type="checkbox" name="confirmation"
                                             value="all">
                                         <span class="checkmark"></span>
                                     </label>
@@ -482,7 +482,7 @@
                                 </a>
                             </div>
                             <div class="toggle-box">
-                                <div id="pay-now" class="wrap">
+                                <div id="pay-now" class="wrap pay now">
                                     <h3><i class="fas fa-credit-card"></i>Card Details</h3>
                                     <div class="row">
                                     <div class="col-md-8">
@@ -499,16 +499,25 @@
                                     </div>
                                 </div>
                                 </div>
-                                <div id="pay-later" class="wrap" style="display: none;">
+                                <div id="pay-later" class="wrap pay later" style="display: none;">
                                     <p class="note">Choosing a pay later will save your posting as an unpaid draft and create an Invoice. You must pay the invoice before the job becomes active.</p>
-                                    <input class="form-control" type="text" placeholder="PO # / Invoice notes">
-                                    <input class="form-control" type="text" placeholder="Accounting email">
+                                    <div class="later-wrap">
+                                        <input class="form-control" type="text" placeholder="PO # / Invoice notes">
+                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span class="cstm-tooltip">Will be displayed on invoices for reference</span></a>
+                                    </div>
+                                    <div class="later-wrap">
+                                        <input class="form-control" type="text" placeholder="Accounting email">
+                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span class="cstm-tooltip">Billing contact for issues related to job listing payment</span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row list-sec detail form submit">
-                            <button class="submit" type="submit">
+                            <button class="submit pay-now" type="submit">
                                 <i class="fas fa-paper-plane"></i> Pay and Post Job Now
+                            </button>
+                            <button class="submit pay-later" type="submit" style="display: none;">
+                                <i class="fas fa-clock"></i> Pay later and post job(s) later
                             </button>
                         </div>
                     </form>

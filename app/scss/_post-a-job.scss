@@ -64,7 +64,7 @@
                         margin-right: 20px;
                         padding: 11px 18px;
                         border-radius: 50%;
-                        color: rgba(60, 61, 107, 0.5);
+                        color: vsPrimaryOpacity(0.5);
                         background: #E2E2E9;
 
                     }
@@ -78,7 +78,7 @@
                     p {
                         font-size: 14px;
                         line-height: 16px;
-                        color: rgba(60, 61, 107, 0.5);
+                        color: vsPrimaryOpacity(0.5);
                     }
 
                 }
@@ -88,7 +88,8 @@
         .main-content {
             .form {
                 margin-top: 0;
-                &.submit{
+
+                &.submit {
                     padding: 0;
                 }
 
@@ -108,6 +109,37 @@
 
                     .toggle-box {
                         padding-top: 20px;
+
+                        .later-wrap {
+                            position: relative;
+
+                            a {
+                                position: absolute;
+                                right: 16px;
+                                top: 16px;
+                                background: white;
+                                color: $primary;
+                                border: none;
+
+                                .cstm-tooltip{
+                                    width: 30vw;
+                                    left: -13.5vw;
+                                    background: #000;
+                                    top: unset;
+                                    bottom: 130%;
+                                    &:before{
+                                        top: 100%;
+                                        transform: rotate(180deg);
+                                    }
+                                }
+
+                                &:hover{
+                                    .cstm-tooltip{
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
                     }
 
                     h3 {
@@ -117,7 +149,8 @@
                         font-weight: 900;
                         font-size: 18px;
                         line-height: 21px;
-                        i{
+
+                        i {
                             margin-right: 10px;
                         }
                     }
@@ -131,7 +164,7 @@
 
                             .col-md-6 {
                                 padding: 16px 0;
-                                color: rgba(60, 61, 107, 0.5);
+                                color: vsPrimaryOpacity(0.5);
                                 position: relative;
 
                                 &:before {
@@ -213,7 +246,7 @@
                     }
 
                     label {
-                        color: rgba(60, 61, 107, 0.5);
+                        color: vsPrimaryOpacity(0.5);
                         font-size: 18px;
                         line-height: 21px;
                         position: relative;
@@ -226,7 +259,7 @@
                         width: 100%;
                         text-align: center;
                         padding: 15px 0;
-                        color: rgba(60, 61, 107, 0.5);
+                        color: vsPrimaryOpacity(0.5);
                         background: #E2E2E9;
                         box-sizing: border-box;
                         border-radius: 8px;
@@ -274,6 +307,10 @@
                     .accordion-body {
                         background: $white;
 
+                        &.job-item {
+                            background: $light-bg;
+                        }
+
                         .job-detail {
                             padding: 0;
                         }
@@ -297,7 +334,7 @@
                         .main-content {
                             .list-sec {
                                 padding: 16px;
-                                background: rgba(0, 0, 0, 0.05);
+                                background: $light-bg;
 
                                 &:not(:first-child) {
                                     margin-top: 14px;
@@ -308,7 +345,7 @@
                         .sidebar {
                             padding: 16px;
                             margin: 0;
-                            background: rgba(0, 0, 0, 0.05);
+                            background: $light-bg;
 
                             .button {
                                 padding: 10px 0;
@@ -323,6 +360,10 @@
                             .share-text {
                                 font-size: 10px;
                                 line-height: 12px;
+
+                                span {
+                                    background: $light-bg;
+                                }
                             }
 
                             .copy {

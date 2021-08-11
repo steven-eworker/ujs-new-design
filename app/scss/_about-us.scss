@@ -1,0 +1,250 @@
+.about-us {
+    h2 {
+        color: $primary;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        position: relative;
+        text-align: center;
+
+        &.text-bg {
+            &:before {
+                content: attr(data-title);
+                font-weight: bold;
+                font-size: 130px;
+                line-height: 152px;
+                text-transform: uppercase;
+                position: absolute;
+                left: 20%;
+                top: -100%;
+                color: vsPrimaryOpacity(0.05);
+
+                @include breakpoint-down(small) {
+                    font-weight: bold;
+                    font-size: 50px;
+                    line-height: 59px;
+                    left: 12%;
+                    top: -16%;
+                }
+            }
+        }
+    }
+
+    img {
+        &.desk {
+            display: inline-block;
+
+            @include breakpoint-down(small) {
+                display: none;
+            }
+        }
+
+        &.mob {
+            display: none;
+
+            @include breakpoint-down(small) {
+                display: inline-block;
+            }
+        }
+    }
+
+    p {
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        color: vsPrimaryOpacity(0.65);
+
+        @include breakpoint-down(small) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 28px;
+        display: inline-block;
+        color: $primary;
+
+        @include breakpoint-down(small) {
+            font-size: 18px;
+            line-height: 21px;
+            margin-left: 20px;
+            text-align: left;
+        }
+    }
+
+    &.banner {
+        text-align: left;
+        padding: 200px 0;
+
+        h1 {
+            font-size: 40px;
+            line-height: 47px;
+
+            @include breakpoint-down(small) {
+                font-weight: bold;
+                font-size: 24px;
+                line-height: 28px;
+                text-align: center;
+            }
+        }
+    }
+
+    &.tagline {
+        padding: 46px 0;
+        text-align: center;
+
+        img {
+            display: inline-block;
+            width: 140px;
+            margin-left: 20px;
+        }
+
+        .copy {
+            @include breakpoint-down(small) {
+                display: flex;
+
+                img,
+                h3 {
+                    padding: 0 13px
+                }
+            }
+        }
+    }
+
+    &.about {
+        .container {
+            @include breakpoint-down(small) {
+                padding: 0;
+            }
+        }
+
+        .col-md-6 {
+            padding: 0;
+
+            &:last-child {
+                padding: 150px 100px 150px 100px;
+
+                @include breakpoint-down(small) {
+                    padding: 50px 30px;
+                }
+            }
+
+            img {
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                border-radius: 0px 0px 200px 0px;
+
+                @include breakpoint-down(small) {
+                    border-radius: 0;
+                    width: 100%;
+                }
+            }
+
+            p {
+                margin-top: 24px;
+            }
+        }
+    }
+
+    &.who-we-are {
+        padding: 80px 0;
+        @include breakpoint-down(small){
+            padding-top: 0;
+            padding-bottom: 50px;
+        }
+
+        .copy {
+            margin-top: 70px;
+            padding: 0 265px;
+
+            @include breakpoint-down(small) {
+                padding: 0 30px;
+            }
+        }
+    }
+
+    &.trusted {
+        text-align: center;
+        padding: 80px 0;
+        background: $light-bg;
+
+        .container {
+            @include breakpoint-down(small) {
+                text-align: center;
+            }
+        }
+
+        h3 {
+            @include breakpoint-down(small) {
+                padding: 0 23%;
+            }
+        }
+
+        img {
+            margin-top: 46px;
+        }
+    }
+
+    &.connecting {
+        padding: 80px 0;
+        background: $secondary;
+
+        .container {
+            @include breakpoint-down(small) {
+                padding: 0 30px;
+            }
+        }
+
+        .heading {
+            h2 {
+                text-align: left;
+
+                @include breakpoint-down(small) {
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .cta-box {
+            text-align: right;
+
+            .btn {
+                padding: 15px 40px;
+                border-color: $primary;
+                background: $primary;
+                color: $white;
+
+                &:hover {
+                    color: $primary;
+                    background: transparent;
+                }
+
+                &:first-child {
+                    margin-right: 15px;
+                }
+
+                &.transparent {
+                    background: transparent;
+                    color: $primary;
+
+                    &:hover {
+                        background: $primary;
+                        color: $white;
+                    }
+                }
+            }
+
+            div {
+                @include breakpoint-down(small) {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 42px;
+                }
+            }
+        }
+    }
+}
