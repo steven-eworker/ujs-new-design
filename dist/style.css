@@ -2277,6 +2277,55 @@ a::before {
   }
 }
 
+.the-team.left-image, .the-team.right-image {
+  padding: 130px 0;
+}
+
+.the-team.left-image img, .the-team.right-image img {
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.the-team.left-image h3, .the-team.right-image h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3C3D6B;
+}
+
+.the-team.left-image .edu, .the-team.right-image .edu {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(60, 61, 107, 0.5);
+}
+
+.the-team.left-image p, .the-team.right-image p {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: rgba(60, 61, 107, 0.65);
+}
+
+.the-team.left-image .social a:not(:last-child), .the-team.right-image .social a:not(:last-child) {
+  margin-right: 5px;
+}
+
+.the-team.left-image .social i, .the-team.right-image .social i {
+  font-size: 24px;
+  line-height: 28px;
+  color: rgba(60, 61, 107, 0.5);
+}
+
+.the-team.right-image {
+  background: #F8F9FA;
+}
+
 .site-footer {
   background-color: #3C3D6B;
   padding: 60px 0px;
