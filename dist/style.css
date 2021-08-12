@@ -2391,6 +2391,151 @@ a::before {
   }
 }
 
+.login .img-box {
+  padding: 0;
+}
+
+.login .form-box {
+  padding: 100px 130px;
+  text-align: center;
+}
+
+.login .form-box .form {
+  background: #F8F9FA;
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 42px;
+  padding: 30px;
+}
+
+.login .form-box .form .name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #3C3D6B;
+  text-transform: uppercase;
+}
+
+.login .form-box .form .note {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(60, 61, 107, 0.65);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login .form-box .form .note a {
+  font-weight: bold;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: rgba(60, 61, 107, 0.65);
+}
+
+.login .form-box .form .submit {
+  display: block;
+  background: #0AD188;
+  color: #ffffff;
+  border: 1px solid #0AD188;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 14px 0;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.login .form-box .form .submit:hover {
+  color: #0AD188;
+  background: #ffffff;
+}
+
+.login .form-box .form .submit:hover i {
+  color: #0AD188;
+}
+
+.login .form-box .form .submit i {
+  color: #ffffff;
+  margin-left: 5px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.login .form-box .form .form-control {
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(60, 61, 107, 0.5);
+  padding: 14px 48px;
+}
+
+.login .form-box .form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login .form-box .form .form-group .left,
+.login .form-box .form .form-group .right {
+  position: absolute;
+  color: rgba(60, 61, 107, 0.5);
+  top: 16px;
+}
+
+.login .form-box .form .form-group .left {
+  left: 16px;
+}
+
+.login .form-box .form .form-group .right {
+  right: 16px;
+}
+
+.login .form-box .form .cta {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #3C3D6B;
+  padding: 17px 22px;
+  background: #E2E2E9;
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.login .form-box .form .cta:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.login .form-box .form .cta.transparent {
+  border-color: transparent;
+  background: transparent;
+}
+
+.login .form-box .form .cta.transparent:hover {
+  background: #E2E2E9;
+  border-color: #E2E2E9;
+}
+
+.login .form-box .copyright {
+  margin-top: 30px;
+  color: rgba(60, 61, 107, 0.5);
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.login .form-box .social-links {
+  margin-top: 18px;
+}
+
+.login .form-box .social-links a {
+  margin-right: 10px;
+  color: rgba(60, 61, 107, 0.5);
+  font-size: 24px;
+}
+
 .site-footer {
   background-color: #3C3D6B;
   padding: 60px 0px;

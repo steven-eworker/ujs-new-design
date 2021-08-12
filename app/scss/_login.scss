@@ -1,0 +1,139 @@
+.login {
+    .img-box {
+        padding: 0;
+    }
+
+    .form-box {
+        padding: 100px 130px;
+        text-align: center;
+
+        .form {
+            background: $light-bg;
+            border: 1px solid #E2E2E9;
+            box-sizing: border-box;
+            border-radius: 8px;
+            margin-top: 42px;
+            padding: 30px;
+
+            .name {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                color: $primary;
+                text-transform: uppercase;
+            }
+
+            .note {
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 14px;
+                color: vsPrimaryOpacity(0.65);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                text-align: left;
+
+                a {
+                    font-weight: bold;
+                    text-decoration-line: underline;
+                    color: vsPrimaryOpacity(0.65);
+                }
+            }
+
+            .submit {
+                display: block;
+                background: $success;
+                color: $white;
+                border: 1px solid $success;
+                box-sizing: border-box;
+                border-radius: 8px;
+                padding: 14px 0;
+                transition: all 250ms ease-in-out;
+
+                &:hover {
+                    color: $success;
+                    background: $white;
+
+                    i {
+                        color: $success;
+                    }
+                }
+
+                i {
+                    color: $white;
+                    margin-left: 5px;
+                    transition: all 250ms ease-in-out;
+                }
+            }
+
+            .form-control {
+                font-size: 18px;
+                line-height: 21px;
+                color: vsPrimaryOpacity(0.5);
+                padding: 14px 48px;
+            }
+
+            .form-group {
+                position: relative;
+                margin-bottom: 20px;
+
+                .left,
+                .right {
+                    position: absolute;
+                    color: vsPrimaryOpacity(0.5);
+                    top: 16px;
+                }
+
+                .left {
+                    left: 16px;
+                }
+
+                .right {
+                    right: 16px;
+                }
+            }
+
+            .cta {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                color: $primary;
+                padding: 17px 22px;
+                background: #E2E2E9;
+                border: 1px solid #E2E2E9;
+                box-sizing: border-box;
+                border-radius: 8px;
+
+                &:hover {
+                    background: transparent;
+                    border-color: transparent;
+                }
+
+                &.transparent {
+                    border-color: transparent;
+                    background: transparent;
+
+                    &:hover {
+                        background: #E2E2E9;
+                        border-color: #E2E2E9;
+                    }
+                }
+            }
+
+            
+        }
+        .copyright {
+            margin-top: 30px;
+            color: vsPrimaryOpacity(0.5);
+            font-size: 14px;
+            line-height: 16px;
+        }
+        .social-links {
+            margin-top: 18px;
+            a {
+                margin-right: 10px;
+                color: vsPrimaryOpacity(0.5);
+                font-size: 24px;
+            }
+        }
+    }
+}
