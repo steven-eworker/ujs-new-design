@@ -2281,6 +2281,24 @@ a::before {
   padding: 130px 0;
 }
 
+@media (max-width: 39.9375em) {
+  .the-team.left-image, .the-team.right-image {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .the-team.left-image .img, .the-team.right-image .img {
+    padding: 0 36px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .the-team.left-image .copy, .the-team.right-image .copy {
+    padding: 15px 30px;
+  }
+}
+
 .the-team.left-image img, .the-team.right-image img {
   border: 1px solid #E2E2E9;
   -webkit-box-sizing: border-box;
@@ -2289,6 +2307,7 @@ a::before {
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   padding: 20px;
+  width: 100%;
 }
 
 .the-team.left-image h3, .the-team.right-image h3 {
@@ -2298,6 +2317,14 @@ a::before {
   color: #3C3D6B;
 }
 
+@media (max-width: 39.9375em) {
+  .the-team.left-image h3, .the-team.right-image h3 {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+}
+
 .the-team.left-image .edu, .the-team.right-image .edu {
   font-weight: 500;
   font-size: 18px;
@@ -2305,11 +2332,33 @@ a::before {
   color: rgba(60, 61, 107, 0.5);
 }
 
+@media (max-width: 39.9375em) {
+  .the-team.left-image .edu, .the-team.right-image .edu {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+  }
+}
+
 .the-team.left-image p, .the-team.right-image p {
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
   color: rgba(60, 61, 107, 0.65);
+}
+
+@media (max-width: 39.9375em) {
+  .the-team.left-image p, .the-team.right-image p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .the-team.left-image .social, .the-team.right-image .social {
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 
 .the-team.left-image .social a:not(:last-child), .the-team.right-image .social a:not(:last-child) {
@@ -2324,6 +2373,22 @@ a::before {
 
 .the-team.right-image {
   background: #F8F9FA;
+}
+
+.the-team.right-image .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 39.9375em) {
+  .the-team.right-image .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .site-footer {
