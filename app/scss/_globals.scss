@@ -90,6 +90,35 @@ body {
         border-color: $primary;
     }
 }
+.row {
+    margin: 0;
+    padding: 0;
+
+    &.toggles {
+        text-align: center;
+
+        .col-md-6 {
+            padding: 16px 0;
+            color: vsPrimaryOpacity(0.5);
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                left: 0;
+            }
+
+            &.active {
+                border-bottom: 1px solid $primary;
+                color: $primary;
+            }
+
+        }
+    }
+}
 
 a,
 a::after,

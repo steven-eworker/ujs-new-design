@@ -90,6 +90,35 @@ body.noscroll::before {
   border-color: #3C3D6B;
 }
 
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.row.toggles {
+  text-align: center;
+}
+
+.row.toggles .col-md-6 {
+  padding: 16px 0;
+  color: rgba(60, 61, 107, 0.5);
+  position: relative;
+}
+
+.row.toggles .col-md-6:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  left: 0;
+}
+
+.row.toggles .col-md-6.active {
+  border-bottom: 1px solid #3C3D6B;
+  color: #3C3D6B;
+}
+
 a,
 a::after,
 a::before {
@@ -2391,13 +2420,40 @@ a::before {
   }
 }
 
-.login .img-box {
+.login {
   padding: 0;
 }
 
+.login .img-box {
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 39.9375em) {
+  .login .img-box {
+    display: none;
+  }
+}
+
 .login .form-box {
-  padding: 100px 130px;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 58px 0;
+}
+
+.login .wrap {
+  margin-top: 30px;
+}
+
+.login .form-box {
   text-align: center;
+}
+
+@media (max-width: 39.9375em) {
+  .login .form-box {
+    padding: 44px 30px;
+  }
 }
 
 .login .form-box .form {
@@ -2408,6 +2464,33 @@ a::before {
   border-radius: 8px;
   margin-top: 42px;
   padding: 30px;
+}
+
+.login .form-box .form .inline .form-control {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.login .form-box .form .inline .col {
+  padding: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .login .form-box .form .inline .col {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.login .form-box .form .inline .col:last-child {
+  padding-left: 20px;
+}
+
+@media (max-width: 39.9375em) {
+  .login .form-box .form .inline .col:last-child {
+    padding-left: 0;
+    margin-top: 15px;
+  }
 }
 
 .login .form-box .form .name {
@@ -2423,9 +2506,13 @@ a::before {
   font-size: 12px;
   line-height: 14px;
   color: rgba(60, 61, 107, 0.65);
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: left;
+}
+
+.login .form-box .form .note.register {
+  margin: 0;
 }
 
 .login .form-box .form .note a {
@@ -2433,6 +2520,18 @@ a::before {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: rgba(60, 61, 107, 0.65);
+}
+
+.login .form-box .form .bold-note {
+  color: #3C3D6B;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.login .form-box .form .bold-note a {
+  color: #3C3D6B;
+  text-decoration: underline;
 }
 
 .login .form-box .form .submit {
@@ -2473,7 +2572,7 @@ a::before {
 
 .login .form-box .form .form-group {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .login .form-box .form .form-group .left,
@@ -2491,6 +2590,19 @@ a::before {
   right: 16px;
 }
 
+.login .form-box .form .form-group.cta-box {
+  margin-bottom: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .login .form-box .form .form-group.cta-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .login .form-box .form .cta {
   font-weight: 500;
   font-size: 14px;
@@ -2502,6 +2614,13 @@ a::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px;
+}
+
+@media (max-width: 39.9375em) {
+  .login .form-box .form .cta {
+    display: block;
+    width: 100%;
+  }
 }
 
 .login .form-box .form .cta:hover {
@@ -2517,6 +2636,56 @@ a::before {
 .login .form-box .form .cta.transparent:hover {
   background: #E2E2E9;
   border-color: #E2E2E9;
+}
+
+.login .form-box label {
+  color: #3C3D6B;
+  font-size: 18px;
+  line-height: 21px;
+  position: relative;
+  padding-left: 42px;
+  cursor: pointer;
+}
+
+.login .form-box input[type="radio"],
+.login .form-box input[type="checkbox"] {
+  opacity: 0;
+}
+
+.login .form-box input[type="radio"]:checked + .checkmark,
+.login .form-box input[type="checkbox"]:checked + .checkmark {
+  background: #3C3D6B;
+}
+
+.login .form-box input[type="radio"]:checked + .checkmark::after,
+.login .form-box input[type="checkbox"]:checked + .checkmark::after {
+  display: block;
+}
+
+.login .form-box .checkmark {
+  display: inline-block;
+  background: #FFFFFF;
+  border: 2px solid rgba(60, 61, 107, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+.login .form-box .checkmark:after {
+  content: "\2713\0020";
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .login .form-box .copyright {

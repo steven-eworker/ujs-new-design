@@ -1,11 +1,32 @@
 .login {
+    padding: 0;
+
     .img-box {
         padding: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include breakpoint-down(small) {
+            display: none;
+        }
     }
 
     .form-box {
-        padding: 100px 130px;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 58px 0;
+    }
+
+    .wrap {
+        margin-top: 30px;
+    }
+
+    .form-box {
         text-align: center;
+
+        @include breakpoint-down(small) {
+            padding: 44px 30px;
+        }
 
         .form {
             background: $light-bg;
@@ -14,6 +35,30 @@
             border-radius: 8px;
             margin-top: 42px;
             padding: 30px;
+
+            .inline {
+                .form-control {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+
+                .col {
+                    padding: 0;
+
+                    @include breakpoint-down(small) {
+                        flex-basis: 100%;
+                    }
+
+                    &:last-child {
+                        padding-left: 20px;
+
+                        @include breakpoint-down(small) {
+                            padding-left: 0;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
 
             .name {
                 font-weight: bold;
@@ -28,14 +73,29 @@
                 font-size: 12px;
                 line-height: 14px;
                 color: vsPrimaryOpacity(0.65);
-                margin-top: 20px;
-                margin-bottom: 20px;
+                margin-top: 15px;
+                margin-bottom: 15px;
                 text-align: left;
+
+                &.register {
+                    margin: 0;
+                }
 
                 a {
                     font-weight: bold;
                     text-decoration-line: underline;
                     color: vsPrimaryOpacity(0.65);
+                }
+            }
+
+            .bold-note {
+                color: $primary;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                a{
+                    color: $primary;
+                    text-decoration: underline;
                 }
             }
 
@@ -74,7 +134,7 @@
 
             .form-group {
                 position: relative;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
 
                 .left,
                 .right {
@@ -90,6 +150,14 @@
                 .right {
                     right: 16px;
                 }
+
+                &.cta-box {
+                    margin-bottom: 0;
+
+                    @include breakpoint-down(small) {
+                        flex-direction: column-reverse;
+                    }
+                }
             }
 
             .cta {
@@ -102,6 +170,11 @@
                 border: 1px solid #E2E2E9;
                 box-sizing: border-box;
                 border-radius: 8px;
+
+                @include breakpoint-down(small) {
+                    display: block;
+                    width: 100%;
+                }
 
                 &:hover {
                     background: transparent;
@@ -119,16 +192,66 @@
                 }
             }
 
-            
+
         }
+
+        label {
+            color: $primary;
+            font-size: 18px;
+            line-height: 21px;
+            position: relative;
+            padding-left: 42px;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            opacity: 0;
+
+            &:checked+.checkmark {
+                background: $primary;
+
+                &::after {
+                    display: block;
+                }
+            }
+        }
+
+        .checkmark {
+            display: inline-block;
+            background: #FFFFFF;
+            border: 2px solid vsPrimaryOpacity(0.5);
+            box-sizing: border-box;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+            top: -4px;
+
+            &:after {
+                // display: none;
+                content: "\2713\0020";
+                position: absolute;
+                left: 7px;
+                top: 4px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+
         .copyright {
             margin-top: 30px;
             color: vsPrimaryOpacity(0.5);
             font-size: 14px;
             line-height: 16px;
         }
+
         .social-links {
             margin-top: 18px;
+
             a {
                 margin-right: 10px;
                 color: vsPrimaryOpacity(0.5);

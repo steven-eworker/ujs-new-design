@@ -55,3 +55,9 @@ if( textareas != undefined ){
         selector: '.textarea'
       });
 }
+
+var mainEl = document.querySelector('main');
+if( mainEl.classList.contains('login') ){
+    var height = document.querySelector('.form-box').offsetHeight;
+    document.querySelector('.img-box').style.height = height.toString() + 'px';
+}
