@@ -11,6 +11,17 @@
         }
     }
 
+    .row{
+        &.toggles{
+            margin-top: 24px;
+            .col-md-6{
+                @include breakpoint-down(small){
+                    flex-basis: 50%;
+                }
+            }
+        }
+    }
+
     .form-box {
         max-width: 450px;
         margin: 0 auto;
@@ -174,6 +185,9 @@
                 @include breakpoint-down(small) {
                     display: block;
                     width: 100%;
+                    &:first-child{
+                        margin-top: 20px;
+                    }
                 }
 
                 &:hover {
@@ -184,6 +198,9 @@
                 &.transparent {
                     border-color: transparent;
                     background: transparent;
+                    &.bordered{
+                        border-color: #E2E2E9;
+                    }
 
                     &:hover {
                         background: #E2E2E9;
@@ -256,6 +273,27 @@
                 margin-right: 10px;
                 color: vsPrimaryOpacity(0.5);
                 font-size: 24px;
+            }
+        }
+    }
+    &.reset-password{
+        .form-box{
+            .form{
+                .note{
+                    text-align: center;
+                }
+                .submit{
+                    i{
+                        margin-left: 0px;
+                        margin-right: 5px;
+                    }
+                }
+                .cta{
+                    width: 48%;
+                    @include breakpoint-down(small){
+                        width: 100%;
+                    }
+                }
             }
         }
     }

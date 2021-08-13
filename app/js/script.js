@@ -57,7 +57,7 @@ if( textareas != undefined ){
 }
 
 var mainEl = document.querySelector('main');
-if( mainEl.classList.contains('login') ){
+if( mainEl.classList.contains('adjust-height') ){
     var height = document.querySelector('.form-box').offsetHeight;
     document.querySelector('.img-box').style.height = height.toString() + 'px';
 }

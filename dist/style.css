@@ -2436,6 +2436,17 @@ a::before {
   }
 }
 
+.login .row.toggles {
+  margin-top: 24px;
+}
+
+@media (max-width: 39.9375em) {
+  .login .row.toggles .col-md-6 {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
 .login .form-box {
   max-width: 450px;
   margin: 0 auto;
@@ -2621,6 +2632,9 @@ a::before {
     display: block;
     width: 100%;
   }
+  .login .form-box .form .cta:first-child {
+    margin-top: 20px;
+  }
 }
 
 .login .form-box .form .cta:hover {
@@ -2631,6 +2645,10 @@ a::before {
 .login .form-box .form .cta.transparent {
   border-color: transparent;
   background: transparent;
+}
+
+.login .form-box .form .cta.transparent.bordered {
+  border-color: #E2E2E9;
 }
 
 .login .form-box .form .cta.transparent:hover {
@@ -2703,6 +2721,25 @@ a::before {
   margin-right: 10px;
   color: rgba(60, 61, 107, 0.5);
   font-size: 24px;
+}
+
+.login.reset-password .form-box .form .note {
+  text-align: center;
+}
+
+.login.reset-password .form-box .form .submit i {
+  margin-left: 0px;
+  margin-right: 5px;
+}
+
+.login.reset-password .form-box .form .cta {
+  width: 48%;
+}
+
+@media (max-width: 39.9375em) {
+  .login.reset-password .form-box .form .cta {
+    width: 100%;
+  }
 }
 
 .site-footer {
