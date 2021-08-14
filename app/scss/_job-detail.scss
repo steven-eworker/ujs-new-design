@@ -73,6 +73,9 @@
 
             &.form {
                 padding: 30px;
+                @include breakpoint-down(small){
+                    padding: 20px;
+                }
 
                 .form-control {
                     color: vsPrimaryOpacity(0.65);
