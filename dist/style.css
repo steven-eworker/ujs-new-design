@@ -1663,6 +1663,10 @@ a::before {
   margin-right: 10px;
 }
 
+.post-a-job.jobs h2 {
+  display: inline-block;
+}
+
 .post-a-job.jobs h2 i {
   margin-right: 10px;
 }
@@ -1774,6 +1778,36 @@ a::before {
   font-size: 18px;
   line-height: 21px;
   color: rgba(60, 61, 107, 0.75);
+}
+
+.post-a-job.jobs .main-content .note-check .greyed {
+  padding: 15px;
+  color: rgba(60, 61, 107, 0.75);
+  background: rgba(60, 61, 107, 0.15);
+  border: 1px solid #3C3D6B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.post-a-job.jobs .main-content .note-check .greyed:hover {
+  background: #ffffff;
+  color: #3C3D6B;
+}
+
+.post-a-job.jobs .main-content .note-check .credit-count {
+  color: #0AD188;
+  background: rgba(10, 209, 136, 0.15);
+  border: 1px solid #0AD188;
+  float: right;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 11px 27px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 50px;
 }
 
 .post-a-job.jobs .main-content .note-check .col-md-9 {
