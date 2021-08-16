@@ -1663,6 +1663,14 @@ a::before {
   margin-right: 10px;
 }
 
+.post-a-job.jobs.contact-us {
+  background-color: #ffffff;
+}
+
+.post-a-job.jobs.contact-us .main-content .form {
+  background-color: #F8F9FA;
+}
+
 .post-a-job.jobs h2 {
   display: inline-block;
 }

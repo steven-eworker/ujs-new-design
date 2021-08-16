@@ -1,5 +1,13 @@
 .post-a-job {
     &.jobs {
+        &.contact-us{
+            background-color: $white;
+            .main-content{
+                .form{
+                    background-color: $light-bg;
+                }
+            }
+        }
         h2 {
             display: inline-block;
 
