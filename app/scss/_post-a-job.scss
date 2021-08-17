@@ -1,15 +1,21 @@
 .post-a-job {
     &.jobs {
-        &.contact-us{
+        &.contact-us {
             background-color: $white;
-            .main-content{
-                .form{
+
+            .main-content {
+                .form {
                     background-color: $light-bg;
                 }
             }
         }
+
         h2 {
             display: inline-block;
+
+            &.accordion-header {
+                display: block;
+            }
 
             i {
                 margin-right: 10px;
@@ -22,11 +28,18 @@
 
             .skip {
                 a {
+                    color: $success;
                     border-radius: 8px;
-                    border: 1px solid $primary;
+                    border: 1px solid #E2E2E9;
                     display: block;
                     width: 100%;
                     padding: 15px 0;
+                    background-color: $white;
+
+                    &:hover {
+                        color: $white;
+                        background-color: $success;
+                    }
                 }
             }
 
@@ -43,14 +56,14 @@
                         width: 2px;
                         height: 128%;
                         background: #E2E2E9;
-                        bottom: 42px;
+                        bottom: 52px;
                         position: absolute;
                         left: 22px;
                         z-index: -1;
                     }
 
                     &:nth-child(3):before {
-                        bottom: 39px;
+                        bottom: 37px;
                     }
 
                     &.active {
@@ -61,7 +74,7 @@
 
                         &:not(:first-child):before {
                             background: $success;
-                            bottom: 42px;
+                            bottom: 52px;
                         }
                     }
 
@@ -141,7 +154,7 @@
 
                 .credit-count {
                     color: $success;
-                    background: rgba(10,209,136,0.15);
+                    background: rgba(10, 209, 136, 0.15);
                     border: 1px solid $success;
                     float: right;
                     font-weight: 900;
@@ -222,11 +235,89 @@
 
                 &.submit {
                     padding: 0;
+
+                    &.p-now {
+                        display: flex;
+                        justify-content: space-between;
+                        box-shadow: none;
+                        background: transparent;
+                        border: none;
+
+                        .pay-later {
+                            display: none;
+                        }
+
+                        .submit {
+                            flex-basis: 48%;
+                            border-width: 2px;
+
+                            &.pay-now-later {
+                                background: $white;
+                                color: $success;
+
+                                &:hover {
+                                    background: $success;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }
+
+                    &.p-later {
+                        .submit {
+                            display: none;
+
+                            &.pay-later {
+                                display: block;
+                            }
+                        }
+                    }
                 }
 
                 &.list-sec {
                     &:not(:first-child) {
                         margin-top: 15px;
+                    }
+
+                    .label-wrap {
+                        position: relative;
+                        padding: 0;
+
+                        label {
+                            position: absolute;
+                            top: 18px;
+                            left: 10px;
+                            padding: 0 5px;
+                            transition: all 250ms ease-in-out;
+                            transform-origin: 0 0;
+                            background-color: #fff;
+                            opacity: 0;
+                            cursor: auto;
+                        }
+
+                        .form-control {
+
+                            &::placeholder {
+                                transition: all 250ms ease-in-out;
+                            }
+
+                            &:focus,
+                            &:not(:placeholder-shown),
+                            &:hover {
+                                box-shadow: none;
+                                border-color: #E2E2E9;
+
+                                &::placeholder {
+                                    opacity: 0;
+                                }
+
+                                +label {
+                                    font-size: 14px;
+                                    transform: translate(0px, -28px);
+                                    opacity: 1;
+                                }
+                            }
+                        }
                     }
 
 
@@ -241,7 +332,9 @@
                             line-height: 21px;
                             text-align: center;
                             background: $light-bg;
-                            padding: 15px 0;
+                            // padding: 15px 0;
+                            padding: 0;
+                            border: none;
 
                             +input[type="file"] {
                                 display: none;
@@ -251,20 +344,12 @@
                                 margin-right: 5px;
                             }
 
-                            img {
-                                width: 34px;
-                                height: 34px;
-                                display: inline-block;
-                            }
 
                             span {
                                 display: block;
                                 margin-top: 10px;
                             }
 
-                            &.logo {
-                                padding: 40px 20px;
-                            }
                         }
 
                     }
@@ -421,6 +506,25 @@
                         cursor: pointer;
                     }
 
+                    .ticket-number {
+                        font-size: 18px;
+                        line-height: 21px;
+                        padding: 7px 16px;
+                        border: 1px solid #E2E2E9;
+                        box-sizing: border-box;
+                        border-radius: 8px;
+                    }
+
+                    .selected {
+
+                        label {
+                            color: $primary;
+                        }
+                        .ticket-number{
+                            color: $primary;
+                        }
+                    }
+
                     .apply {
                         display: block;
                         width: 100%;
@@ -430,6 +534,19 @@
                         background: #E2E2E9;
                         box-sizing: border-box;
                         border-radius: 8px;
+                        .active{
+                            display: none;
+                        }
+                        &.active{
+                            color: $white;
+                            background: $success;
+                            .non-active{
+                                display: none;
+                            }
+                            .active{
+                                display: inline-block;
+                            }
+                        }
                     }
                 }
 
@@ -476,6 +593,8 @@
 
                         &.job-item {
                             background: $light-bg;
+                            border: 1px solid #E2E2E9;
+                            box-sizing: border-box;
                         }
 
                         .job-detail {

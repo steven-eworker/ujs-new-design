@@ -1675,6 +1675,10 @@ a::before {
   display: inline-block;
 }
 
+.post-a-job.jobs h2.accordion-header {
+  display: block;
+}
+
 .post-a-job.jobs h2 i {
   margin-right: 10px;
 }
@@ -1685,11 +1689,18 @@ a::before {
 }
 
 .post-a-job.jobs .sidebar .skip a {
+  color: #0AD188;
   border-radius: 8px;
-  border: 1px solid #3C3D6B;
+  border: 1px solid #E2E2E9;
   display: block;
   width: 100%;
   padding: 15px 0;
+  background-color: #ffffff;
+}
+
+.post-a-job.jobs .sidebar .skip a:hover {
+  color: #ffffff;
+  background-color: #0AD188;
 }
 
 .post-a-job.jobs .sidebar .create {
@@ -1707,14 +1718,14 @@ a::before {
   width: 2px;
   height: 128%;
   background: #E2E2E9;
-  bottom: 42px;
+  bottom: 52px;
   position: absolute;
   left: 22px;
   z-index: -1;
 }
 
 .post-a-job.jobs .sidebar .create .create-item:nth-child(3):before {
-  bottom: 39px;
+  bottom: 37px;
 }
 
 .post-a-job.jobs .sidebar .create .create-item.active .number {
@@ -1724,7 +1735,7 @@ a::before {
 
 .post-a-job.jobs .sidebar .create .create-item.active:not(:first-child):before {
   background: #0AD188;
-  bottom: 42px;
+  bottom: 52px;
 }
 
 .post-a-job.jobs .sidebar .create .create-item:not(:last-child) {
@@ -1896,8 +1907,117 @@ a::before {
   padding: 0;
 }
 
+.post-a-job.jobs .main-content .form.submit.p-now {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+  border: none;
+}
+
+.post-a-job.jobs .main-content .form.submit.p-now .pay-later {
+  display: none;
+}
+
+.post-a-job.jobs .main-content .form.submit.p-now .submit {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  border-width: 2px;
+}
+
+.post-a-job.jobs .main-content .form.submit.p-now .submit.pay-now-later {
+  background: #ffffff;
+  color: #0AD188;
+}
+
+.post-a-job.jobs .main-content .form.submit.p-now .submit.pay-now-later:hover {
+  background: #0AD188;
+  color: #ffffff;
+}
+
+.post-a-job.jobs .main-content .form.submit.p-later .submit {
+  display: none;
+}
+
+.post-a-job.jobs .main-content .form.submit.p-later .submit.pay-later {
+  display: block;
+}
+
 .post-a-job.jobs .main-content .form.list-sec:not(:first-child) {
   margin-top: 15px;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap {
+  position: relative;
+  padding: 0;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap label {
+  position: absolute;
+  top: 18px;
+  left: 10px;
+  padding: 0 5px;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  background-color: #fff;
+  opacity: 0;
+  cursor: auto;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control::-webkit-input-placeholder {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:-ms-input-placeholder {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control::-ms-input-placeholder {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control::placeholder {
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:focus, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:not(:placeholder-shown), .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #E2E2E9;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:focus::-webkit-input-placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:not(:placeholder-shown)::-webkit-input-placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:hover::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:focus:-ms-input-placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:not(:placeholder-shown):-ms-input-placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:hover:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:focus::-ms-input-placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:not(:placeholder-shown)::-ms-input-placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:hover::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:focus::placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:not(:placeholder-shown)::placeholder, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:hover::placeholder {
+  opacity: 0;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:focus + label, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:not(:placeholder-shown) + label, .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control:hover + label {
+  font-size: 14px;
+  -webkit-transform: translate(0px, -28px);
+          transform: translate(0px, -28px);
+  opacity: 1;
 }
 
 .post-a-job.jobs .main-content .form.list-sec .form-control {
@@ -1911,7 +2031,8 @@ a::before {
   line-height: 21px;
   text-align: center;
   background: #F8F9FA;
-  padding: 15px 0;
+  padding: 0;
+  border: none;
 }
 
 .post-a-job.jobs .main-content .form.list-sec .form-control.custom-file-upload + input[type="file"] {
@@ -1922,19 +2043,9 @@ a::before {
   margin-right: 5px;
 }
 
-.post-a-job.jobs .main-content .form.list-sec .form-control.custom-file-upload img {
-  width: 34px;
-  height: 34px;
-  display: inline-block;
-}
-
 .post-a-job.jobs .main-content .form.list-sec .form-control.custom-file-upload span {
   display: block;
   margin-top: 10px;
-}
-
-.post-a-job.jobs .main-content .form.list-sec .form-control.custom-file-upload.logo {
-  padding: 40px 20px;
 }
 
 .post-a-job.jobs .main-content .form.list-sec img {
@@ -2088,6 +2199,24 @@ a::before {
   cursor: pointer;
 }
 
+.post-a-job.jobs .main-content .form.list-sec .ticket-number {
+  font-size: 18px;
+  line-height: 21px;
+  padding: 7px 16px;
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .selected label {
+  color: #3C3D6B;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .selected .ticket-number {
+  color: #3C3D6B;
+}
+
 .post-a-job.jobs .main-content .form.list-sec .apply {
   display: block;
   width: 100%;
@@ -2098,6 +2227,23 @@ a::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .apply .active {
+  display: none;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .apply.active {
+  color: #ffffff;
+  background: #0AD188;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .apply.active .non-active {
+  display: none;
+}
+
+.post-a-job.jobs .main-content .form.list-sec .apply.active .active {
+  display: inline-block;
 }
 
 .post-a-job.jobs .main-content .form .label {
@@ -2143,6 +2289,9 @@ a::before {
 
 .post-a-job.jobs .main-content .form .accordion .accordion-body.job-item {
   background: #F8F9FA;
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .post-a-job.jobs .main-content .form .accordion .accordion-body .job-detail {

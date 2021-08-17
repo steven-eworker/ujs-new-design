@@ -78,7 +78,8 @@
                 <div class="row">
                     <div class="col-md-3 job-listing job-detail post-a-job sidebar">
                         <div class="skip">
-                            <a href="javascript:void(0)"><img src="images/skip.png" alt=""></a>
+                            <a href="javascript:void(0)"><i class="fas fa-level-down-alt"></i> Skip to purchase
+                                Credit</a>
                         </div>
                         <div class="row list-sec">
                             <div class="create">
@@ -109,58 +110,77 @@
                     <form class="col-md-8 main-content" action="">
                         <div class="row list-sec detail form">
                             <h2>Job Details</h2>
-                            <input type="text" class="form-control" placeholder="Title">
-                            <input type="text" class="form-control" placeholder="Position">
+                            <div class="label-wrap">
+                                <input type="text" id="title" class="form-control" placeholder="Title">
+                                <label for="title">Title</label>
+                            </div>
+                            <div class="label-wrap">
+                                <input type="text" id="position" class="form-control" placeholder="Position">
+                                <label for="position">Position</label>
+                            </div>
                             <div class="row">
                                 <div class="col">
-                                    <select name="" id="" class="form-control">
-                                        <option value="">City</option>
-                                        <option value="">Value 1</option>
-                                        <option value="">Value 2</option>
-                                    </select>
+                                    <div class="label-wrap">
+                                        <select name="" id="city" class="form-control">
+                                            <option value="">Value 1</option>
+                                            <option value="">Value 2</option>
+                                        </select>
+                                        <label for="city">City</label>
+                                    </div>
                                 </div>
                                 <div class="col">
-                                    <select name="" id="" class="form-control">
-                                        <option value="">State(s)</option>
-                                        <option value="">Value 1</option>
-                                        <option value="">Value 2</option>
-                                    </select>
+                                    <div class="label-wrap">
+                                        <select name="states" id="states" class="form-control">
+                                            <option value="">Value 1</option>
+                                            <option value="">Value 2</option>
+                                        </select>
+                                        <label for="states">State(s)</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Practice Type(s)</option>
-                                        <option value="">Value 1</option>
-                                        <option value="">Value 2</option>
-                                    </select>
+                                    <div class="label-wrap">
+                                        <select name="practice" id="practice" class="form-control">
+                                            <option value="">Value 1</option>
+                                            <option value="">Value 2</option>
+                                        </select>
+                                        <label for="practice">Practice Type(s)</label>
+                                    </div>
                                 </div>
                                 <div class="col form-control">
-                                    <label class="visa">Visa Candidates accepted?<input type="checkbox" name="confirmation"
-                                            value="all">
+                                    <label class="visa">Visa Candidates accepted?<input type="checkbox"
+                                            name="confirmation" value="all">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
-                            <select class="form-control" name="" id="">
-                                <option value="">Subspecialty(s)</option>
-                                <option value="">Value 1</option>
-                                <option value="">Value 2</option>
-                            </select>
+                            <div class="label-wrap">
+                                <select class="form-control" name="subspecialty" id="subspecialty">
+                                    <option value="">Value 1</option>
+                                    <option value="">Value 2</option>
+                                </select>
+                                <label for="subspecialty">Subspecialty(s)</label>
+                            </div>
                         </div>
                         <div class="row list-sec detail form">
                             <h2>Employer Details</h2>
                             <div class="row">
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" placeholder="Name">
-                                    <input type="text" class="form-control" placeholder="Home Page URL">
+                                    <div class="label-wrap">
+                                        <input type="text" id="name" class="form-control" placeholder="Name">
+                                        <label for="name">Name</label>
+                                    </div>
+                                    <div class="label-wrap">
+                                        <input type="text" id="homepage" class="form-control" placeholder="Home Page URL">
+                                        <label for="homepage">Home Page URL</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="file-upload1" class="form-control custom-file-upload logo">
-                                        <img src="images/upload.png" alt="">
-                                        <span>Upload Logo</span>
+                                        <img src="images/upload-logo.png" alt="">
                                     </label>
-                                    <input id="file-upload1" type="file"/>
+                                    <input id="file-upload1" type="file" />
                                 </div>
                             </div>
                         </div>
@@ -169,12 +189,15 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <label for="file-upload2" class="form-control custom-file-upload">
-                                        <i class="fa fa-video"></i> Upload Video
+                                        <img src="images/upload-video.png" alt="">
                                     </label>
-                                    <input id="file-upload2" type="file"/>
+                                    <input id="file-upload2" type="file" />
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" placeholder="YouTube Video URL">
+                                    <div class="label-wrap">
+                                        <input type="text" id="youTube" class="form-control" placeholder="YouTube Video URL">
+                                        <label for="youTube">YouTube Video URL</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -192,10 +215,16 @@
                             </div>
                             <div class="toggle-box">
                                 <div id="url" class="wrap">
-                                    <input class="form-control" type="text" placeholder="Application URL">
+                                    <div class="label-wrap">
+                                        <input class="form-control" id="application" type="text" placeholder="Application URL">
+                                        <label for="application">Application URL</label>
+                                    </div>
                                 </div>
                                 <div id="email" class="wrap" style="display: none;">
-                                    <input class="form-control" type="text" placeholder="Apply to Email">
+                                    <div class="label-wrap">
+                                        <input class="form-control" id="apply-url" type="text" placeholder="Apply to Email">
+                                        <label for="apply-url">Apply to Email</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -205,25 +234,26 @@
                         </div>
                         <div class="row list-sec detail form">
                             <h2>Increase visibility with these add-ons</h2>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Highlight my post in yellow (+$10)
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Highlight my post with a custom brand color (+$15)
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
+                                <span class="ticket-number">#323648</span>
                             </div>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Sticky my post so it stays on the front page for 1 month (+$100)
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Sticky my post so it stays on the front page for 3 months (+$250)
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
@@ -437,31 +467,31 @@
                         </div>
                         <div class="row list-sec detail form">
                             <h2>Purchase Credits</h2>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Pre-purchase 1 credit ($5)
                                     <input type="radio" name="purchase">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Pre-purchase a package of 5 credits and save 25% ($20)
                                     <input type="radio" name="purchase">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Pre-purchase a package of 10 credits and save 30% ($35)
                                     <input type="radio" name="purchase">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Pre-purchase a package of 15 credits and save 35% ($50)
                                     <input type="radio" name="purchase">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label">
+                            <div class="label checks">
                                 <label>Pre-purchase a package of 20 credits and save 40% ($60)
                                     <input type="radio" name="purchase">
                                     <span class="checkmark"></span>
@@ -471,10 +501,14 @@
                         <div class="row list-sec detail form">
                             <h2><i class="fas fa-tag"></i>tag Have a coupon?</h2>
                             <div class="col-md-9">
-                                <input type="text" placeholder="Enter your discount code" class="form-control">
+                                <div class="label-wrap">
+                                    <input type="text" id="discount" placeholder="Enter your discount code" class="form-control">
+                                    <label for="discount">Enter your discount code</label>
+                                </div>
                             </div>
                             <div class="col-md-3">
-                                <a href="#" class="apply">Apply</a>
+                                <!-- Remove the Class active from <a class="apply active"> tag to see the greyed out version of the button -->
+                                <a href="#" class="apply active"> <span class="non-active">Apply</span> <span class="active"><i class="fas fa-check-circle"></i> Applied</span></a>
                             </div>
                         </div>
                         <div class="row list-sec detail form">
@@ -492,39 +526,59 @@
                                 <div id="pay-now" class="wrap pay now">
                                     <h3><i class="fas fa-credit-card"></i>Card Details</h3>
                                     <div class="row">
-                                    <div class="col-md-8">
-                                        <input class="form-control" type="text" placeholder="Card Number">
-
+                                        <div class="col-md-8">
+                                            <div class="label-wrap">
+                                                <input class="form-control" id="card-num" type="text" placeholder="Card Number">
+                                                <label for="card-num">Card Number</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="label-wrap">
+                                                <input class="form-control" id="card-date" type="text" placeholder="MM/YY">
+                                                <label for="card-date">MM/YY</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="label-wrap">
+                                                <input class="form-control" id="cvv-num" type="text" placeholder="CVV">
+                                                <label for="cvv-num">CVV</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-md-2">
-                                        <input class="form-control" type="text" placeholder="MM/YY">
-
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input class="form-control" type="text" placeholder="CVV">
-
-                                    </div>
-                                </div>
                                 </div>
                                 <div id="pay-later" class="wrap pay later" style="display: none;">
-                                    <p class="note">Choosing a pay later will save your posting as an unpaid draft and create an Invoice. You must pay the invoice before the job becomes active.</p>
+                                    <p class="note">Choosing a pay later will save your posting as an unpaid draft and
+                                        create an Invoice. You must pay the invoice before the job becomes active.</p>
                                     <div class="later-wrap">
-                                        <input class="form-control" type="text" placeholder="PO # / Invoice notes">
-                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span class="cstm-tooltip">Will be displayed on invoices for reference</span></a>
+                                        <div class="label-wrap">
+                                            <input class="form-control" id="po-in" type="text" placeholder="PO # / Invoice notes">
+                                            <label for="po-in">PO # / Invoice notes</label>
+                                        </div>
+                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span
+                                                class="cstm-tooltip">Will be displayed on invoices for
+                                                reference</span></a>
                                     </div>
                                     <div class="later-wrap">
-                                        <input class="form-control" type="text" placeholder="Accounting email">
-                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span class="cstm-tooltip">Billing contact for issues related to job listing payment</span></a>
+                                        <div class="label-wrap">
+                                            <input class="form-control" id="acc-email" type="text" placeholder="Accounting email">
+                                            <label for="acc-email">Accounting email</label>
+                                        </div>
+                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span
+                                                class="cstm-tooltip">Billing contact for issues related to job listing
+                                                payment</span></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row list-sec detail form submit">
+                        <div class="row list-sec detail form submit p-now">
+                            <button class="submit pay-now-later" type="submit">
+                                <i class="fas fa-clock"></i> Pay Now and Post Job Later
+                            </button>
                             <button class="submit pay-now" type="submit">
                                 <i class="fas fa-paper-plane"></i> Pay and Post Job Now
                             </button>
-                            <button class="submit pay-later" type="submit" style="display: none;">
-                                <i class="fas fa-clock"></i> Pay later and post job(s) later
+                            <button class="submit pay-later" type="submit">
+                                <i class="fas fa-clock"></i> Pay Later and Post Job Later
                             </button>
                         </div>
                     </form>

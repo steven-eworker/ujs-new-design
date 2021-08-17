@@ -37,11 +37,11 @@ if( toggles != undefined ){
             divFocus.style.display = 'block';
             if( divFocus.classList.contains('pay') ){
                 if( divFocus.classList.contains('now') ){
-                    document.querySelector('.submit.pay-now').style.display = 'block';
-                    document.querySelector('.submit.pay-later').style.display = 'none';
+                    document.querySelector('.submit.pay-now').parentNode.classList.add('p-now');
+                    document.querySelector('.submit.pay-now').parentNode.classList.remove('p-later');
                 } else {
-                    document.querySelector('.submit.pay-now').style.display = 'none';
-                    document.querySelector('.submit.pay-later').style.display = 'block';
+                    document.querySelector('.submit.pay-now').parentNode.classList.add('p-later');
+                    document.querySelector('.submit.pay-now').parentNode.classList.remove('p-now');
                 }
             }
             btn.target.classList.add('active');
@@ -60,4 +60,31 @@ var mainEl = document.querySelector('main');
 if( mainEl.classList.contains('adjust-height') ){
     var height = document.querySelector('.form-box').offsetHeight;
     document.querySelector('.img-box').style.height = height.toString() + 'px';
+}
+
+var checkBoxes = document.querySelectorAll('.checks');
+if( checkBoxes != undefined )
+checkBoxes.forEach(function(checks){
+    checks.querySelectorAll('label').forEach(function(label){
+        label.addEventListener('click', function(elm){
+            if( elm.target.parentNode.classList.contains('selected') ){
+                elm.target.parentNode.classList.remove('selected');
+            } else {
+                elm.target.parentNode.classList.add('selected');
+            }
+            removeSelectedLabels();
+        });
+    });
+});
+
+function removeSelectedLabels(){
+    checkBoxes.forEach(function(checks){
+        checks.querySelectorAll('label').forEach(function(label){
+            if( label.querySelector('input:checked') == null ){
+                label.parentNode.classList.remove('selected');
+            } else {
+                label.parentNode.classList.add('selected')
+            }
+        });
+    });
 }
