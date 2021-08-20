@@ -74,6 +74,14 @@
         .nav-item {
             padding: 42px 36px;
 
+            @include breakpoint-down(large){
+                padding: 42px 18px;
+            }
+
+            @include breakpoint-down(medium){
+                padding: 42px 10px;
+            }
+
             @include breakpoint-down(small) {
                 padding: 15px 0px;
             }
@@ -81,6 +89,7 @@
             .nav-link {
                 color: $primary;
                 z-index: 1;
+                padding: 0;
 
                 .fas {
                     font-size: 14px;
@@ -120,6 +129,7 @@
                     border: none;
                     list-style-type: disc;
                     width: 100%;
+                    padding: 0;
                 }
 
                 li {
@@ -127,6 +137,9 @@
                     @include breakpoint-down(small){
                         padding: 0;
                         margin: 15px 34px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
                         &::marker{
                             color: $secondary;
                         }
@@ -149,6 +162,9 @@
 
             &:last-child {
                 margin-right: 30px;
+                @include breakpoint-down(medium){
+                    margin-right: 15px;
+                }
             }
         }
     }
