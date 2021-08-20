@@ -52,8 +52,9 @@
 
             &:first-child {
                 margin-right: 30px;
+                margin-bottom: 20px;
 
-                @include breakpoint-down(small) {
+                @include breakpoint-down(medium) {
                     margin-right: 10px;
                 }
             }
@@ -93,7 +94,7 @@
 
     .copyright {
         text-align: center;
-        margin-top: 56px;
+        margin-top: 36px;
         font-size: 14px;
         color: $white;
         opacity: 0.5;

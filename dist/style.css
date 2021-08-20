@@ -862,8 +862,6 @@ a::before {
 @media (max-width: 39.9375em) {
   .banner.job-listing {
     text-align: center;
-    background-size: auto;
-    background-position: 77% 10%;
   }
 }
 
@@ -2662,6 +2660,21 @@ a::before {
   color: rgba(60, 61, 107, 0.05);
 }
 
+@media (max-width: 87.4375em) {
+  .about-us h2.text-bg:before {
+    left: 24%;
+    top: -126%;
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .about-us h2.text-bg:before {
+    left: 16%;
+    font-size: 60px;
+  }
+}
+
 @media (max-width: 39.9375em) {
   .about-us h2.text-bg:before {
     font-weight: bold;
@@ -2670,6 +2683,10 @@ a::before {
     left: 12%;
     top: -16%;
   }
+}
+
+.about-us img {
+  width: 100%;
 }
 
 .about-us img.desk {
@@ -2749,6 +2766,7 @@ a::before {
 .about-us.tagline img {
   display: inline-block;
   width: 100px;
+  height: 62px;
   margin-left: 20px;
 }
 
@@ -2758,10 +2776,6 @@ a::before {
     display: -ms-flexbox;
     display: flex;
   }
-  .about-us.tagline .copy img,
-  .about-us.tagline .copy h3 {
-    padding: 0 13px;
-  }
 }
 
 @media (max-width: 39.9375em) {
@@ -2770,34 +2784,46 @@ a::before {
   }
 }
 
-.about-us.about .col-md-6 {
+.about-us.about .col-lg-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-us.about .col-lg-6 {
   padding: 0;
 }
 
-.about-us.about .col-md-6:last-child {
-  padding: 150px 100px 150px 100px;
+.about-us.about .col-lg-6:last-child {
+  padding: 0 100px;
 }
 
-@media (max-width: 39.9375em) {
-  .about-us.about .col-md-6:last-child {
+@media (max-width: 63.9375em) {
+  .about-us.about .col-lg-6:last-child {
     padding: 50px 30px;
   }
 }
 
-.about-us.about .col-md-6 img {
+.about-us.about .col-lg-6 img {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 0px 0px 200px 0px;
 }
 
 @media (max-width: 39.9375em) {
-  .about-us.about .col-md-6 img {
+  .about-us.about .col-lg-6 img {
     border-radius: 0;
     width: 100%;
   }
 }
 
-.about-us.about .col-md-6 p {
+.about-us.about .col-lg-6 p {
   margin-top: 24px;
 }
 
@@ -2817,6 +2843,18 @@ a::before {
   padding: 0 265px;
 }
 
+@media (max-width: 87.4375em) {
+  .about-us.who-we-are .copy {
+    padding: 0 220px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .about-us.who-we-are .copy {
+    padding: 0 120px;
+  }
+}
+
 @media (max-width: 39.9375em) {
   .about-us.who-we-are .copy {
     padding: 0 30px;
@@ -2832,12 +2870,6 @@ a::before {
 @media (max-width: 39.9375em) {
   .about-us.trusted .container {
     text-align: center;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .about-us.trusted h3 {
-    padding: 0 23%;
   }
 }
 
@@ -2873,11 +2905,23 @@ a::before {
   text-align: right;
 }
 
+@media (max-width: 63.9375em) {
+  .about-us.connecting .cta-box {
+    text-align: center;
+  }
+}
+
 .about-us.connecting .cta-box .btn {
   padding: 15px 40px;
   border-color: #3C3D6B;
   background: #3C3D6B;
   color: #ffffff;
+}
+
+@media (max-width: 39.9375em) {
+  .about-us.connecting .cta-box .btn {
+    padding: 15px 18px;
+  }
 }
 
 .about-us.connecting .cta-box .btn:hover {
@@ -2889,9 +2933,21 @@ a::before {
   margin-right: 15px;
 }
 
+@media (max-width: 63.9375em) {
+  .about-us.connecting .cta-box .btn:first-child {
+    margin-bottom: 0 !important;
+  }
+}
+
 .about-us.connecting .cta-box .btn.transparent {
   background: transparent;
   color: #3C3D6B;
+}
+
+@media (max-width: 63.9375em) {
+  .about-us.connecting .cta-box .btn.transparent {
+    margin-bottom: 20px;
+  }
 }
 
 .about-us.connecting .cta-box .btn.transparent:hover {
@@ -2899,7 +2955,7 @@ a::before {
   color: #ffffff;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .about-us.connecting .cta-box div {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2909,6 +2965,9 @@ a::before {
         -ms-flex-direction: row;
             flex-direction: row;
     margin-top: 42px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -3412,9 +3471,10 @@ a::before {
 
 .site-footer .advert a:first-child {
   margin-right: 30px;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .site-footer .advert a:first-child {
     margin-right: 10px;
   }
@@ -3457,7 +3517,7 @@ a::before {
 
 .site-footer .copyright {
   text-align: center;
-  margin-top: 56px;
+  margin-top: 36px;
   font-size: 14px;
   color: #ffffff;
   opacity: 0.5;

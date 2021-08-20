@@ -5,8 +5,6 @@
 
         @include breakpoint-down(small) {
             text-align: center;
-            background-size: auto;
-            background-position: 77% 10%;
         }
 
         .main-heading {

@@ -19,6 +19,16 @@
                 top: -100%;
                 color: vsPrimaryOpacity(0.05);
 
+                @include breakpoint-down(large) {
+                    left: 24%;
+                    top: -126%;
+                    font-size: 80px;
+                }
+                @include breakpoint-down(medium) {
+                    left: 16%;
+                    font-size: 60px;
+                }
+
                 @include breakpoint-down(small) {
                     font-weight: bold;
                     font-size: 50px;
@@ -31,6 +41,8 @@
     }
 
     img {
+        width: 100%;
+
         &.desk {
             display: inline-block;
 
@@ -98,6 +110,7 @@
         img {
             display: inline-block;
             width: 100px;
+            height: 62px;
             margin-left: 20px;
         }
 
@@ -107,7 +120,7 @@
 
                 img,
                 h3 {
-                    padding: 0 13px
+                    // padding: 0 13px;
                 }
             }
         }
@@ -118,15 +131,22 @@
             @include breakpoint-down(small) {
                 padding: 0;
             }
+
         }
 
-        .col-md-6 {
+        .col-lg-6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-lg-6 {
             padding: 0;
 
             &:last-child {
-                padding: 150px 100px 150px 100px;
+                padding: 0 100px;
 
-                @include breakpoint-down(small) {
+                @include breakpoint-down(medium) {
                     padding: 50px 30px;
                 }
             }
@@ -149,7 +169,8 @@
 
     &.who-we-are {
         padding: 80px 0;
-        @include breakpoint-down(small){
+
+        @include breakpoint-down(small) {
             padding-top: 0;
             padding-bottom: 50px;
         }
@@ -157,6 +178,12 @@
         .copy {
             margin-top: 70px;
             padding: 0 265px;
+            @include breakpoint-down(large){
+                padding: 0 220px;
+            }
+            @include breakpoint-down(medium){
+                padding: 0 120px;
+            }
 
             @include breakpoint-down(small) {
                 padding: 0 30px;
@@ -177,7 +204,7 @@
 
         h3 {
             @include breakpoint-down(small) {
-                padding: 0 23%;
+                // padding: 0 23%;
             }
         }
 
@@ -211,25 +238,38 @@
 
         .cta-box {
             text-align: right;
+            @include breakpoint-down(medium){
+                text-align: center;
+            }
 
             .btn {
                 padding: 15px 40px;
                 border-color: $primary;
                 background: $primary;
                 color: $white;
+                @include breakpoint-down(small){
+                    padding: 15px 18px;
+                }
 
                 &:hover {
                     color: $primary;
                     background: transparent;
                 }
-
+                
                 &:first-child {
                     margin-right: 15px;
+                    
+                    @include breakpoint-down(medium){
+                        margin-bottom: 0 !important;
+                    }
                 }
 
                 &.transparent {
                     background: transparent;
                     color: $primary;
+                    @include breakpoint-down(medium){
+                        margin-bottom: 20px;
+                    }
 
                     &:hover {
                         background: $primary;
@@ -239,10 +279,11 @@
             }
 
             div {
-                @include breakpoint-down(small) {
+                @include breakpoint-down(medium) {
                     display: flex;
                     flex-direction: row;
                     margin-top: 42px;
+                    justify-content: center;
                 }
             }
         }
