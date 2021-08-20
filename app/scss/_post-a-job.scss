@@ -25,6 +25,12 @@
         .sidebar {
             margin: 0;
             margin-right: 22px;
+            @include breakpoint-down(small){
+                .list-sec{
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
 
             .create-mob {
                 @include breakpoint-down(small) {
@@ -276,6 +282,9 @@
 
             .form {
                 margin-top: 0;
+                @include breakpoint-down(small){
+                    margin: 0;
+                }
 
                 &.submit {
                     padding: 0;
@@ -522,16 +531,16 @@
                                 }
                             }
                         }
+                        label{
+                            display: block;
+                        }
 
                         .visa {
                             padding-left: 0;
 
                             .checkmark {
                                 left: unset;
-                                right: -56%;
-                                @include breakpoint-down(small){
-                                    right: -32%;
-                                }
+                                right: 16px;
                             }
                         }
                     }

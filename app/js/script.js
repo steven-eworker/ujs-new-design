@@ -88,3 +88,63 @@ function removeSelectedLabels(){
         });
     });
 }
+
+var searchInputs = document.querySelectorAll('.search');
+if( searchInputs != undefined ){
+    searchInputs.forEach(function(srch){
+        srch.addEventListener('onkeyup', function(elm){
+            filterListSearch(elm);
+        });
+    });
+}
+
+function filterListSearch1() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.querySelectorAll('.search')[0];
+    filter = input.value.toUpperCase();
+    ul = input.parentNode.querySelector('.list-options');
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("label")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+function filterListSearch2() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.querySelectorAll('.search')[1];
+    filter = input.value.toUpperCase();
+    ul = input.parentNode.querySelector('.list-options');
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("label")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+function filterListSearch3() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.querySelectorAll('.search')[2];
+    filter = input.value.toUpperCase();
+    ul = input.parentNode.querySelector('.list-options');
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("label")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}

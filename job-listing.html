@@ -75,7 +75,7 @@
         <section class="jobs job-listing">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3 fltr-wrap">
                         <div class="mob-triggers title d-block d-sm-none">
                             <a class="filter-trigger" href="javascript:void(0)">
                                 <img src="images/filter-icon.svg" alt="" class="icon">
@@ -103,7 +103,7 @@
                                                 aria-labelledby="headingOne" data-bs-parent="#accordionstate">
                                                 <div class="accordion-body">
                                                     <input class="search" type="text" name="" id=""
-                                                        placeholder="Search...">
+                                                        placeholder="Search..." onkeyup="filterListSearch1()">
                                                     <ul class="list-options">
                                                         <li><label>Albama<input type="checkbox" name="confirmation"
                                                                     value="all">
@@ -149,33 +149,25 @@
                                                 aria-labelledby="headingTwo" data-bs-parent="#accordionstate">
                                                 <div class="accordion-body">
                                                     <input class="search" type="text" name="" id=""
-                                                        placeholder="Search...">
+                                                        placeholder="Search..." onkeyup="filterListSearch2()">
                                                     <ul class="list-options">
-                                                        <li><label>Albama<input type="checkbox" name="confirmation"
+                                                        <li><label>Hospital<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Alaska<input type="checkbox" name="confirmation"
+                                                        <li><label>Academic Institution<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Arizona<input type="checkbox" name="confirmation"
+                                                        <li><label>Group Practice<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Arkansas<input type="checkbox" name="confirmation"
+                                                        <li><label>Solo Practice<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>California<input type="checkbox" name="confirmation"
-                                                                    value="all">
-                                                                <span class="checkmark"></span>
-                                                            </label></li>
-                                                        <li><label>Colorado<input type="checkbox" name="confirmation"
-                                                                    value="all">
-                                                                <span class="checkmark"></span>
-                                                            </label></li>
-                                                        <li><label>Connecticut<input type="checkbox" name="confirmation"
+                                                        <li><label>Multispecialty Group<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
@@ -195,36 +187,44 @@
                                                 aria-labelledby="headingThree" data-bs-parent="#accordionstate">
                                                 <div class="accordion-body">
                                                     <input class="search" type="text" name="" id=""
-                                                        placeholder="Search...">
+                                                        placeholder="Search..." onkeyup="filterListSearch3()">
                                                     <ul class="list-options">
-                                                        <li><label>Albama<input type="checkbox" name="confirmation"
+                                                        <li><label>General Urology<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Alaska<input type="checkbox" name="confirmation"
+                                                        <li><label>Urologic Oncology<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Arizona<input type="checkbox" name="confirmation"
+                                                        <li><label>Pediatric Urology<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Arkansas<input type="checkbox" name="confirmation"
+                                                        <li><label>Reconstructive Urology<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>California<input type="checkbox" name="confirmation"
+                                                        <li><label>FPMRS/Urogynecology<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Colorado<input type="checkbox" name="confirmation"
+                                                        <li><label>Robotic/Minimally Invasive Surgery<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
-                                                        <li><label>Connecticut<input type="checkbox" name="confirmation"
+                                                        <li><label>Endourology<input type="checkbox" name="confirmation"
                                                                     value="all">
                                                                 <span class="checkmark"></span>
                                                             </label></li>
+                                                        <li><label>Neurourology<input type="checkbox" name="confirmation"
+                                                                value="all">
+                                                            <span class="checkmark"></span>
+                                                        </label></li>
+                                                        <li><label>Andrology/Men’s Health<input type="checkbox" name="confirmation"
+                                                            value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
                                                     </ul>
                                                 </div>
                                             </div>
@@ -260,7 +260,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9 listing-wrap">
                         <div class="job-list">
                             <div class="d-flex justify-content-start align-items-center job-item">
                                 <div class="d-flex justify-content-start align-items-center details">
@@ -278,7 +278,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 1d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly flex-column tags">
                                         <a href="#" class="btn tag">Hospital Employed</a>
                                         <a href="#" class="btn tag">Neurorology</a>
@@ -305,7 +305,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 1d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly flex-column tags">
                                         <a href="#" class="btn tag">Group Practice</a>
                                     </div>
@@ -327,7 +327,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 2d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly tags">
                                         <p class="btn tag"></p>
                                     </div>
@@ -349,7 +349,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 2d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly tags">
                                         <p class="btn tag"></p>
                                     </div>
@@ -371,7 +371,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 2d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly tags">
                                         <p class="btn tag"></p>
                                     </div>
@@ -393,7 +393,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 2d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly tags">
                                         <p class="btn tag"></p>
                                     </div>
@@ -415,7 +415,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 2d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly tags">
                                         <p class="btn tag"></p>
                                     </div>
@@ -437,7 +437,7 @@
                                         <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 2d ago</p>
                                     </div>
                                 </div>
-                                <div class="d-flex justify-content-between align-items-start cta-box">
+                                <div class="d-flex justify-content-between align-items-center cta-box">
                                     <div class="d-flex justify-content-evenly tags">
                                         <p class="btn tag"></p>
                                     </div>
