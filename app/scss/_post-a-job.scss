@@ -26,7 +26,18 @@
             margin: 0;
             margin-right: 22px;
 
+            .create-mob {
+                @include breakpoint-down(small) {
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                }
+            }
+
             .skip {
+                padding: 0;
+                margin-top: 0;
+
                 a {
                     color: $success;
                     border-radius: 8px;
@@ -47,6 +58,12 @@
                 padding: 0;
                 text-align: left;
 
+                @include breakpoint-down(small) {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
                 .create-item {
                     z-index: 5;
                     position: relative;
@@ -60,6 +77,16 @@
                         position: absolute;
                         left: 22px;
                         z-index: -1;
+
+                        @include breakpoint-down(small) {
+                            width: 100%;
+                            height: 2px;
+                            background: #E2E2E9;
+                            bottom: 50% !important;
+                            position: absolute;
+                            left: -67px;
+                            z-index: -1;
+                        }
                     }
 
                     &:nth-child(3):before {
@@ -80,6 +107,10 @@
 
                     &:not(:last-child) {
                         margin-bottom: 50px;
+
+                        @include breakpoint-down(small) {
+                            margin-bottom: 0;
+                        }
                     }
 
                     .number {
@@ -95,12 +126,21 @@
                         font-weight: 500;
                         font-size: 18px;
                         line-height: 21px;
+
+                        @include breakpoint-down(small) {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
                     }
 
                     p {
                         font-size: 14px;
                         line-height: 16px;
                         color: vsPrimaryOpacity(0.5);
+                        @include breakpoint-down(small) {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
                     }
 
                 }
@@ -136,6 +176,10 @@
                 font-size: 18px;
                 line-height: 21px;
                 color: vsPrimaryOpacity(0.75);
+                @include breakpoint-down(small) {
+                    font-size: 16px;
+                    line-height: 19px;
+                }
 
                 .greyed {
                     padding: 15px;
@@ -250,6 +294,12 @@
                         .submit {
                             flex-basis: 48%;
                             border-width: 2px;
+                            @include breakpoint-down(small){
+                                flex-basis: 100%;
+                                &:nth-child(2){
+                                    margin-top: 20px;
+                                }
+                            }
 
                             &.pay-now-later {
                                 background: $white;
@@ -279,6 +329,7 @@
                         margin-top: 15px;
                     }
 
+
                     .label-wrap {
                         position: relative;
                         padding: 0;
@@ -293,6 +344,10 @@
                             background-color: #fff;
                             opacity: 0;
                             cursor: auto;
+                            @include breakpoint-down(small) {
+                                font-size: 16px;
+                                line-height: 19px;
+                            }
                         }
 
                         .form-control {
@@ -360,6 +415,11 @@
 
                     .toggle-box {
                         padding-top: 20px;
+                        .col-md-2{
+                            @include breakpoint-down(small){
+                                flex-basis: 48%;
+                            }
+                        }
 
                         .later-wrap {
                             position: relative;
@@ -401,6 +461,10 @@
                         font-weight: 900;
                         font-size: 18px;
                         line-height: 21px;
+                        @include breakpoint-down(small) {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
 
                         i {
                             margin-right: 10px;
@@ -418,6 +482,12 @@
                                 padding: 16px 0;
                                 color: vsPrimaryOpacity(0.5);
                                 position: relative;
+                                @include breakpoint-down(small){
+                                    flex-basis: 50%;
+                                    &:last-child{
+                                        margin-top: 0;
+                                    }
+                                }
 
                                 &:before {
                                     content: '';
@@ -444,6 +514,13 @@
                             &:last-child {
                                 padding-right: 0;
                             }
+                            &:not(.form-control){
+
+                                @include breakpoint-down(small){
+                                    padding: 0;
+                                    flex-basis: 100%;
+                                }
+                            }
                         }
 
                         .visa {
@@ -452,6 +529,9 @@
                             .checkmark {
                                 left: unset;
                                 right: -56%;
+                                @include breakpoint-down(small){
+                                    right: -32%;
+                                }
                             }
                         }
                     }
@@ -494,6 +574,10 @@
                             color: #fff;
                             font-size: 18px;
                             font-weight: 700;
+                            @include breakpoint-down(small) {
+                                font-size: 16px;
+                                line-height: 19px;
+                            }
                         }
                     }
 
@@ -504,6 +588,10 @@
                         position: relative;
                         padding-left: 42px;
                         cursor: pointer;
+                        @include breakpoint-down(small) {
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
                     }
 
                     .ticket-number {
@@ -513,6 +601,11 @@
                         border: 1px solid #E2E2E9;
                         box-sizing: border-box;
                         border-radius: 8px;
+                        @include breakpoint-down(small) {
+                            font-size: 14px;
+                            line-height: 18px;
+                            display: none;
+                        }
                     }
 
                     .selected {
@@ -520,7 +613,8 @@
                         label {
                             color: $primary;
                         }
-                        .ticket-number{
+
+                        .ticket-number {
                             color: $primary;
                         }
                     }
@@ -534,16 +628,20 @@
                         background: #E2E2E9;
                         box-sizing: border-box;
                         border-radius: 8px;
-                        .active{
+
+                        .active {
                             display: none;
                         }
-                        &.active{
+
+                        &.active {
                             color: $white;
                             background: $success;
-                            .non-active{
+
+                            .non-active {
                                 display: none;
                             }
-                            .active{
+
+                            .active {
                                 display: inline-block;
                             }
                         }
@@ -574,16 +672,22 @@
                         box-shadow: none;
                         background: none;
 
-                        &:after {
-                            background: none;
-                            content: 'HIDE';
-                            transform: unset;
-                            margin-right: 20px;
+                        @include breakpoint-up(medium){
+
+                            &:after {
+                                background: none;
+                                content: 'HIDE';
+                                transform: unset;
+                                margin-right: 20px;
+                            }
                         }
+
 
                         &.collapsed {
                             &:after {
-                                content: 'SHOW';
+                                @include breakpoint-up(medium){
+                                    content: 'SHOW';
+                                }
                             }
                         }
                     }

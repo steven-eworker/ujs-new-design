@@ -77,11 +77,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 job-listing job-detail post-a-job sidebar">
-                        <div class="skip">
+                        <div class="row list-sec d-xs-block d-lg-none create-mob">
+                            <div class="create">
+                                <div class="d-flex justify-content-start align-items-center create-item active">
+                                    <span class="number">1</span>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center create-item">
+                                    <span class="number">2</span>
+                                </div>
+                                <div class="d-flex justify-content-start align-items-center create-item">
+                                    <span class="number">3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec skip">
                             <a href="javascript:void(0)"><i class="fas fa-level-down-alt"></i> Skip to purchase
                                 Credit</a>
                         </div>
-                        <div class="row list-sec">
+                        <div class="row list-sec d-none d-lg-block">
                             <div class="create">
                                 <div class="d-flex justify-content-start align-items-center create-item active">
                                     <span class="number">1</span>
@@ -269,6 +282,7 @@
                                             aria-expanded="false" aria-controls="jobpreviewcollapse">
                                             <i class="fas fa-eye"></i>Job Listing Preview
                                         </button>
+                                        <!-- Redirect user to respective page instead of opening the accordion -->
                                     </h2>
                                     <div id="jobpreviewcollapse" class="accordion-collapse collapse job-list"
                                         aria-labelledby="flush-headingOne" data-bs-parent="#jobpreview">
@@ -319,6 +333,7 @@
                                             <i class="fas fa-eye"></i>Job Listing Details Preview
                                         </button>
                                     </h2>
+                                     <!-- Redirect user to respective page instead of opening the accordion -->
                                     <div id="jobview" class="accordion-collapse collapse job-list"
                                         aria-labelledby="flush-headingOne" data-bs-parent="#jobdetail">
                                         <div class="accordion-body">

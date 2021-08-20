@@ -1688,6 +1688,20 @@ a::before {
   margin-right: 22px;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .sidebar .create-mob {
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: none;
+  }
+}
+
+.post-a-job.jobs .sidebar .skip {
+  padding: 0;
+  margin-top: 0;
+}
+
 .post-a-job.jobs .sidebar .skip a {
   color: #0AD188;
   border-radius: 8px;
@@ -1708,6 +1722,20 @@ a::before {
   text-align: left;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .sidebar .create {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .post-a-job.jobs .sidebar .create .create-item {
   z-index: 5;
   position: relative;
@@ -1722,6 +1750,18 @@ a::before {
   position: absolute;
   left: 22px;
   z-index: -1;
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .sidebar .create .create-item:not(:first-child):before {
+    width: 100%;
+    height: 2px;
+    background: #E2E2E9;
+    bottom: 50% !important;
+    position: absolute;
+    left: -67px;
+    z-index: -1;
+  }
 }
 
 .post-a-job.jobs .sidebar .create .create-item:nth-child(3):before {
@@ -1742,6 +1782,12 @@ a::before {
   margin-bottom: 50px;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .sidebar .create .create-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 .post-a-job.jobs .sidebar .create .create-item .number {
   display: inline-block;
   margin-right: 20px;
@@ -1757,10 +1803,24 @@ a::before {
   line-height: 21px;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .sidebar .create .create-item h2 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
 .post-a-job.jobs .sidebar .create .create-item p {
   font-size: 14px;
   line-height: 16px;
   color: rgba(60, 61, 107, 0.5);
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .sidebar .create .create-item p {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .post-a-job.jobs .main-content.col-md-6 {
@@ -1797,6 +1857,13 @@ a::before {
   font-size: 18px;
   line-height: 21px;
   color: rgba(60, 61, 107, 0.75);
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .note-check {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .post-a-job.jobs .main-content .note-check .greyed {
@@ -1930,6 +1997,16 @@ a::before {
   border-width: 2px;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.submit.p-now .submit {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .post-a-job.jobs .main-content .form.submit.p-now .submit:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+
 .post-a-job.jobs .main-content .form.submit.p-now .submit.pay-now-later {
   background: #ffffff;
   color: #0AD188;
@@ -1969,6 +2046,13 @@ a::before {
   background-color: #fff;
   opacity: 0;
   cursor: auto;
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .label-wrap label {
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .post-a-job.jobs .main-content .form.list-sec .label-wrap .form-control::-webkit-input-placeholder {
@@ -2056,6 +2140,13 @@ a::before {
   padding-top: 20px;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .toggle-box .col-md-2 {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+  }
+}
+
 .post-a-job.jobs .main-content .form.list-sec .toggle-box .later-wrap {
   position: relative;
 }
@@ -2096,6 +2187,13 @@ a::before {
   line-height: 21px;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
 .post-a-job.jobs .main-content .form.list-sec h3 i {
   margin-right: 10px;
 }
@@ -2113,6 +2211,16 @@ a::before {
   padding: 16px 0;
   color: rgba(60, 61, 107, 0.5);
   position: relative;
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .row.toggles .col-md-6 {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .post-a-job.jobs .main-content .form.list-sec .row.toggles .col-md-6:last-child {
+    margin-top: 0;
+  }
 }
 
 .post-a-job.jobs .main-content .form.list-sec .row.toggles .col-md-6:before {
@@ -2137,6 +2245,14 @@ a::before {
   padding-right: 0;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .row .col:not(.form-control) {
+    padding: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .post-a-job.jobs .main-content .form.list-sec .row .visa {
   padding-left: 0;
 }
@@ -2144,6 +2260,12 @@ a::before {
 .post-a-job.jobs .main-content .form.list-sec .row .visa .checkmark {
   left: unset;
   right: -56%;
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .row .visa .checkmark {
+    right: -32%;
+  }
 }
 
 .post-a-job.jobs .main-content .form.list-sec input[type="radio"],
@@ -2190,6 +2312,13 @@ a::before {
   font-weight: 700;
 }
 
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .checkmark:after {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
 .post-a-job.jobs .main-content .form.list-sec label {
   color: rgba(60, 61, 107, 0.5);
   font-size: 18px;
@@ -2197,6 +2326,13 @@ a::before {
   position: relative;
   padding-left: 42px;
   cursor: pointer;
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec label {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .post-a-job.jobs .main-content .form.list-sec .ticket-number {
@@ -2207,6 +2343,14 @@ a::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 8px;
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .ticket-number {
+    font-size: 14px;
+    line-height: 18px;
+    display: none;
+  }
 }
 
 .post-a-job.jobs .main-content .form.list-sec .selected label {
@@ -2271,16 +2415,20 @@ a::before {
   background: none;
 }
 
-.post-a-job.jobs .main-content .form .accordion .accordion-button:after {
-  background: none;
-  content: 'HIDE';
-  -webkit-transform: unset;
-          transform: unset;
-  margin-right: 20px;
+@media (min-width: 40em) {
+  .post-a-job.jobs .main-content .form .accordion .accordion-button:after {
+    background: none;
+    content: 'HIDE';
+    -webkit-transform: unset;
+            transform: unset;
+    margin-right: 20px;
+  }
 }
 
-.post-a-job.jobs .main-content .form .accordion .accordion-button.collapsed:after {
-  content: 'SHOW';
+@media (min-width: 40em) {
+  .post-a-job.jobs .main-content .form .accordion .accordion-button.collapsed:after {
+    content: 'SHOW';
+  }
 }
 
 .post-a-job.jobs .main-content .form .accordion .accordion-body {
