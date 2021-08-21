@@ -18,8 +18,8 @@
 
 <body>
     <main>
-        <header class="container navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
-            <div class="container-fluid">
+        <header class="container-fluid navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
+            <div class="container">
                 <a class="navbar-brand" href="index.html"><img src="images/ujs-logo.png" alt="UJS Logo"></a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
@@ -31,7 +31,7 @@
                 </button>
 
                 <div class="navbar-collapse collapse flex-grow-0" id="main-navbar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end align-items-center">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown"
                                 aria-expanded="false">About<i class="fas fa-angle-down"></i></a>
@@ -76,7 +76,7 @@
             </div>
         </header>
         <section class="container-fluid banner job-listing job-detail d-none d-md-block"
-            style="background-image: url('images/home-banner.png');">
+            style="background-image: url('images/small-bg.png');">
             <div class="container">
                 <h1 class="main-heading">My Profile</h1>
             </div>
@@ -95,23 +95,41 @@
                             <h2>Personal Details</h2>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="First Name">
+                                    <div class="label-wrap">
+                                        <input type="text" id="firstName" class="form-control" placeholder="First Name">
+                                        <label for="firstName">First Name</label>
+                                    </div>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Last Name">
+                                    <div class="label-wrap">
+                                        <input type="text" id="lastName" class="form-control" placeholder="Last Name">
+                                        <label for="lastName">Last Name</label>
+                                    </div>
                                 </div>
                             </div>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <div class="label-wrap">
+                                <input type="email" id="email" class="form-control" placeholder="Email">
+                                <label for="email">Email</label>
+                            </div>
                         </div>
                         <div class="row list-sec detail form">
                             <h2>Change Password</h2>
-                            <input type="password" class="form-control" placeholder="Change Password">
+                            <div class="label-wrap">
+                                <input type="password" id="CurrentPassword" class="form-control" placeholder="Current Password">
+                                <label for="CurrentPassword">Current Password</label>
+                            </div>
                             <div class="row">
                                 <div class="col">
-                                    <input type="password" class="form-control" placeholder="New Password">
+                                    <div class="label-wrap">
+                                        <input type="password" id="newPassword" class="form-control" placeholder="New Password">
+                                        <label for="newPassword">New Password</label>
+                                    </div>
                                 </div>
                                 <div class="col">
-                                    <input type="password" class="form-control" placeholder="Re-type Password">
+                                    <div class="label-wrap">
+                                        <input type="password" id="reTypePassword" class="form-control" placeholder="Re-type Password">
+                                        <label for="reTypePassword">Re-type Password</label>
+                                    </div>
                                 </div>
                             </div>
                             <button class="submit" type="submit">
@@ -120,26 +138,43 @@
                         </div>
                         <div class="row list-sec detail form">
                             <h2>MAILING ADDRESS</h2>
-                            <input type="text" class="form-control" placeholder="Street">
-                            <input type="text" class="form-control" placeholder="Street 2">
+                            <div class="label-wrap">
+                                <input type="text" id="street" class="form-control" placeholder="Street">
+                                <label for="street">Street</label>
+                            </div>
+                            <div class="label-wrap">
+                                <input type="text" id="street2" class="form-control" placeholder="Street 2">
+                                <label for="street2">Street 2</label>
+                            </div>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="City">
+                                    <div class="label-wrap">
+                                        <input type="text" id="city" class="form-control" placeholder="City">
+                                        <label for="city">City</label>
+                                    </div>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="State">
+                                    <div class="label-wrap">
+                                        <input type="text" id="state" class="form-control" placeholder="State">
+                                        <label for="state">State</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" placeholder="Zipcode">
+                                    <div class="label-wrap">
+                                        <input type="text" id="zipcode" class="form-control" placeholder="Zipcode">
+                                        <label for="zipcode">Zipcode</label>
+                                    </div>
                                 </div>
                                 <div class="col">
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Country</option>
-                                        <option value="">UK</option>
-                                        <option value="">USA</option>
-                                    </select>
+                                    <div class="label-wrap">
+                                        <select name="" id="Country" class="form-control">
+                                            <option value="">USA</option>
+                                            <option value="">UK</option>
+                                        </select>
+                                        <label for="Country">Country</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -147,24 +182,33 @@
                     <div class="col-md-6 main-content">
                         <div class="row list-sec detail form">
                             <h2>JOB SEEKER INFORMATION</h2>
-                            <select name="" id="" class="form-control">
-                                <option value="">Job Seeker Type</option>
-                                <option value="">Type 1</option>
-                                <option value="">Type 2</option>
-                            </select>
-                            <select name="" id="" class="form-control">
-                                <option value="">Residency Program</option>
-                                <option value="">Type 1</option>
-                                <option value="">Type 2</option>
-                            </select>
-                            <select name="" id="" class="form-control">
-                                <option value="">Fellowship Program</option>
-                                <option value="">Type 1</option>
-                                <option value="">Type 2</option>
-                            </select>
+                            <div class="label-wrap">
+                                <select name="" id="jobSeekerType" class="form-control">
+                                    <option value="">Type 1</option>
+                                    <option value="">Type 2</option>
+                                </select>
+                                <label for="jobSeekerType">Job Seeker Type</label>
+                            </div>
+                            <div class="label-wrap">
+                                <select name="" id="residencyProgram" class="form-control">
+                                    <option value="">Type 1</option>
+                                    <option value="">Type 2</option>
+                                </select>
+                                <label for="residencyProgram">Residency Program</label>
+                            </div>
+                            <div class="label-wrap">
+                                <select name="" id="fellowshipProgram" class="form-control">
+                                    <option value="">Type 1</option>
+                                    <option value="">Type 2</option>
+                                </select>
+                                <label for="fellowshipProgram">Fellowship Program</label>
+                            </div>
                             <div class="row">
                                 <div class="col-md-5 pl-0">
-                                    <input type="number" class="form-control" min="1900" max="2099" step="1" placeholder="Graduation Year" />
+                                    <div class="label-wrap">
+                                        <input type="number" id="graduationYear" class="form-control" min="1900" max="2099" step="1" placeholder="Graduation Year" />
+                                        <label for="graduationYear">Graduation Year</label>
+                                    </div>
                                 </div>
                                 <div class="col-md-7 pr-0">
                                     <label for="file-upload" class="form-control custom-file-upload">
@@ -188,21 +232,27 @@
                             <h2>JOB SEARCH PREFERENCES</h2>
                             <div class="row justify-content-between note-check">
                                 <p>Select the types of practice and states you're interested in. We'll use these settings to show you the jobs that match your interests.</p>
-                                <select name="" id="" class="form-control">
-                                    <option value="">Practice Type(s)</option>
-                                    <option value="">Type 1</option>
-                                    <option value="">Type 2</option>
-                                </select>
-                                <select name="" id="" class="form-control">
-                                    <option value="">State(s)</option>
-                                    <option value="">Type 1</option>
-                                    <option value="">Type 2</option>
-                                </select>
-                                <select name="" id="" class="form-control">
-                                    <option value="">Subspecialty(s)</option>
-                                    <option value="">Type 1</option>
-                                    <option value="">Type 2</option>
-                                </select>
+                                <div class="label-wrap">
+                                    <select name="" id="practiceTypes" class="form-control">
+                                        <option value="">Type 1</option>
+                                        <option value="">Type 2</option>
+                                    </select>
+                                    <label for="practiceTypes">Practice Type(s)</label>
+                                </div>
+                                <div class="label-wrap">
+                                    <select name="" id="states" class="form-control">
+                                        <option value="">Type 1</option>
+                                        <option value="">Type 2</option>
+                                    </select>
+                                    <label for="states">State(s)</label>
+                                </div>
+                                <div class="label-wrap">
+                                    <select name="" id="subspeciality" class="form-control">
+                                        <option value="">Type 1</option>
+                                        <option value="">Type 2</option>
+                                    </select>
+                                    <label for="subspeciality">Subspecialty(s)</label>
+                                </div>
                             </div>
                         </div>
                         <div class="row list-sec detail form submit">

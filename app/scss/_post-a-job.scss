@@ -25,8 +25,9 @@
         .sidebar {
             margin: 0;
             margin-right: 22px;
-            @include breakpoint-down(small){
-                .list-sec{
+
+            @include breakpoint-down(small) {
+                .list-sec {
                     margin-left: 0;
                     margin-right: 0;
                 }
@@ -143,6 +144,7 @@
                         font-size: 14px;
                         line-height: 16px;
                         color: vsPrimaryOpacity(0.5);
+
                         @include breakpoint-down(small) {
                             font-size: 16px;
                             line-height: 19px;
@@ -154,6 +156,10 @@
         }
 
         .main-content {
+            &.profile {
+                margin-bottom: 16px;
+            }
+
             &.col-md-6 {
                 width: 48%;
 
@@ -182,6 +188,7 @@
                 font-size: 18px;
                 line-height: 21px;
                 color: vsPrimaryOpacity(0.75);
+
                 @include breakpoint-down(small) {
                     font-size: 16px;
                     line-height: 19px;
@@ -196,6 +203,10 @@
                     border-radius: 5px;
                     display: inline-block;
 
+                    @include breakpoint-down(small) {
+                        font-size: 14px;
+                    }
+
                     &:hover {
                         background: $white;
                         color: $primary;
@@ -205,7 +216,6 @@
                 .credit-count {
                     color: $success;
                     background: rgba(10, 209, 136, 0.15);
-                    border: 1px solid $success;
                     float: right;
                     font-weight: 900;
                     font-size: 24px;
@@ -213,6 +223,12 @@
                     padding: 11px 27px;
                     box-sizing: border-box;
                     border-radius: 50px;
+
+                    @include breakpoint-down(small) {
+                        font-size: 18px;
+                        line-height: 21px;
+                        padding: 7px 18px;
+                    }
                 }
 
                 .col-md-9 {
@@ -282,8 +298,55 @@
 
             .form {
                 margin-top: 0;
-                @include breakpoint-down(small){
+
+                @include breakpoint-down(small) {
                     margin: 0;
+                }
+
+                .label-wrap {
+                    position: relative;
+                    padding: 0;
+
+                    label {
+                        position: absolute !important;
+                        top: 18px;
+                        left: 10px;
+                        padding: 0 5px !important;
+                        transition: all 250ms ease-in-out;
+                        transform-origin: 0 0;
+                        background-color: #fff;
+                        opacity: 0;
+                        cursor: auto;
+
+                        @include breakpoint-down(small) {
+                            font-size: 16px;
+                            line-height: 19px;
+                        }
+                    }
+
+                    .form-control {
+
+                        &::placeholder {
+                            transition: all 250ms ease-in-out;
+                        }
+
+                        &:focus,
+                        &:not(:placeholder-shown),
+                        &:hover {
+                            box-shadow: none;
+                            border-color: #E2E2E9;
+
+                            &::placeholder {
+                                opacity: 0;
+                            }
+
+                            +label {
+                                font-size: 14px;
+                                transform: translate(0px, -28px);
+                                opacity: 1;
+                            }
+                        }
+                    }
                 }
 
                 &.submit {
@@ -303,9 +366,11 @@
                         .submit {
                             flex-basis: 48%;
                             border-width: 2px;
-                            @include breakpoint-down(small){
+
+                            @include breakpoint-down(small) {
                                 flex-basis: 100%;
-                                &:nth-child(2){
+
+                                &:nth-child(2) {
                                     margin-top: 20px;
                                 }
                             }
@@ -337,53 +402,6 @@
                     &:not(:first-child) {
                         margin-top: 15px;
                     }
-
-
-                    .label-wrap {
-                        position: relative;
-                        padding: 0;
-
-                        label {
-                            position: absolute;
-                            top: 18px;
-                            left: 10px;
-                            padding: 0 5px;
-                            transition: all 250ms ease-in-out;
-                            transform-origin: 0 0;
-                            background-color: #fff;
-                            opacity: 0;
-                            cursor: auto;
-                            @include breakpoint-down(small) {
-                                font-size: 16px;
-                                line-height: 19px;
-                            }
-                        }
-
-                        .form-control {
-
-                            &::placeholder {
-                                transition: all 250ms ease-in-out;
-                            }
-
-                            &:focus,
-                            &:not(:placeholder-shown),
-                            &:hover {
-                                box-shadow: none;
-                                border-color: #E2E2E9;
-
-                                &::placeholder {
-                                    opacity: 0;
-                                }
-
-                                +label {
-                                    font-size: 14px;
-                                    transform: translate(0px, -28px);
-                                    opacity: 1;
-                                }
-                            }
-                        }
-                    }
-
 
                     .form-control {
                         margin-bottom: 20px;
@@ -424,8 +442,9 @@
 
                     .toggle-box {
                         padding-top: 20px;
-                        .col-md-2{
-                            @include breakpoint-down(small){
+
+                        .col-md-2 {
+                            @include breakpoint-down(small) {
                                 flex-basis: 48%;
                             }
                         }
@@ -470,6 +489,7 @@
                         font-weight: 900;
                         font-size: 18px;
                         line-height: 21px;
+
                         @include breakpoint-down(small) {
                             font-size: 16px;
                             line-height: 19px;
@@ -491,9 +511,11 @@
                                 padding: 16px 0;
                                 color: vsPrimaryOpacity(0.5);
                                 position: relative;
-                                @include breakpoint-down(small){
+
+                                @include breakpoint-down(small) {
                                     flex-basis: 50%;
-                                    &:last-child{
+
+                                    &:last-child {
                                         margin-top: 0;
                                     }
                                 }
@@ -523,15 +545,17 @@
                             &:last-child {
                                 padding-right: 0;
                             }
-                            &:not(.form-control){
 
-                                @include breakpoint-down(small){
+                            &:not(.form-control) {
+
+                                @include breakpoint-down(small) {
                                     padding: 0;
                                     flex-basis: 100%;
                                 }
                             }
                         }
-                        label{
+
+                        label {
                             display: block;
                         }
 
@@ -583,6 +607,7 @@
                             color: #fff;
                             font-size: 18px;
                             font-weight: 700;
+
                             @include breakpoint-down(small) {
                                 font-size: 16px;
                                 line-height: 19px;
@@ -597,6 +622,7 @@
                         position: relative;
                         padding-left: 42px;
                         cursor: pointer;
+
                         @include breakpoint-down(small) {
                             font-size: 14px;
                             line-height: 18px;
@@ -610,6 +636,7 @@
                         border: 1px solid #E2E2E9;
                         box-sizing: border-box;
                         border-radius: 8px;
+
                         @include breakpoint-down(small) {
                             font-size: 14px;
                             line-height: 18px;
@@ -669,6 +696,11 @@
                     font-weight: 500;
                     font-size: 18px;
                     line-height: 21px;
+
+                    @include breakpoint-down(small) {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
                 }
 
                 .accordion {
@@ -681,7 +713,7 @@
                         box-shadow: none;
                         background: none;
 
-                        @include breakpoint-up(medium){
+                        @include breakpoint-up(medium) {
 
                             &:after {
                                 background: none;
@@ -694,7 +726,7 @@
 
                         &.collapsed {
                             &:after {
-                                @include breakpoint-up(medium){
+                                @include breakpoint-up(medium) {
                                     content: 'SHOW';
                                 }
                             }

@@ -90,6 +90,7 @@ body {
         border-color: $primary;
     }
 }
+
 .row {
     margin: 0;
     padding: 0;
@@ -117,6 +118,20 @@ body {
             }
 
         }
+    }
+}
+
+p {
+    @include breakpoint-down(small) {
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.form-control {
+    @include breakpoint-down(small) {
+        font-size: 16px;
+        line-height: 19px;
     }
 }
 
