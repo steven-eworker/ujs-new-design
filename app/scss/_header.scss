@@ -13,7 +13,7 @@
         z-index: 10;
     }
 
-    @include breakpoint-down(small) {
+    @include breakpoint-down(medium) {
         padding: 14px;
         box-shadow: 0px 5px 27px rgba(0, 0, 0, 0.25);
         border-radius: 0px 0px 5px 5px;
@@ -72,15 +72,16 @@
     }
 
     .navbar-collapse {
-        @include breakpoint-down(small) {
+        @include breakpoint-down(medium) {
             padding-top: 35px;
             padding-bottom: 80px;
         }
     }
 
     .navbar-nav {
-        @include breakpoint-down(small) {
+        @include breakpoint-down(medium) {
             margin-left: 10px;
+            align-items: end !important;
         }
 
         .nav-item {
@@ -120,8 +121,9 @@
                     left: 0;
                     z-index: 2;
                     opacity: 0;
-                    @include breakpoint-down(small){
+                    @include breakpoint-down(medium){
                         background: $white;
+                        z-index: -1;
                     }
                 }
 

@@ -169,7 +169,7 @@ a::before {
   z-index: 10;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .site-header {
     padding: 14px;
     -webkit-box-shadow: 0px 5px 27px rgba(0, 0, 0, 0.25);
@@ -229,16 +229,19 @@ a::before {
   content: none;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .site-header .navbar-collapse {
     padding-top: 35px;
     padding-bottom: 80px;
   }
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .site-header .navbar-nav {
     margin-left: 10px;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: end !important;
   }
 }
 
@@ -288,9 +291,10 @@ a::before {
   opacity: 0;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .site-header .navbar-nav .nav-item .nav-link:before {
     background: #ffffff;
+    z-index: -1;
   }
 }
 
@@ -607,6 +611,7 @@ a::before {
     font-size: 14px;
     line-height: 16px;
     margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -618,8 +623,8 @@ a::before {
 @media (max-width: 39.9375em) {
   .jobs .job-list .job-item .copy .location {
     margin-top: 10px;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -629,9 +634,10 @@ a::before {
 
 @media (max-width: 39.9375em) {
   .jobs .job-list .job-item .copy .date {
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 18px;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 0;
   }
 }
 
@@ -642,7 +648,7 @@ a::before {
 
 @media (max-width: 63.9375em) {
   .jobs .job-list .job-item .cta-box {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 }
 
@@ -662,7 +668,7 @@ a::before {
   padding: 6px 14px;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .jobs .job-list .job-item .cta-box .btn.tag {
     font-size: 12px;
     line-height: 14px;
@@ -703,12 +709,9 @@ a::before {
 @media (max-width: 39.9375em) {
   .jobs .job-list .job-item .cta-box .star-box .star {
     margin-bottom: 0;
-  }
-}
-
-@media (max-width: 25rem) {
-  .jobs .job-list .job-item .cta-box .star-box .star {
     position: relative;
+    top: unset;
+    right: unset;
   }
 }
 
@@ -745,13 +748,14 @@ a::before {
   border: 1px solid #0AD188;
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 63.9375em) {
   .jobs .job-list .job-item.advert .tag {
     position: absolute;
     top: 0;
     right: 0;
     color: #3C3D6B;
-    background: #0AD188;
+    background: #9CCCCC;
+    border-color: #9CCCCC;
     font-size: 12px;
     -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
@@ -774,6 +778,12 @@ a::before {
     font-size: 16px;
     line-height: 19px;
     margin-top: 0;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .jobs .job-list .job-item.advert .copy .desc {
+    margin: 0;
   }
 }
 
