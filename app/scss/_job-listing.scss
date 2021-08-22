@@ -20,16 +20,19 @@
 }
 
 .job-listing {
-    .listing-wrap{
+    .listing-wrap {
         padding: 0;
     }
-    .fltr-wrap{
+
+    .fltr-wrap {
         padding-left: 0;
         padding-right: 25px;
     }
+
     .job-list {
         .job-item {
             position: relative;
+
             &:first-child {
                 margin-top: 0;
             }
@@ -44,10 +47,23 @@
                 .title {
                     font-size: 18px;
                     color: $primary;
+                    max-width: 330px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 4px;
+
+                    @include breakpoint-down(medium) {
+                        max-width: unset;
+                        white-space: unset;
+                    }
                 }
 
                 .copy {
                     width: 100%;
+                    .desc{
+                        margin-bottom: 8px;
+                    }
                 }
             }
 
@@ -59,6 +75,17 @@
                 }
 
                 .star-box {
+                    .star {
+                        position: absolute;
+                        top: 35%;
+                        right: 34px;
+                        @include breakpoint-down(medium){
+                            position: relative;
+                            top: unset;
+                            right: unset;
+                        }
+                    }
+
                     .date {
                         font-size: 14px;
                         line-height: 16px;
@@ -88,6 +115,7 @@
 
         .title {
             margin-bottom: 15px;
+
             @include breakpoint-down(small) {
                 display: none !important;
             }
@@ -119,9 +147,18 @@
                     box-shadow: none;
 
                     .cta {
-                        padding: 15px 30px;
+                        padding: 15px 34px;
                         background: $white;
                         border: 1px solid #E2E2E9;
+                        color: $primary;
+
+                        &:first-child {
+                            margin-right: 15px;
+                        }
+
+                        &:last-child {
+                            border-color: $primary;
+                        }
 
                         @include breakpoint-down(small) {
                             padding: 15px 38px;
@@ -145,6 +182,7 @@
                     &::after {
                         background-image: url('../images/angle-up.svg');
                         transform: rotate(-180deg);
+                        background-size: 16px;
                     }
 
                     &:not(.collapsed) {
@@ -194,8 +232,9 @@
 
                 .confirmation {
                     padding-top: 20px;
-                    .check-box{
-                        &:last-child{
+
+                    .check-box {
+                        &:last-child {
                             margin-left: 24px;
                         }
                     }
@@ -264,7 +303,8 @@
                     opacity: 0;
                     z-index: -2;
                     color: $primary;
-                    @include breakpoint-down(small){
+
+                    @include breakpoint-down(small) {
                         padding-left: 30px;
                     }
                 }
@@ -278,8 +318,13 @@
                     text-align: left;
 
                     @include breakpoint-down(small) {
-                        max-height: 100px;
+                        // max-height: 100px;
                         overflow-y: scroll;
+                        position: absolute;
+                        background: #fff;
+                        width: 100%;
+                        z-index: 5;
+                        left: 38px;
                     }
 
                     li {

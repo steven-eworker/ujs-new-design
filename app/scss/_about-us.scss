@@ -77,12 +77,13 @@
         line-height: 28px;
         display: inline-block;
         color: $primary;
+        margin: 0;
 
-        @include breakpoint-down(small) {
+        @include breakpoint-down(medium) {
             font-size: 18px;
             line-height: 21px;
             margin-left: 20px;
-            text-align: left;
+            text-align: center;
         }
     }
 

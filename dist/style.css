@@ -947,10 +947,26 @@ a::before {
 .job-listing .job-list .job-item .details .title {
   font-size: 18px;
   color: #3C3D6B;
+  max-width: 330px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 63.9375em) {
+  .job-listing .job-list .job-item .details .title {
+    max-width: unset;
+    white-space: unset;
+  }
 }
 
 .job-listing .job-list .job-item .details .copy {
   width: 100%;
+}
+
+.job-listing .job-list .job-item .details .copy .desc {
+  margin-bottom: 8px;
 }
 
 @media (max-width: 39.9375em) {
@@ -959,6 +975,20 @@ a::before {
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
             flex-direction: row !important;
+  }
+}
+
+.job-listing .job-list .job-item .cta-box .star-box .star {
+  position: absolute;
+  top: 35%;
+  right: 34px;
+}
+
+@media (max-width: 63.9375em) {
+  .job-listing .job-list .job-item .cta-box .star-box .star {
+    position: relative;
+    top: unset;
+    right: unset;
   }
 }
 
@@ -1025,9 +1055,18 @@ a::before {
 }
 
 .job-listing .filters .form .field-item.btns .cta {
-  padding: 15px 30px;
+  padding: 15px 34px;
   background: #ffffff;
   border: 1px solid #E2E2E9;
+  color: #3C3D6B;
+}
+
+.job-listing .filters .form .field-item.btns .cta:first-child {
+  margin-right: 15px;
+}
+
+.job-listing .filters .form .field-item.btns .cta:last-child {
+  border-color: #3C3D6B;
 }
 
 @media (max-width: 39.9375em) {
@@ -1055,6 +1094,7 @@ a::before {
   background-image: url("../images/angle-up.svg");
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+  background-size: 16px;
 }
 
 .job-listing .filters .form .field-item .accordion-button:not(.collapsed):after {
@@ -1195,8 +1235,12 @@ a::before {
 
 @media (max-width: 39.9375em) {
   .job-listing .filters .form .field-item .list-options {
-    max-height: 100px;
     overflow-y: scroll;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    z-index: 5;
+    left: 38px;
   }
 }
 
@@ -2793,14 +2837,15 @@ a::before {
   line-height: 28px;
   display: inline-block;
   color: #3C3D6B;
+  margin: 0;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .about-us h3 {
     font-size: 18px;
     line-height: 21px;
     margin-left: 20px;
-    text-align: left;
+    text-align: center;
   }
 }
 
