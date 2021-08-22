@@ -25,7 +25,9 @@
 
     }
 
+
     &.jobs {
+
         .intro {
             @include breakpoint-down(small) {
                 margin-left: 20px;
@@ -73,7 +75,8 @@
 
             &.form {
                 padding: 30px;
-                @include breakpoint-down(small){
+
+                @include breakpoint-down(small) {
                     padding: 20px;
                 }
 
@@ -158,6 +161,16 @@
 
         .main-content {
             margin-right: 22px;
+        }
+
+        &.cv-db {
+            .main-content {
+                margin-right: 0;
+
+                .list-sec.form {
+                    background-color: #fff;
+                }
+            }
         }
 
         .sidebar {
@@ -293,7 +306,8 @@
                         line-height: 28px;
                     }
                 }
-                &.mob-social{
+
+                &.mob-social {
                     display: none;
                 }
 
@@ -347,37 +361,46 @@
             }
 
             &.job-detail {
-                .mob-triggers { 
+                .mob-triggers {
                     display: none;
-                    @include breakpoint-down(small){
+
+                    @include breakpoint-down(small) {
                         display: flex !important;
                     }
+
                     .filter-trigger:first-child {
                         background: $success;
                         color: $white;
+
                         i {
                             margin: 0;
                         }
-                        span{
+
+                        span {
                             margin-left: 5px;
                         }
-                        .toggle{
+
+                        .toggle {
                             display: none;
                         }
-                        &.opened{
-                            i:first-child{
+
+                        &.opened {
+                            i:first-child {
                                 display: none;
                             }
-                            .toggle{
+
+                            .toggle {
                                 display: inline-block;
                                 transform: unset;
                             }
                         }
                     }
-                    .results-count{
+
+                    .results-count {
                         display: flex;
                         position: relative;
-                        &:after{
+
+                        &:after {
                             content: '';
                             position: absolute;
                             width: 2px;
@@ -386,47 +409,139 @@
                             left: 50%;
                             top: 0;
                         }
-                        a{
+
+                        a {
                             flex-basis: 50%;
                             width: unset;
                             padding: 0;
                         }
-                        i{
+
+                        i {
                             color: $primary;
-                            &.star{
+
+                            &.star {
                                 color: $yellow;
                                 border-right: 1px solid #E2E2E9;
                             }
                         }
                     }
                 }
-                .filters{
-                    .social{
-                        &.mob-social{
+
+                .filters {
+                    .social {
+                        &.mob-social {
                             display: none !important;
                         }
                     }
-                    &.open{
+
+                    &.open {
                         margin: 0;
                         padding-bottom: 40px;
                         padding-top: 30px;
-                        .green, .yellow, .share-text{
+
+                        .green,
+                        .yellow,
+                        .share-text {
                             display: none;
                         }
-                        .social{
+
+                        .social {
                             display: none !important;
-                            &.mob-social{
+
+                            &.mob-social {
                                 display: flex !important;
                                 flex-direction: column !important;
-                                a{
+
+                                a {
                                     margin-bottom: 10px;
                                     padding: 16px 0;
-                                    i{
+
+                                    i {
                                         margin-right: 10px;
                                     }
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cv-db {
+    .table {
+        background: #FFFFFF;
+        border: 1px solid #E2E2E9;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+
+        thead {
+            background-color: #E2E2E9;
+            border-style: none;
+
+            tr {
+                border: none;
+                border-style: unset;
+                box-sizing: border-box;
+                border-radius: 8px 8px 0px 0px;
+
+            }
+        }
+
+        th {
+            color: $primary;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: center;
+
+            &:first-child {
+                padding-left: 25px;
+                border-radius: 8px 0px 0px 0px;
+            }
+
+            &:last-child {
+                padding-right: 25px;
+                border-radius: 0px 8px 0px 0px;
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 40px;
+
+                    &.sn {
+                        color: vsPrimaryOpacity(0.75);
+                    }
+
+                    &.name {
+                        color: $primary;
+                    }
+
+                    &.activity {
+                        color: vsPrimaryOpacity(0.5);
+                    }
+
+                    &.hyperlink {
+                        font-weight: 500;
+                        text-decoration-line: underline;
+                        color: $hyperlink;
+                    }
+
+                    &:first-child {
+                        padding-left: 25px;
+                    }
+
+                    &:last-child {
+                        padding-right: 25px;
                     }
                 }
             }

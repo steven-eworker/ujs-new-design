@@ -1558,6 +1558,14 @@ a::before {
   margin-right: 22px;
 }
 
+.job-detail.jobs.cv-db .main-content {
+  margin-right: 0;
+}
+
+.job-detail.jobs.cv-db .main-content .list-sec.form {
+  background-color: #fff;
+}
+
 .job-detail.jobs .sidebar {
   margin-top: 33px;
   margin-left: 22px;
@@ -1830,7 +1838,9 @@ a::before {
   padding-top: 30px;
 }
 
-.job-detail.jobs .sidebar.job-detail .filters.open .green, .job-detail.jobs .sidebar.job-detail .filters.open .yellow, .job-detail.jobs .sidebar.job-detail .filters.open .share-text {
+.job-detail.jobs .sidebar.job-detail .filters.open .green,
+.job-detail.jobs .sidebar.job-detail .filters.open .yellow,
+.job-detail.jobs .sidebar.job-detail .filters.open .share-text {
   display: none;
 }
 
@@ -1855,6 +1865,83 @@ a::before {
 
 .job-detail.jobs .sidebar.job-detail .filters.open .social.mob-social a i {
   margin-right: 10px;
+}
+
+.cv-db .table {
+  background: #FFFFFF;
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.cv-db .table thead {
+  background-color: #E2E2E9;
+  border-style: none;
+}
+
+.cv-db .table thead tr {
+  border: none;
+  border-style: unset;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.cv-db .table th {
+  color: #3C3D6B;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.cv-db .table th:first-child {
+  padding-left: 25px;
+  border-radius: 8px 0px 0px 0px;
+}
+
+.cv-db .table th:last-child {
+  padding-right: 25px;
+  border-radius: 0px 8px 0px 0px;
+}
+
+.cv-db .table tbody tr td {
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+.cv-db .table tbody tr td.sn {
+  color: rgba(60, 61, 107, 0.75);
+}
+
+.cv-db .table tbody tr td.name {
+  color: #3C3D6B;
+}
+
+.cv-db .table tbody tr td.activity {
+  color: rgba(60, 61, 107, 0.5);
+}
+
+.cv-db .table tbody tr td.hyperlink {
+  font-weight: 500;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #007BFF;
+}
+
+.cv-db .table tbody tr td:first-child {
+  padding-left: 25px;
+}
+
+.cv-db .table tbody tr td:last-child {
+  padding-right: 25px;
 }
 
 .post-a-job.jobs.contact-us {
