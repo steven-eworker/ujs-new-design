@@ -1,9 +1,16 @@
 .job-listing {
     &.emp-dashboard {
+        .container {
+            &:first-child {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+
         .emp-sidebar {
             padding: 0;
 
-            @include breakpoint-up(medium) {
+            @include breakpoint-up(large) {
                 width: 26%;
             }
 
@@ -36,15 +43,27 @@
                         padding: 6px 22px;
                     }
                 }
+
+                .submit {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                }
             }
         }
 
         .emp-listing {
-            @include breakpoint-up(medium) {
+            @include breakpoint-up(large) {
                 width: 70%;
             }
 
             .intro {
+                @include breakpoint-down(small) {
+                    margin-top: 30px;
+                    justify-content: center !important;
+                    margin-left: 0;
+                }
+
                 .title {
                     margin-top: 0;
                     margin-bottom: 16px;
@@ -52,33 +71,54 @@
                 }
             }
 
+            .job-list {
+                @include breakpoint-down(small) {
+                    padding: 0;
+                }
+            }
+
             .job-item {
                 border: 1px solid #E2E2E9;
-                &.job-open{
-                    .job-status{
+                padding-top: 32px;
+
+                &.job-open {
+                    .job-status {
                         background: $success;
                         border-color: $success;
                     }
-                    .views{
-                        .num{
+
+                    .views {
+                        .num {
                             color: $success;
                         }
                     }
                 }
-                &.job-filled{
-                    .job-status{
+
+                &.job-filled {
+                    .job-status {
                         background: $yellow;
                         border-color: $yellow;
                     }
-                    .views{
-                        .num{
+
+                    .views {
+                        .num {
                             color: $yellow;
                         }
                     }
                 }
-                .copy{
-                    .title{
+
+                .copy {
+                    .title {
                         max-width: unset;
+                    }
+                }
+
+                .img {
+                    .title {
+                        font-weight: 500;
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-bottom: 10px;
                     }
                 }
 
@@ -94,28 +134,70 @@
                     line-height: 14px;
                     padding: 5px 11px;
                 }
-                .publish-status, .due-date{
+
+                .publish-status,
+                .due-date {
                     font-size: 16px;
                     line-height: 18px;
                     display: inline-block;
-                }
-                .publish-status{
-                    color: vsPrimaryOpacity(0.5);
-                }
-                .due-date{
-                    margin-left: 15px;
-                    color: vsDangerOpacity(0.5);
+                    @include breakpoint-down(small){
+                        display: block;
+                    }
                 }
 
-                .cta-box{
-                    .views{
+                .publish-status {
+                    color: vsPrimaryOpacity(0.5);
+
+                    @include breakpoint-down(small) {
+                        margin-bottom: 10px;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+
+                .due-date {
+                    margin-left: 15px;
+                    color: vsDangerOpacity(0.5);
+
+                    @include breakpoint-down(small) {
+                        margin-bottom: 10px;
+                        margin-left: 0;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+
+                .cta-box {
+                    @include breakpoint-down(small){
+                        justify-content: space-between !important;
+                    }
+                    .tags{
+                        @include breakpoint-down(small){
+                            flex-direction: column !important;
+                            justify-content: space-between !important;
+                        }
+                    }
+                    .views {
                         font-size: 14px;
                         line-height: 16px;
                         color: vsPrimaryOpacity(0.65);
+                        @include breakpoint-down(small){
+                            margin-bottom: 10px;
+                        }
+                        i{
+                            display: none;
+                            @include breakpoint-down(small){
+                                display: inline-block;
+                            }
+                        }
                     }
                 }
-                .location{
+
+                .location {
                     display: block;
+                    @include breakpoint-down(small){
+                        margin-top: 0;
+                    }
                 }
 
                 .action-box {
@@ -125,7 +207,8 @@
                         color: $primary;
                         background: #F8F9FA;
                         padding: 11px;
-                        &:first-child{
+
+                        &:first-child {
                             right: 10px;
                         }
 
@@ -137,7 +220,7 @@
                             bottom: 130%;
                             opacity: 0;
                             z-index: -2;
-                            
+
                             &:before {
                                 top: 100%;
                                 transform: rotate(180deg);
@@ -152,6 +235,13 @@
                                 z-index: 1;
                             }
                         }
+                    }
+                }
+                &.greyed{
+                    .job-status{
+                        background-color: vsPrimaryOpacity(0.35);
+                        color: vsPrimaryOpacity(0.35);
+                        border-color: vsPrimaryOpacity(0.35);
                     }
                 }
             }
