@@ -18,4 +18,8 @@ $breakpoints-down:("xsmall": "25rem", "small":"39.9375em", "medium": "63.9375em"
 
 @function vsPrimaryOpacity($opacity){  
     @return rgba(60,61,107,$opacity);  
-  }
+}
+
+@function vsDangerOpacity($opacity){  
+    @return rgba(255,0,0,$opacity);  
+}

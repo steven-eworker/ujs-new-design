@@ -304,8 +304,8 @@
                 }
 
                 .tag {
-                    color: $success;
-                    border: 1px solid $success;
+                    background: $secondary;
+                    // border: 1px solid $success;
 
                     @include breakpoint-down(medium) {
                         position: absolute;
@@ -350,7 +350,8 @@
                     }
 
                     .btn {
-                        color: $success;
+                        background: $success;
+                        color: $white;
                         border-color: $success;
                         padding: 15px 50px;
 
@@ -361,8 +362,8 @@
                         }
 
                         &:hover {
-                            background: $success;
-                            color: $primary;
+                            background: transparent;
+                            color: $success;
                         }
                     }
                 }
