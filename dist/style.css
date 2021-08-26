@@ -2030,6 +2030,16 @@ a::before {
   border-radius: 8px 0px 0px 0px;
 }
 
+.cv-db .table th:nth-child(2) {
+  padding-left: 25px;
+}
+
+@media (min-width: 40em) {
+  .cv-db .table th:nth-child(2) {
+    border-radius: 8px 0px 0px 0px;
+  }
+}
+
 .cv-db .table th:last-child {
   padding-right: 25px;
   border-radius: 0px 8px 0px 0px;
@@ -2040,11 +2050,12 @@ a::before {
   font-size: 14px;
   line-height: 40px;
   border-bottom: 1px solid #E2E2E9;
+  vertical-align: middle;
 }
 
 @media (max-width: 39.9375em) {
   .cv-db .table tbody tr td {
-    line-height: 18px;
+    line-height: 24px;
   }
 }
 
@@ -2069,12 +2080,71 @@ a::before {
   color: #007BFF;
 }
 
+@media (max-width: 39.9375em) {
+  .cv-db .table tbody tr td.hyperlink a {
+    font-size: 12px;
+  }
+}
+
+.cv-db .table tbody tr td:nth-child(2) {
+  padding-left: 25px;
+}
+
 .cv-db .table tbody tr td:first-child {
   padding-left: 25px;
 }
 
 .cv-db .table tbody tr td:last-child {
   padding-right: 25px;
+}
+
+.cv-db .table tbody tr td.action a {
+  color: #EFAC00;
+}
+
+.cv-db .table tbody tr td.action .closed {
+  display: none;
+}
+
+.cv-db .table tbody tr td.action .opened {
+  display: inline-block;
+}
+
+.cv-db .table tbody tr.mobile-activity {
+  opacity: 0;
+  z-index: -2;
+  position: absolute;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.cv-db .table tbody tr.mobile-activity td:nth-child(2) {
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(60, 61, 107, 0.75);
+  line-height: 24px;
+}
+
+.cv-db .table tbody tr.mobile-activity td:last-child {
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  right: 4%;
+  color: rgba(60, 61, 107, 0.75);
+}
+
+.cv-db .table tbody tr.open .action .closed {
+  display: inline-block;
+}
+
+.cv-db .table tbody tr.open .action .opened {
+  display: none;
+}
+
+.cv-db .table tbody tr.open + .mobile-activity {
+  opacity: 1;
+  z-index: 2;
+  position: relative;
 }
 
 .post-a-job.jobs.contact-us {

@@ -178,3 +178,17 @@ showPassword.forEach(function(el){
         }
     });
 });
+
+var plusIcons = document.querySelectorAll('.action a');
+if( plusIcons != undefined ){
+    plusIcons.forEach(function(pi){
+        pi.addEventListener('click', function(el){
+            var parentEl = el.target.parentNode.parentNode.parentNode;
+            if( parentEl.classList.contains('open') ){
+                parentEl.classList.remove('open');
+            } else {
+                parentEl.classList.add('open');
+            }
+        });
+    });
+}
