@@ -6,7 +6,7 @@
         background-repeat: no-repeat;
         background-size: cover;
 
-        @include breakpoint-down(small) {
+        @include breakpoint-down(large) {
             display: none;
         }
     }
@@ -46,6 +46,8 @@
             border-radius: 8px;
             margin-top: 42px;
             padding: 30px;
+
+            
 
             .inline {
                 .form-control {
@@ -141,6 +143,7 @@
                 line-height: 21px;
                 color: vsPrimaryOpacity(0.5);
                 padding: 14px 48px;
+                font-weight: 300;
             }
 
             .form-group {
@@ -160,6 +163,7 @@
 
                 .right {
                     right: 16px;
+                    cursor: pointer;
                 }
 
                 &.cta-box {
@@ -192,7 +196,7 @@
 
                 &:hover {
                     background: transparent;
-                    border-color: transparent;
+                    border-color: $primary;
                 }
 
                 &.transparent {

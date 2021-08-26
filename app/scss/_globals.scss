@@ -135,6 +135,21 @@ p {
     }
 }
 
+select {
+    &.form-control {
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background:url('../images/angle-down.png') 94% 50% no-repeat;
+
+        // &::before {
+        //     content: '';
+        //     background-image: url('../images/angle-down.png');
+        //     position: absolute;
+        // }
+    }
+}
+
 a,
 a::after,
 a::before {

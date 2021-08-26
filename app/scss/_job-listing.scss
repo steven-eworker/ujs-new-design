@@ -45,17 +45,28 @@
                 }
 
                 .title {
-                    font-size: 18px;
+                    font-size: 22px;
                     color: $primary;
-                    max-width: 330px;
+                    max-width: 500px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     margin-bottom: 4px;
+                    font-weight: 500;
 
+                    @include breakpoint-down(large) {
+                        max-width: 340px;
+                    }
+                    
                     @include breakpoint-down(medium) {
                         max-width: unset;
                         white-space: unset;
+                        max-width: 220px;
+                        line-height: 19px;
+                        font-size: 16px;
+                    }
+                    @include breakpoint-down(small) {
+                        max-width: unset;
                     }
                 }
 
@@ -145,6 +156,13 @@
                     background: transparent;
                     padding: 0;
                     box-shadow: none;
+                    @include breakpoint-down(large){
+                        flex-direction: column;
+                    }
+
+                    @include breakpoint-down(small){
+                        flex-direction: row;
+                    }
 
                     .cta {
                         padding: 15px 34px;
@@ -316,6 +334,10 @@
                     margin-left: -36px;
                     list-style-type: none;
                     text-align: left;
+                    &.states{
+                        max-height: 325px;
+                        overflow-y: scroll;
+                    }
 
                     @include breakpoint-down(small) {
                         // max-height: 100px;
@@ -329,6 +351,10 @@
 
                     li {
                         margin-bottom: 16px;
+                        font-weight: 400;
+                        .checkmark{
+                            box-shadow: unset;
+                        }
                     }
                 }
 

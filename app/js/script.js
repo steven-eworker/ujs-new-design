@@ -150,16 +150,31 @@ function filterListSearch3() {
 }
 
 
-window.onscroll = fixTheHeader;
 var header = document.querySelector("header");
-var sticky = header.offsetTop;
-
-function fixTheHeader() {
-    if( window.innerWidth > 991 ){
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky-head");
-        } else {
-            header.classList.remove("sticky-head");
+if( header != undefined ){
+    window.onscroll = fixTheHeader;
+    var sticky = header.offsetTop;
+    
+    function fixTheHeader() {
+        if( window.innerWidth > 991 ){
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky-head");
+            } else {
+                header.classList.remove("sticky-head");
+            }
         }
     }
 }
+
+var showPassword = document.querySelectorAll('.show-password');
+showPassword.forEach(function(el){
+    el.addEventListener('click', function(toggle){
+        console.log(toggle.target);
+        var input = toggle.target.parentNode.querySelector('input');
+        if( input.type === 'password' ){
+            input.type = 'text';
+        } else {
+            input.type = 'password';
+        }
+    });
+});

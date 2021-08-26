@@ -2,6 +2,7 @@
     padding: 0;
     transition:all 300ms ease-in-out;
     background: $white;
+    padding: 12px 0;
     &.sticky-head{
         position: fixed;
         top: 0;
@@ -121,8 +122,8 @@
                     background: vsPrimaryOpacity(0.05);
                     position: absolute;
                     width: 100%;
-                    height: 110%;
-                    top: -8px;
+                    height: 114%;
+                    top: -12px;
                     left: 0;
                     z-index: 2;
                     opacity: 0;
