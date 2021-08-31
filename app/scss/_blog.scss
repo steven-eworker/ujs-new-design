@@ -1,0 +1,275 @@
+.blog {
+    .container {
+        @media(max-width:992px) {
+            padding: 0 30px;
+        }
+    }
+
+    .filter-bar {
+        display: flex;
+        align-items: center;
+
+        .search-bar {
+            position: relative;
+            flex-basis: 88%;
+
+            .form-control {
+                border: 1px solid #E2E2E9;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+                padding: 12px 12px 12px 40px;
+                font-weight: 400;
+                font-size: 18px;
+            }
+
+            i {
+                position: absolute;
+                top: 34%;
+                left: 12px;
+                color: vsPrimaryOpacity(0.5);
+                font-weight: 600;
+            }
+        }
+
+        .form-action {
+            flex-basis: 35%;
+            display: flex;
+
+            @media(max-width:992px) {
+                flex-basis: 20%;
+            }
+        }
+
+        .submit {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            padding: 14px 0;
+            color: $white;
+            background: $success;
+            border: 1px solid $success;
+            border: 1px solid #0AD188;
+            box-sizing: border-box;
+            border-radius: 8px;
+            margin-left: 15px;
+            transition: all 250ms ease-in-out;
+            flex-basis: 40%;
+
+            @media(max-width:992px) {
+                flex-basis: 100%;
+
+                span {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                background: $white;
+                color: $success;
+            }
+
+            i {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+
+        .sort {
+            display: inline-block;
+            width: auto;
+            background-color: $white;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: vsPrimaryOpacity(0.5);
+            padding: 15px 16% 15px 10%;
+            margin-left: 15px;
+            background-position: 72% 50%;
+            border: 1px solid #E2E2E9;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+
+            @media(max-width:992px) {
+                display: none;
+            }
+        }
+    }
+
+    .posts {
+        margin-top: 40px;
+
+        @include breakpoint-down(medium) {
+            margin-top: 25px;
+        }
+
+        .card-wrap {
+            padding: 0;
+            padding-right: 28px;
+
+            @media(max-width:992px) {
+                padding: 0;
+
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .card {
+            background: $white;
+            border: 1px solid #E2E2E9;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 0;
+
+            .img {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .post-meta,
+            .copy,
+            .cta-box {
+                padding: 0 30px;
+            }
+
+            .post-meta {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-between;
+
+                .date,
+                .author {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: vsPrimaryOpacity(0.5);
+
+                    @include breakpoint-down(medium) {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+            }
+
+            .copy {
+                .title {
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: $primary;
+
+                    @include breakpoint-down(medium) {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+
+                .description {
+                    color: vsPrimaryOpacity(0.5);
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-top: 10px;
+
+                    @include breakpoint-down(medium) {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+            }
+
+            .cta-box {
+                display: flex;
+                margin-bottom: 25px;
+
+                .more,
+                .share {
+                    flex-basis: 50%;
+                    padding: 16px 4%;
+                    text-align: center;
+                    border: 1px solid transparent;
+                    font-size: 16px;
+                    line-height: 19px;
+                    border-radius: 8px;
+
+                    @include breakpoint-down(medium) {
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+
+                .more {
+                    font-weight: bold;
+                    color: $success;
+                    background: vsSuccessOpacity(0.15);
+                    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+
+                    &:hover {
+                        border-color: $success;
+                    }
+                }
+
+                .share {
+                    font-weight: 900;
+                    color: vsPrimaryOpacity(0.5);
+                    margin-left: 10px;
+
+                    &:hover {
+                        border-color: $primary;
+                        color: $primary;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .posts {
+        &.greyed {
+
+            .date,
+            .author,
+            .title,
+            .sub-title,
+            .description {
+                background: #E2E2E9;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+                height: 18px;
+            }
+
+            .post-meta {
+                .date {
+                    width: 18%;
+                }
+
+                .author {
+                    width: 25%;
+                }
+            }
+
+            .title {
+                width: 100%;
+            }
+
+            .sub-title {
+                width: 70%;
+            }
+
+            .description {
+                height: 11px;
+                line-height: 14px;
+                margin: 0;
+            }
+
+            .cta-box {
+                margin-top: 20px;
+            }
+        }
+    }
+}
