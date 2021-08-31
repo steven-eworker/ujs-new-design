@@ -4373,6 +4373,181 @@ a::before {
   margin-top: 20px;
 }
 
+.blog-detail.banner .post-meta {
+  color: #ffffff;
+}
+
+.blog-detail.banner .post-meta .date {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.blog-detail.banner .post-meta .author {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.banner .main-heading {
+    text-align: left;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.banner .post-meta {
+    text-align: left;
+    margin-left: 30px;
+  }
+}
+
+.blog-detail.jobs .list-sec {
+  padding: 25px;
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.jobs .list-sec {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.blog-detail.jobs .list-sec p,
+.blog-detail.jobs .list-sec img,
+.blog-detail.jobs .list-sec h3 {
+  padding: 0;
+}
+
+.blog-detail.jobs .list-sec h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+  color: #3C3D6B;
+  margin-top: 10px;
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.jobs .list-sec h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.jobs .sidebar {
+    margin: 0;
+  }
+}
+
+.blog-detail.jobs .sidebar .contact-info {
+  margin-top: 0;
+}
+
+.blog-detail.jobs .sidebar .contact-info p {
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(60, 61, 107, 0.65);
+  text-transform: unset;
+  font-weight: normal;
+}
+
+.blog-detail.jobs .sidebar .contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.jobs .sidebar .contact-info p:last-child {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.blog-detail.jobs .sidebar .contact-info p.heading {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.jobs .sidebar .contact-info p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .blog-detail.jobs .sidebar .contact-info a {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.blog-detail.jobs .sidebar .intro .title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.blog-detail.jobs .sidebar .similar-posts {
+  padding: 15px;
+}
+
+.blog-detail.jobs .sidebar .similar-posts .container {
+  padding: 0;
+}
+
+.blog-detail.jobs .sidebar .similar-posts .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+}
+
+.blog-detail.jobs .sidebar .similar-posts .post:not(:first-child) {
+  margin-top: 20px;
+}
+
+.blog-detail.jobs .sidebar .similar-posts .post img {
+  -ms-flex-preferred-size: 38%;
+      flex-basis: 38%;
+  width: 38%;
+  margin-right: 12px;
+  border-radius: 5px;
+}
+
+.blog-detail.jobs .sidebar .similar-posts .post h4 {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #3C3D6B;
+  text-align: left;
+}
+
+.blog-detail.jobs .sidebar .filters {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+  left: unset;
+  bottom: unset;
+}
+
+@media (max-width: 39.9375em) {
+  .blog-detail.jobs .sidebar .filters {
+    margin-top: 0;
+  }
+}
+
+.blog-detail.jobs .sidebar .social .icon {
+  padding: 11px 0;
+  width: 30%;
+}
+
 .site-footer {
   background-color: #3C3D6B;
   padding: 60px 0px;

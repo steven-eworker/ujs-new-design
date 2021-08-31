@@ -273,3 +273,169 @@
         }
     }
 }
+
+.blog-detail {
+    &.banner {
+        .post-meta {
+            color: $white;
+
+            .date {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            .author {
+                font-weight: 900;
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+        .main-heading{
+            @include breakpoint-down(medium){
+                text-align: left;
+                margin-left: 30px;
+            }
+        }
+        .post-meta{
+            @include breakpoint-down(medium){
+                text-align: left;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    &.jobs {
+        .list-sec {
+            padding: 25px;
+            @include breakpoint-down(medium){
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            p,
+            img,
+            h3 {
+                padding: 0;
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 25px;
+                color: $primary;
+                margin-top: 10px;
+
+                @include breakpoint-down(medium) {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
+        }
+
+        .sidebar {
+            @include breakpoint-down(medium){
+                margin: 0;
+            }
+            .contact-info {
+                margin-top: 0;
+
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: vsPrimaryOpacity(0.65);
+                    text-transform: unset;
+                    font-weight: normal;
+
+                    &:last-child {
+                        margin-bottom: 0;
+
+                        @include breakpoint-down(medium) {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                    }
+
+                    &.heading {
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+
+                    @include breakpoint-down(medium) {
+                        font-size: 14px;
+                        line-height: 25px;
+                    }
+                }
+
+                a {
+                    @include breakpoint-down(medium) {
+                        font-size: 16px;
+                        line-height: 25px;
+                    }
+                }
+            }
+
+            .intro {
+                .title {
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 25px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .similar-posts {
+                padding: 15px;
+
+                .container {
+                    padding: 0;
+                }
+
+                .post {
+                    display: flex;
+                    padding: 0;
+
+                    &:not(:first-child) {
+                        margin-top: 20px;
+                    }
+
+                    img {
+                        flex-basis: 38%;
+                        width: 38%;
+                        margin-right: 12px;
+                        border-radius: 5px;
+                    }
+
+                    h4 {
+                        flex-basis: 55%;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: $primary;
+                        text-align: left;
+                    }
+                }
+            }
+
+            .filters {
+                opacity: 1;
+                position: relative;
+                z-index: 2;
+                left: unset;
+                bottom: unset;
+                @include breakpoint-down(small){
+                    margin-top: 0;
+                }
+            }
+
+            .social {
+                .icon {
+                    padding: 11px 0;
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
