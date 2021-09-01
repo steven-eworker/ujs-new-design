@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urologu Job Search | Job Listings</title>
+    <link href="dist/bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dist/style.css">
+
+</head>
+
+<body>
+    <main>
+        <header class="container-fluid navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/new-logo.png" alt="UJS Logo"></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon d-flex flex-column justify-content-center">
+                        <img src="images/hamburger-line.svg" alt="">
+                        <img src="images/hamburger-line.svg" alt="">
+                    </span>
+                </button>
+
+                <div class="navbar-collapse collapse flex-grow-0" id="main-navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown"
+                                aria-expanded="false">About<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="the-team.html">The Team</a></li>
+                                <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-bs-toggle="dropdown"
+                                aria-expanded="false">Job Seekers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                <li><a class="dropdown-item" href="job-listing.html">View Job Listing</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                aria-expanded="false">Employers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <li><a class="dropdown-item" href="post-a-job.html">Post a Job</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an Account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                aria-expanded="false"><img src="images/lucy.png" alt=""> Hey Lucy<i
+                                    class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <li><a class="dropdown-item" href="profile-job-seeker.html">My Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid banner job-listing job-detail d-none d-md-block"
+            style="background-image: url('images/small-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Job Listings</h1>
+            </div>
+        </section>
+        <section class="container-fluid banner job-listing job-detail d-md-none"
+            style="background-image: url('images/mob-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Job Listings</h1>
+            </div>
+        </section>
+        <section class="jobs job-listing cv-db admin-job-list">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12">
+                        <table class="table">
+                            <thead>
+                                <th class="d-md-none"></th>
+                                <th>#</th>
+                                <th>Job Title <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">Employer <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">STATUS</th>
+                                <th class="d-none d-md-block">POSITION</th>
+                                <th class="d-none d-md-block">CREATED ON <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">EXPIRES ON <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">UV <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">TV <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block"></th>
+                                <th class="d-none d-md-block"></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">1</td>
+                                    <td class="name"><a href="">Northern California Urology Opportunity</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Champlin LLC</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="d-none d-md-block count">44</td>
+                                    <td class="d-none d-md-block count">68</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Champlin LLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">44</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">68</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">2</td>
+                                    <td class="name"><a href="">Full Patient Schedule plus Work/Life...</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Gorczany-Weimann</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">August 20, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="d-none d-md-block count">18</td>
+                                    <td class="d-none d-md-block count">25</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Gorczany-Weimann</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">August 20, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">18</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">3</td>
+                                    <td class="name"><a href="">Urologist needed in Maryland</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Hintz Group</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">August 31, 2021</td>
+                                    <td class="d-none d-md-block expired">August 31, 2021</td>
+                                    <td class="d-none d-md-block count">75</td>
+                                    <td class="d-none d-md-block count">100</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Hintz Group</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">August 31, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">August 31, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">75</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">4</td>
+                                    <td class="name"><a href="">Urologist Needed Dublin GA</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Keebler, Labadie</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">September 16, 2021</td>
+                                    <td class="d-none d-md-block expired">September 30, 2021</td>
+                                    <td class="d-none d-md-block count">80</td>
+                                    <td class="d-none d-md-block count">124</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Keebler, Labadie</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">September 16, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">September 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">80</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">124</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">5</td>
+                                    <td class="name"><a href="">Urologist for Employed Practice</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Bosco and Sons</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">September 28, 2021</td>
+                                    <td class="d-none d-md-block expired">September 30, 2021</td>
+                                    <td class="d-none d-md-block count">68</td>
+                                    <td class="d-none d-md-block count">98</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Bosco and Sons</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">September 28, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">September 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">68</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">98</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">6</td>
+                                    <td class="name"><a href="">Urologist Opportunity - Franklin, NC</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Blick and Bosco</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position filled">Filled</td>
+                                    <td class="d-none d-md-block created">October 12, 2021</td>
+                                    <td class="d-none d-md-block expired">October 30, 2021</td>
+                                    <td class="d-none d-md-block count">44</td>
+                                    <td class="d-none d-md-block count">68</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Blick and Bosco</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position filled">Filled</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">October 12, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">October 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">44</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">68</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">7</td>
+                                    <td class="name"><a href="">Urology opportunity in desirable north...</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Rogahn PLC</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position filled">Filled</td>
+                                    <td class="d-none d-md-block created">October 12, 2021</td>
+                                    <td class="d-none d-md-block expired">October 30, 2021</td>
+                                    <td class="d-none d-md-block count">21</td>
+                                    <td class="d-none d-md-block count">48</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Rogahn PLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position filled">Filled</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">October 12, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">October 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">48</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">8</td>
+                                    <td class="name"><a href="">Urologist needed in Florida</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Renner Group</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">October 12, 2021</td>
+                                    <td class="d-none d-md-block expired">October 30, 2021</td>
+                                    <td class="d-none d-md-block count">88</td>
+                                    <td class="d-none d-md-block count">127</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Renner Group</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">October 12, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">October 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">88</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">127</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">9</td>
+                                    <td class="name"><a href="">Urologist needed in Pennsylvania</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Wiza-Breitenberg</a></td>
+                                    <td class="d-none d-md-block status">Expired</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">April 25, 2021</td>
+                                    <td class="d-none d-md-block expired">April 30, 2021</td>
+                                    <td class="d-none d-md-block count">51</td>
+                                    <td class="d-none d-md-block count">79</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Wiza-Breitenberg</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status">Expired</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">April 25, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">April 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">51</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">79</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">10</td>
+                                    <td class="name"><a href="">Urology Leadership Opportunity in...</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Kovacek PLC</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position filled">Filled</td>
+                                    <td class="d-none d-md-block created">November 2, 2021</td>
+                                    <td class="d-none d-md-block expired">November 30, 2021</td>
+                                    <td class="d-none d-md-block count">98</td>
+                                    <td class="d-none d-md-block count">174</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Kovacek PLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position filled">Filled</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">November 2, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">November 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">98</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">174</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">11</td>
+                                    <td class="name"><a href="">Experienced Urology PA Needed in Ge...</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Ziemann Inc</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">November 12, 2021</td>
+                                    <td class="d-none d-md-block expired">November 30, 2021</td>
+                                    <td class="d-none d-md-block count">64</td>
+                                    <td class="d-none d-md-block count">108</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Ziemann Inc</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">November 12, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">November 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">64</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">108</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">12</td>
+                                    <td class="name"><a href="">Urology Opportunity in South Texas Co...</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Jast-Wehner</a></td>
+                                    <td class="d-none d-md-block status">Expired</td>
+                                    <td class="d-none d-md-block position filled">Filled</td>
+                                    <td class="d-none d-md-block created">April 21, 2021</td>
+                                    <td class="d-none d-md-block expired">April 30, 2021</td>
+                                    <td class="d-none d-md-block count">74</td>
+                                    <td class="d-none d-md-block count">111</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Jast-Wehner</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status">Expired</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position filled">Filled</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">April 21, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">April 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">74</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">111</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">13</td>
+                                    <td class="name"><a href="">Urology in Texas!</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Wiegand LLC</a></td>
+                                    <td class="d-none d-md-block status">Expired</td>
+                                    <td class="d-none d-md-block position filled">Filled</td>
+                                    <td class="d-none d-md-block created">April 8, 2021</td>
+                                    <td class="d-none d-md-block expired">April 30, 2021</td>
+                                    <td class="d-none d-md-block count">65</td>
+                                    <td class="d-none d-md-block count">87</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Wiegand LLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status">Expired</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position filled">Filled</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">April 8, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">April 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">65</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">87</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">14</td>
+                                    <td class="name"><a href="">Work Two Weeks/ Month, Make $300-$...</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Gleichner LLC</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">December 15, 2021</td>
+                                    <td class="d-none d-md-block expired">December 30, 2021</td>
+                                    <td class="d-none d-md-block count">97</td>
+                                    <td class="d-none d-md-block count">119</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Gleichner LLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">December 15, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">December 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">97</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">119</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">15</td>
+                                    <td class="name"><a href="">Lucrative Opportunity in Maine</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Price Group</a></td>
+                                    <td class="d-none d-md-block status published">Published</td>
+                                    <td class="d-none d-md-block position open">Open</td>
+                                    <td class="d-none d-md-block created">December 21, 2021</td>
+                                    <td class="d-none d-md-block expired">December 30, 2021</td>
+                                    <td class="d-none d-md-block count">55</td>
+                                    <td class="d-none d-md-block count">83</td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-eye"></i></a>
+                                    </td>
+                                    <td class="d-none d-md-block edit-action"><a href=""><i class="fas fa-edit"></i></a>
+                                    </td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="2">
+                                        <table class="table">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Price Group</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Status</td>
+                                                    <td class="inner-table status published">Published</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Position</td>
+                                                    <td class="inner-table position open">Open</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Created on</td>
+                                                    <td class="inner-table created">December 21, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Expires on</td>
+                                                    <td class="inner-table expired">December 30, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unique Views</td>
+                                                    <td class="inner-table count">55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Views</td>
+                                                    <td class="inner-table count">83</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="inner-table mob-cta" colspan="2">
+                                                        <a href="javascript:void(0)"><i class="fas fa-eye"></i> View</a>
+                                                        <a href="javascript:void(0)"><i class="fas fa-edit"></i> Edit</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-center align-items-center all-jobs cta pagination">
+                            <a href="#" class="btn btn-outline-primary prev"><i class="fas fa-angle-left"></i>
+                                <span>Previous</span></a>
+                            <ul class="numbers">
+                                <li class="current"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary next"><span>Next</span> <i
+                                    class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row justify-content-between align-items-end">
+                    <div class="col-md-6 col-lg-3 content">
+                        <a href="#" class="footer-logo"><img src="images/footer-new.png" alt="Footer Logo"></a>
+                        <div class="d-flex justify-content-between footer-links">
+                            <div class="menu">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">The Team</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu">
+                                <h4>Jobs</h4>
+                                <ul>
+                                    <li><a href="#">Find a Job</a></li>
+                                    <li><a href="#">Post a Job</a></li>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 sponsored">
+                        <div class="advert">
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&#169; 2021 Urology Job Search. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="dist/bootstrap5/bootstrap.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/qkuo0xyra9a3nkzqcx58cza2dil7u2haiqreab0luj086q8w/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>
