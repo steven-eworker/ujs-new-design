@@ -44,7 +44,7 @@
                     width: 100%;
                 }
 
-                .title {
+                .title:not(.in-accordion) {
                     font-size: 22px;
                     color: $primary;
                     max-width: 500px;
@@ -216,10 +216,11 @@
                     padding: 0px;
 
                     .btn {
+                        width: 100%;
                         position: relative;
                         width: 100%;
                         display: block;
-                        padding: 15px 50px;
+                        padding: 15px 0;
                         background: $success;
                         color: $white;
                         border: 2px solid $success;

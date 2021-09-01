@@ -436,12 +436,18 @@
 
                     }
 
-                    img {
-                        width: 100%;
-                    }
+                    // img {
+                    //     width: 100%;
+                    // }
 
                     .toggle-box {
+                        padding: 0;
                         padding-top: 20px;
+                        .row{
+                            > :first-child{
+                                padding: 0;
+                            }
+                        }
 
                         .col-md-2 {
                             @include breakpoint-down(small) {
@@ -575,6 +581,7 @@
 
                         &:checked+.checkmark {
                             background: $success;
+                            border-color: $success;
 
                             &::after {
                                 display: block;
@@ -746,12 +753,12 @@
                             padding: 0;
                         }
 
-                        .acc {
-                            img {
-                                width: 80%;
-                                height: auto;
-                            }
-                        }
+                        // .acc {
+                        //     img {
+                        //         width: 80%;
+                        //         height: auto;
+                        //     }
+                        // }
 
                         .col-md-3 {
                             margin: 0;
@@ -828,6 +835,130 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.edit-job-listing {
+    &.jobs {
+        .sidebar {
+            .note-check {
+                margin-bottom: 15px;
+
+                .status {
+                    display: inline-block;
+
+                    span {
+                        color: $yellow;
+
+                        &.checking {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.checking {
+                    .status {
+
+                        span {
+                            display: none;
+
+                            &.checking {
+                                display: inline-block;
+                                color: $success;
+                            }
+                        }
+                    }
+                }
+
+                .col {
+                    padding: 0;
+                }
+
+                .greyed {
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: $primary;
+                    border-color: transparent;
+                    width: 100%;
+
+                    &:hover {
+                        border-color: $primary;
+                    }
+                }
+
+                .switch {
+                    display: inline-block !important;
+
+                    .slider {
+                        &::before {
+                            background-color: $yellow;
+                        }
+                    }
+                }
+            }
+
+            .form {
+                &.list-sec {
+                    padding: 25px;
+                }
+            }
+
+            .skip {
+                margin-top: 15px;
+            }
+        }
+
+        .main-content {
+            @include breakpoint-down(medium) {
+                margin-top: 15px;
+            }
+
+            .upload-wrap {
+                border: 1px solid #E2E2E9;
+                box-sizing: border-box;
+                border-radius: 8px;
+                background-color: $light-bg;
+
+                @include breakpoint-down(medium) {
+                    padding: 40px;
+                }
+            }
+
+            .summary {
+                padding-bottom: 25px;
+                .list {
+                    width: 100%;
+
+                    .first {
+                        float: left;
+                        margin-right: 0.5em;
+                        @include breakpoint-down(small){
+                            width: 68%;
+                        }
+                    }
+
+                    .price {
+                        float: right;
+                        margin-left: 0.5em;
+                        width: auto;
+                        text-align: right;
+                    }
+                    &:after {
+                        content:'';
+                         border-bottom:dotted 2px vsPrimaryOpacity(0.75);
+                        display:block;
+                        overflow:hidden;
+                        height:18px;
+                    }
+                }
+                .total{
+                    text-align: right;
+                    color: $primary;
+                    font-weight: 500;
                 }
             }
         }

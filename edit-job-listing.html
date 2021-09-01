@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urologu Job Search | Edit Job Listing</title>
+    <link href="dist/bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dist/style.css">
+
+</head>
+
+<body>
+    <main>
+        <header class="container navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/new-logo.png" alt="UJS Logo"></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon d-flex flex-column justify-content-center">
+                        <img src="images/hamburger-line.svg" alt="">
+                        <img src="images/hamburger-line.svg" alt="">
+                    </span>
+                </button>
+
+                <div class="navbar-collapse collapse flex-grow-0" id="main-navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown"
+                                aria-expanded="false">About<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="the-team.html">The Team</a></li>
+                                <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-bs-toggle="dropdown"
+                                aria-expanded="false">Job Seekers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                <li><a class="dropdown-item" href="job-listing.html">View Job Listing</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                aria-expanded="false">Employers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <li><a class="dropdown-item" href="post-a-job.html">Post a Job</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an Account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="post-a-job.html" class="btn btn-outline-primary me-2 cta">Post a Job</a>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid banner job-listing job-detail d-none d-md-block"
+            style="background-image: url('images/small-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Edit Job Listing</h1>
+            </div>
+        </section>
+        <section class="container-fluid banner job-listing job-detail d-md-none"
+            style="background-image: url('images/mob-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Edit Job Listing</h1>
+            </div>
+        </section>
+        <section class="jobs job-listing job-detail post-a-job edit-job-listing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 main-content job-listing job-detail post-a-job sidebar in-accordion">
+                        <div class="row note-check">
+                            <div class="col">
+                                <a href="#" class="greyed"><i class="fas fa-arrow-left mx-2"></i> Back to Job Listings</a>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <h2 class="text-start">Position Status</h2>
+                            <div class="row justify-content-between align-items-center note-check">
+                                <div class="col-8 text-start">
+                                    <p class="status mb-0"><span class="checking">Position Open</span><span>Position
+                                            Filled</span></p>
+                                </div>
+                                <div class="col-4 text-end">
+                                    <label class="switch">
+                                        <input class="checkbox" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec skip">
+                            <a href="javascript:void(0)"><i class="fas fa-level-down-alt mx-1"></i> Skip to add-ons</a>
+                        </div>
+                        <div class="row list-sec detail form submit p-0 border-0">
+                            <button class="submit" type="submit">
+                                Save all changes <i class="fas fa-arrow-circle-right mx-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <form class="col-lg-8 main-content" action="">
+                        <div class="row list-sec detail form">
+                            <h2>Job Details</h2>
+                            <div class="label-wrap">
+                                <input type="text" id="title" class="form-control" placeholder="Title"
+                                    value="Full time Urologist needed in beautiful Oregon">
+                                <label for="title">Title</label>
+                            </div>
+                            <div class="label-wrap">
+                                <input type="text" id="position" class="form-control" placeholder="Position"
+                                    value="Urologist">
+                                <label for="position">Position</label>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="label-wrap">
+                                        <select name="" id="city" class="form-control">
+                                            <option value="" selected>Roseburg</option>
+                                        </select>
+                                        <label for="city">City</label>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="label-wrap">
+                                        <select name="states" id="states" class="form-control">
+                                            <option>Alabama</option>
+                                            <option>Alaska</option>
+                                            <option>Arizona</option>
+                                            <option>Arkansas</option>
+                                            <option>California</option>
+                                            <option>Colorado</option>
+                                            <option>Connecticut</option>
+                                            <option>Delaware</option>
+                                            <option>Florida</option>
+                                            <option>Georgia</option>
+                                            <option>Hawaii</option>
+                                            <option>Idaho</option>
+                                            <option>Illinois</option>
+                                            <option>Indiana</option>
+                                            <option>Iowa</option>
+                                            <option>Kansas</option>
+                                            <option>Kentucky</option>
+                                            <option>Louisiana</option>
+                                            <option>Maine</option>
+                                            <option>Maryland</option>
+                                            <option>Massachusetts</option>
+                                            <option>Michigan</option>
+                                            <option>Minnesota</option>
+                                            <option>Mississippi</option>
+                                            <option>Missouri</option>
+                                            <option>Montana</option>
+                                            <option>Nebraska</option>
+                                            <option>Nevada</option>
+                                            <option>New Hampshire</option>
+                                            <option>New Jersey</option>
+                                            <option>New Mexico</option>
+                                            <option>New York</option>
+                                            <option>North Carolina</option>
+                                            <option>North Dakota</option>
+                                            <option>Ohio</option>
+                                            <option>Oklahoma</option>
+                                            <option selected>Oregon</option>
+                                            <option>Pennsylvania</option>
+                                            <option>Rhode Island</option>
+                                            <option>South Carolina</option>
+                                            <option>South Dakota</option>
+                                            <option>Tennessee</option>
+                                            <option>Texas</option>
+                                            <option>Utah</option>
+                                            <option>Vermont</option>
+                                            <option>Virginia</option>
+                                            <option>Washington</option>
+                                            <option>West Virginia</option>
+                                            <option>Wisconsin</option>
+                                            <option>Wyoming</option>
+                                        </select>
+                                        <label for="states">State(s)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="label-wrap">
+                                        <select name="practice" id="practice" class="form-control">
+                                            <option>Hospital</option>
+                                            <option>Academic Institution</option>
+                                            <option selected>Group Practice</option>
+                                            <option>Solo Practice</option>
+                                            <option>Multispecialty Group</option>
+                                        </select>
+                                        <label for="practice">Practice Type(s)</label>
+                                    </div>
+                                </div>
+                                <div class="col form-control">
+                                    <label class="visa">Visa Candidates accepted?<input type="checkbox"
+                                            name="confirmation" value="all" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="label-wrap">
+                                <select class="form-control" name="subspecialty" id="subspecialty">
+                                    <option>General Urology</option>
+                                    <option>Urologic Oncology</option>
+                                    <option>Pediatric Urology</option>
+                                    <option>Reconstructive Urology</option>
+                                    <option>FPMRS/Urogynecology</option>
+                                    <option>Robotic/Minimally Invasive Surgery</option>
+                                    <option>Endourology</option>
+                                    <option selected>Neurourology</option>
+                                    <option>Andrology/Men’s Health</option>
+                                </select>
+                                <label for="subspecialty">Subspecialty(s)</label>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <h2>Employer Details</h2>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="label-wrap">
+                                        <input type="text" id="name" class="form-control" placeholder="Name" value="Urology Job Search">
+                                        <label for="name">Name</label>
+                                    </div>
+                                    <div class="label-wrap">
+                                        <input type="text" id="homepage" class="form-control"
+                                            placeholder="Home Page URL" value="https://www.urologyjobsearch.com/listings">
+                                        <label for="homepage">Home Page URL</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 d-flex align-items-center mb-4 upload-wrap">
+                                    <label for="file-upload1" class="form-control custom-file-upload logo mb-0">
+                                        <img class="w-100" src="images/new-logo.png" alt="">
+                                    </label>
+                                    <input id="file-upload1" type="file" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <h2>Videos</h2>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="file-upload2" class="form-control custom-file-upload">
+                                        <img class="w-100" src="images/upload-video.png" alt="">
+                                    </label>
+                                    <input id="file-upload2" type="file" />
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="label-wrap">
+                                        <input type="text" id="youTube" class="form-control"
+                                            placeholder="YouTube Video URL" value="https://www.youtube.com/watch?v=4eiKspBoJ0A">
+                                        <label for="youTube">YouTube Video URL</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <h2>Application Details</h2>
+                            <div class="row toggles">
+                                <a href="javascript:void(0)" data-target="url" class="col-md-6 active">
+                                    <i class="fas fa-link"></i>
+                                    <span>URL</span>
+                                </a>
+                                <a href="javascript:void(0)" data-target="email" class="col-md-6">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email</span>
+                                </a>
+                            </div>
+                            <div class="toggle-box">
+                                <div id="url" class="wrap">
+                                    <div class="label-wrap">
+                                        <input class="form-control" id="application" type="text"
+                                            placeholder="Application URL" value="https://www.urologyjobsearch.com/listings/425-part-time-urologist-needed-2-4-days-per-month">
+                                        <label for="application">Application URL</label>
+                                    </div>
+                                </div>
+                                <div id="email" class="wrap" style="display: none;">
+                                    <div class="label-wrap">
+                                        <input class="form-control" id="apply-url" type="text"
+                                            placeholder="Apply to Email">
+                                        <label for="apply-url">Apply to Email</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <h2>Job Description</h2>
+                            <textarea name="" id="" cols="30" rows="10" class="textarea">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit scelerisque in dictum non. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Habitasse platea dictumst vestibulum rhoncus est. Faucibus purus in massa tempor nec feugiat nisl. Auctor eu augue ut lectus arcu bibendum at. Lectus nulla at volutpat diam ut. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. Risus nec feugiat in fermentum posuere urna. Eu ultrices vitae auctor eu augue ut lectus. Habitant morbi tristique senectus et netus et. Urna et pharetra pharetra massa massa. Diam maecenas sed enim ut sem. Convallis tellus id interdum velit laoreet. Urna porttitor rhoncus dolor purus non enim. Fringilla ut morbi tincidunt augue.
+                            </textarea>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <h2>Increase visibility with these add-ons</h2>
+                            <div class="label checks">
+                                <label>Highlight my post in yellow (+$10)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="label checks">
+                                <label>Highlight my post with a custom brand color (+$15)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <span class="ticket-number">#323648</span>
+                            </div>
+                            <div class="label checks">
+                                <label>Sticky my post so it stays on the front page for 1 month (+$100)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="label checks">
+                                <label>Sticky my post so it stays on the front page for 3 months (+$250)
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form job-listing">
+                            <div class="accordion accordion-flush job" id="jobpreview">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#jobpreviewcollapse"
+                                            aria-expanded="false" aria-controls="jobpreviewcollapse">
+                                            <i class="fas fa-eye"></i>Job Listing Preview
+                                        </button>
+                                        <!-- Redirect user to respective page instead of opening the accordion -->
+                                    </h2>
+                                    <div id="jobpreviewcollapse" class="accordion-collapse collapse job-list"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#jobpreview">
+                                        <div
+                                            class="accordion-body d-flex justify-content-start align-items-center job-item">
+                                            <div class="d-flex justify-content-start align-items-center details">
+                                                <div class="img acc">
+                                                    <img src="images/ad-placeholder.jpg" alt="">
+                                                    <h3 class="title d-block d-sm-none in-accordion">Full time Urologist needed in
+                                                        beautiful
+                                                        Oregon</h3>
+                                                </div>
+                                                <div class="copy">
+                                                    <h3 class="title d-none d-sm-block in-accordion">Full time Urologist needed in
+                                                        beautiful
+                                                        Oregon</h3>
+                                                    <p class="desc">Foley Health System</p>
+                                                    <a href="#" class="location"><i class="fas fa-map-marker-alt"></i>
+                                                        Bend,
+                                                        Oregon</a>
+                                                    <p class="date d-block d-sm-none"><i class="fas fa-history"></i> 1d
+                                                        ago</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-start cta-box">
+                                                <div class="d-flex justify-content-evenly flex-column tags">
+                                                    <a href="#" class="btn tag">Hospital Employed</a>
+                                                    <a href="#" class="btn tag">Neurorology</a>
+                                                </div>
+                                                <div class="d-flex flex-column star-box">
+                                                    <a href="#" class="star"><i class="far fa-star"></i></a>
+                                                    <p class="date d-none d-sm-block"><i class="fas fa-history"></i> 1d
+                                                        ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form job-listing">
+                            <div class="accordion accordion-flush job" id="jobdetail">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#jobview" aria-expanded="false"
+                                            aria-controls="jobview">
+                                            <i class="fas fa-eye"></i>Job Listing Details Preview
+                                        </button>
+                                    </h2>
+                                    <!-- Redirect user to respective page instead of opening the accordion -->
+                                    <div id="jobview" class="accordion-collapse collapse job-list"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#jobdetail">
+                                        <div class="accordion-body">
+                                            <section class="jobs job-detail">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-8 main-content">
+                                                            <div class="row list-sec">
+                                                                <div class="col-md-4">
+                                                                    <ul class="list-title">
+                                                                        <li>Job Title</li>
+                                                                        <li class="detail d-block d-sm-none">Full time
+                                                                            Urologist needed in beautiful Oregon</li>
+                                                                        <li>Employer</li>
+                                                                        <li class="detail d-block d-sm-none"><a href="#"
+                                                                                class="heading">UJS Health System</a>
+                                                                        </li>
+                                                                        <li>Type of Practice</li>
+                                                                        <li class="detail d-block d-sm-none"><a href="#"
+                                                                                class="tag">Hospital Employed</a></li>
+                                                                        <li>Location</li>
+                                                                        <li class="detail d-block d-sm-none">Bend,
+                                                                            Oregon</li>
+                                                                        <li>Subspecialty</li>
+                                                                        <li class="detail d-block d-sm-none"><a href="#"
+                                                                                class="tag">Neurology</a></li>
+                                                                        <li>Visa Candidates Accepted</li>
+                                                                        <li class="detail d-block d-sm-none">Yes</li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-md-8 d-none d-sm-block">
+                                                                    <ul class="list-title">
+                                                                        <li class="detail">Full time Urologist needed in
+                                                                            beautiful Oregon</li>
+                                                                        <li class="detail"><a href="#"
+                                                                                class="heading">UJS Health System</a>
+                                                                        </li>
+                                                                        <li class="detail"><a href="#"
+                                                                                class="tag">Hospital Employed</a></li>
+                                                                        <li class="detail">Bend, Oregon</li>
+                                                                        <li class="detail"><a href="#"
+                                                                                class="tag">Neurology</a></li>
+                                                                        <li class="detail">Yes</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="d-flex justify-content-between align-items-center intro">
+                                                                <h2 class="title">Job Description</h2>
+                                                            </div>
+                                                            <div class="row list-sec detail">
+                                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                                    elit, sed do eiusmod tempor incididunt
+                                                                    ut labore et dolore magna aliqua. Velit scelerisque
+                                                                    in dictum non. Interdum posuere
+                                                                    lorem ipsum dolor sit amet consectetur adipiscing.
+                                                                    Mattis nunc sed blandit libero
+                                                                    volutpat sed cras ornare arcu. Habitasse platea
+                                                                    dictumst vestibulum rhoncus est.
+                                                                    Faucibus purus in massa tempor nec feugiat nisl.
+                                                                    Auctor eu augue ut lectus arcu bibendum
+                                                                    at. Lectus nulla at volutpat diam ut. Laoreet non
+                                                                    curabitur gravida arcu ac tortor
+                                                                    dignissim convallis. Risus nec feugiat in fermentum
+                                                                    posuere urna. Eu ultrices vitae
+                                                                    auctor eu augue ut lectus. Habitant morbi tristique
+                                                                    senectus et netus et. Urna et
+                                                                    pharetra pharetra massa massa.</p>
+
+                                                                <p>Diam maecenas sed enim ut sem. Convallis tellus id
+                                                                    interdum velit laoreet. Urna porttitor
+                                                                    rhoncus dolor purus non enim. Fringilla ut morbi
+                                                                    tincidunt augue. Tincidunt arcu non
+                                                                    sodales neque sodales ut etiam. Placerat orci nulla
+                                                                    pellentesque dignissim enim sit
+                                                                    amet. Ipsum a arcu cursus vitae. Neque ornare aenean
+                                                                    euismod elementum nisi quis.</p>
+                                                            </div>
+                                                            <div class="row list-sec detail">
+                                                                <iframe width="560" height="220"
+                                                                    src="https://www.youtube.com/embed/4eiKspBoJ0A"
+                                                                    title="YouTube video player" frameborder="0"
+                                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                    allowfullscreen=""></iframe>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="job-listing job-detail list-sec sidebar in-accordion">
+                                                                <div class="mob-triggers title d-block d-sm-none">
+                                                                    <a class="filter-trigger" href="javascript:void(0)">
+                                                                        <i class="fas fa-envelope"></i>
+                                                                        <i class="fas fa-envelope-open toggle"></i>
+                                                                        <span>Apply</span>
+                                                                    </a>
+                                                                    <p class="results-count">
+                                                                        <a href="#">
+                                                                            <i class="far fa-star star"></i>
+                                                                        </a>
+                                                                        <a class="filter-trigger"
+                                                                            href="javascript:void(0)">
+                                                                            <i class="fas fa-share-alt"></i>
+                                                                        </a>
+                                                                    </p>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <button class="button green"><i
+                                                                            class="fas fa-envelope"></i>Apply</button>
+                                                                    <button class="button yellow"><i
+                                                                            class="far fa-star"></i>Add to
+                                                                        Favorites</button>
+                                                                    <p class="share-text"><span>SHARE OR COPY</span></p>
+                                                                    <button class="button blue"><i
+                                                                            class="fas fa-envelope"></i> Email a
+                                                                        Friend</button>
+                                                                    <div class="copy">
+                                                                        <input class="w-100" type="text"
+                                                                            placeholder="urologyjobsearch.com/listi...">
+                                                                        <a href="#" class="fas fa-clone copy-cta"></a>
+                                                                    </div>
+                                                                    <div class="d-flex justify-content-between social">
+                                                                        <a href="#" class="icon linkedin"><i
+                                                                                class="fab fa-linkedin"></i></a>
+                                                                        <a href="#" class="icon twitter"><i
+                                                                                class="fab fa-twitter"></i></a>
+                                                                        <a href="#" class="icon facebook"><i
+                                                                                class="fab fa-facebook"></i></a>
+                                                                    </div>
+                                                                    <div class="contact-info d-none d-md-block">
+                                                                        <p>Contact information</p>
+                                                                        <a href="#"><i class="fas fa-user"></i>Rachel
+                                                                            Lucy</a>
+                                                                        <a href="mailto:rachel@urologyjobsearch.com"><i
+                                                                                class="fas fa-envelope"></i>rachel@urologyjobsearch.com</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <h2><i class="fas fa-tag"></i>tag Have a coupon?</h2>
+                            <div class="col-md-9">
+                                <div class="label-wrap">
+                                    <input type="text" id="discount" placeholder="Enter your discount code" class="form-control" value="UJS0521C">
+                                    <label for="discount">Enter your discount code</label>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <!-- Remove the Class active from <a class="apply active"> tag to see the greyed out version of the button -->
+                                <a href="#" class="apply active"> <span class="non-active">Apply</span> <span class="active"><i class="fas fa-check-circle"></i> Applied</span></a>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form">
+                            <div class="row toggles">
+                                <a href="javascript:void(0)" data-target="pay-now" class="col-md-6 active">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Pay Now</span>
+                                </a>
+                                <a href="javascript:void(0)" data-target="pay-later" class="col-md-6">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Pay later</span>
+                                </a>
+                            </div>
+                            <div class="toggle-box">
+                                <div id="pay-now" class="wrap pay now">
+                                    <h3><i class="fas fa-credit-card"></i>Card Details</h3>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="label-wrap">
+                                                <input class="form-control" id="card-num" type="text" placeholder="Card Number" value="8544  5118  3697  1178">
+                                                <label for="card-num">Card Number</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="label-wrap">
+                                                <input class="form-control" id="card-date" type="text" placeholder="MM/YY" value="05/28">
+                                                <label for="card-date">MM/YY</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="label-wrap">
+                                                <input class="form-control" id="cvv-num" type="text" placeholder="CVV" value="214">
+                                                <label for="cvv-num">CVV</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="pay-later" class="wrap pay later" style="display: none;">
+                                    <p class="note">Choosing a pay later will save your posting as an unpaid draft and
+                                        create an Invoice. You must pay the invoice before the job becomes active.</p>
+                                    <div class="later-wrap">
+                                        <div class="label-wrap">
+                                            <input class="form-control" id="po-in" type="text" placeholder="PO # / Invoice notes">
+                                            <label for="po-in">PO # / Invoice notes</label>
+                                        </div>
+                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span
+                                                class="cstm-tooltip">Will be displayed on invoices for
+                                                reference</span></a>
+                                    </div>
+                                    <div class="later-wrap">
+                                        <div class="label-wrap">
+                                            <input class="form-control" id="acc-email" type="text" placeholder="Accounting email">
+                                            <label for="acc-email">Accounting email</label>
+                                        </div>
+                                        <a href="#" class="btn"><i class="fas fa-info-circle"></i><span
+                                                class="cstm-tooltip">Billing contact for issues related to job listing
+                                                payment</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec detail form summary">
+                            <h2>Summary</h2>
+                            <p class="list">
+                                <span class='first'>Sticky my post so it stays on the front page for 3 months (+$250)</span>
+                                <span class="price">$250.00</span> 
+                            </p>
+                            <p class="total">$250.00</p>
+                        </div>
+                        <div class="row list-sec detail form submit p-now">
+                            <button class="submit pay-now-later" type="submit">
+                                <i class="fas fa-clock"></i> Pay Now and Post Job Later
+                            </button>
+                            <button class="submit pay-now" type="submit">
+                                <i class="fas fa-paper-plane"></i> Pay and Post Job Now
+                            </button>
+                            <button class="submit pay-later" type="submit">
+                                <i class="fas fa-clock"></i> Pay Later and Post Job Later
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row justify-content-between align-items-end">
+                    <div class="col-md-6 col-lg-3 content">
+                        <a href="#" class="footer-logo"><img src="images/footer-new.png" alt="Footer Logo"></a>
+                        <div class="d-flex justify-content-between footer-links">
+                            <div class="menu">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">The Team</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu">
+                                <h4>Jobs</h4>
+                                <ul>
+                                    <li><a href="#">Find a Job</a></li>
+                                    <li><a href="#">Post a Job</a></li>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 sponsored">
+                        <div class="advert">
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&#169; 2021 Urology Job Search. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="dist/bootstrap5/bootstrap.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/qkuo0xyra9a3nkzqcx58cza2dil7u2haiqreab0luj086q8w/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>

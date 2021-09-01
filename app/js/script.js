@@ -192,3 +192,16 @@ if( plusIcons != undefined ){
         });
     });
 }
+
+var checkboxSwitch = document.querySelectorAll('.note-check .switch input');
+if( checkboxSwitch != undefined ){
+    checkboxSwitch.forEach(function(sw){
+        sw.addEventListener('change', function(e){
+            if( e.target.checked == true ){
+                e.target.parentNode.parentNode.parentNode.classList.add('checking');
+            } else {
+                e.target.parentNode.parentNode.parentNode.classList.remove('checking');
+            }
+        });
+    });
+}

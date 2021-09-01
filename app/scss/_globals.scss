@@ -129,6 +129,7 @@ p {
 }
 
 .form-control {
+    color: $primary;
     @include breakpoint-down(small) {
         font-size: 16px;
         line-height: 19px;
@@ -141,12 +142,6 @@ select {
         -webkit-appearance: none;
         -moz-appearance: none;
         background:url('../images/angle-down.png') 94% 50% no-repeat;
-
-        // &::before {
-        //     content: '';
-        //     background-image: url('../images/angle-down.png');
-        //     position: absolute;
-        // }
     }
 }
 
