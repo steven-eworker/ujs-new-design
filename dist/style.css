@@ -4276,6 +4276,110 @@ a::before {
   border-color: rgba(60, 61, 107, 0.35);
 }
 
+.emp-account.jobs {
+  margin-top: 35px;
+}
+
+.emp-account.jobs .main-content {
+  margin-right: 0;
+}
+
+@media (max-width: 63.9375em) {
+  .emp-account .no-padding > * {
+    padding: 0;
+  }
+}
+
+.emp-account .note {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.emp-account .copy-pwd {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #007BFF;
+}
+
+@media (max-width: 63.9375em) {
+  .emp-account .copy-pwd .not-mob {
+    display: none;
+  }
+}
+
+.emp-account .visa {
+  display: block;
+  padding-left: 0 !important;
+  color: rgba(60, 61, 107, 0.75) !important;
+}
+
+@media (max-width: 63.9375em) {
+  .emp-account .visa span:not(.checkmark) {
+    display: inline-block;
+    width: 80%;
+  }
+}
+
+.emp-account .visa .checkmark {
+  left: unset !important;
+  right: 0;
+}
+
+.emp-account .form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.emp-account .form-group .left,
+.emp-account .form-group .right {
+  position: absolute;
+  color: rgba(60, 61, 107, 0.5);
+  top: 20px;
+}
+
+.emp-account .form-group .right {
+  right: 16px;
+  cursor: pointer;
+}
+
+.emp-account .note-check .greyed {
+  text-align: center;
+  display: block !important;
+  border-color: transparent !important;
+}
+
+.emp-account .note-check .greyed:hover {
+  border-color: #3C3D6B !important;
+}
+
+@media (min-width: 40em) {
+  .emp-account .row > :first-child {
+    padding-left: 0;
+  }
+  .emp-account .row > :last-child {
+    padding-right: 0;
+  }
+}
+
+.emp-account .submit.note-check {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: transparent;
+}
+
+.emp-account .submit .greyed {
+  width: 35%;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.emp-account .submit .submit {
+  width: 55%;
+}
+
 @media (max-width: 992px) {
   .blog .container {
     padding: 0 30px;
