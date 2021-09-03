@@ -461,10 +461,10 @@ a::before {
   border-color: #3C3D6B;
 }
 
-.jobs {
-  padding-top: 40px;
-  padding-bottom: 100px;
+.jobs:not(.modal) {
   background-color: #F8F9FA;
+  padding-bottom: 100px;
+  padding-top: 40px;
 }
 
 @media (max-width: 39.9375em) {
@@ -1462,6 +1462,91 @@ a::before {
   color: rgba(60, 61, 107, 0.5);
 }
 
+.modal .modal-content {
+  padding: 30px;
+}
+
+.modal .modal-content .modal-body {
+  padding: 0;
+}
+
+.modal .modal-content .modal-body .row {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+.modal .modal-content .modal-body .row .col {
+  margin-bottom: 0;
+}
+
+.modal .modal-content .modal-body .row .col:first-child {
+  padding-left: 0;
+}
+
+.modal .modal-content .modal-body .row .col:last-child {
+  padding-right: 0;
+}
+
+.modal .modal-content .modal-body .form-control {
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.modal .modal-content .modal-body .form-control:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.modal .modal-content .modal-body .form-control ::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(60, 61, 107, 0.5);
+}
+
+.modal .modal-content .modal-body .form-control :-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(60, 61, 107, 0.5);
+}
+
+.modal .modal-content .modal-body .form-control ::-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(60, 61, 107, 0.5);
+}
+
+.modal .modal-content .modal-body .form-control ::placeholder {
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(60, 61, 107, 0.5);
+}
+
+.modal .modal-header {
+  padding: 0;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.modal .modal-header .modal-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3C3D6B;
+}
+
+.modal .modal-header .btn-close {
+  background: #e2e2e9;
+  opacity: 1;
+}
+
+.modal .modal-header .btn-close i {
+  color: #3C3D6B;
+  font-weight: 900;
+  font-size: 20px;
+}
+
 @media (min-width: 40em) {
   .job-detail.banner .job-item .img {
     margin-right: 20px;
@@ -1673,7 +1758,7 @@ a::before {
   color: #3C3D6B;
 }
 
-.job-detail.jobs .main-content {
+.job-detail.jobs .main-content:not(.modal-dialog) {
   margin-right: 14px;
 }
 
@@ -2378,7 +2463,7 @@ a::before {
 .post-a-job.jobs .sidebar .create .create-item .number {
   display: inline-block;
   margin-right: 20px;
-  padding: 11px 18px;
+  padding: 14px;
   border-radius: 50%;
   color: rgba(60, 61, 107, 0.5);
   background: #E2E2E9;
@@ -2388,6 +2473,7 @@ a::before {
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
+  color: #3C3D6B;
 }
 
 @media (max-width: 39.9375em) {
@@ -3246,6 +3332,11 @@ a::before {
   text-align: right;
   color: #3C3D6B;
   font-weight: 500;
+}
+
+.add-remove .note {
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .about-us h2 {

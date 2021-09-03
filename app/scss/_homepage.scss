@@ -61,9 +61,11 @@
 }
 
 .jobs {
-    padding-top: 40px;
-    padding-bottom: 100px;
-    background-color: $light-bg;
+    &:not(.modal){
+        background-color: $light-bg;
+        padding-bottom: 100px;
+        padding-top: 40px;
+    }
 
     @include breakpoint-down(small) {
         padding-top: 40px;

@@ -191,7 +191,7 @@
             }
         }
 
-        .main-content {
+        .main-content:not(.modal-dialog) {
             margin-right: 14px;
         }
 

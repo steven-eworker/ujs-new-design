@@ -123,7 +123,7 @@
                     .number {
                         display: inline-block;
                         margin-right: 20px;
-                        padding: 11px 18px;
+                        padding: 14px;
                         border-radius: 50%;
                         color: vsPrimaryOpacity(0.5);
                         background: #E2E2E9;
@@ -133,6 +133,7 @@
                         font-weight: 500;
                         font-size: 18px;
                         line-height: 21px;
+                        color: $primary;
 
                         @include breakpoint-down(small) {
                             font-size: 16px;
@@ -962,5 +963,11 @@
                 }
             }
         }
+    }
+}
+.add-remove{
+    .note{
+        font-size: 15px;
+        line-height: 18px;
     }
 }

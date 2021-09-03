@@ -57,7 +57,7 @@
                     @include breakpoint-down(large) {
                         max-width: 340px;
                     }
-                    
+
                     @include breakpoint-down(medium) {
                         max-width: unset;
                         white-space: unset;
@@ -65,6 +65,7 @@
                         line-height: 19px;
                         font-size: 16px;
                     }
+
                     @include breakpoint-down(small) {
                         max-width: unset;
                     }
@@ -72,7 +73,8 @@
 
                 .copy {
                     width: 100%;
-                    .desc{
+
+                    .desc {
                         margin-bottom: 8px;
                     }
                 }
@@ -90,7 +92,8 @@
                         position: absolute;
                         top: 35%;
                         right: 34px;
-                        @include breakpoint-down(medium){
+
+                        @include breakpoint-down(medium) {
                             position: relative;
                             top: unset;
                             right: unset;
@@ -156,11 +159,12 @@
                     background: transparent;
                     padding: 0;
                     box-shadow: none;
-                    @include breakpoint-down(large){
+
+                    @include breakpoint-down(large) {
                         flex-direction: column;
                     }
 
-                    @include breakpoint-down(small){
+                    @include breakpoint-down(small) {
                         flex-direction: row;
                     }
 
@@ -335,7 +339,8 @@
                     margin-left: -36px;
                     list-style-type: none;
                     text-align: left;
-                    &.states{
+
+                    &.states {
                         max-height: 325px;
                         overflow-y: scroll;
                     }
@@ -353,7 +358,8 @@
                     li {
                         margin-bottom: 16px;
                         font-weight: 400;
-                        .checkmark{
+
+                        .checkmark {
                             box-shadow: unset;
                         }
                     }
@@ -483,6 +489,73 @@
 
         .results-count {
             color: vsPrimaryOpacity(0.5);
+        }
+    }
+}
+
+.modal {
+    .modal-content {
+        padding: 30px;
+
+        .modal-body {
+            padding: 0;
+
+            .row {
+                box-shadow: none !important;
+                .col {
+                    margin-bottom: 0;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            .form-control {
+                border: 1px solid #E2E2E9;
+                box-sizing: border-box;
+                border-radius: 8px;
+                padding: 12px 16px;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                ::placeholder {
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: vsPrimaryOpacity(0.5);
+                }
+            }
+        }
+
+    }
+
+    .modal-header {
+        padding: 0;
+        margin-bottom: 20px;
+        border: none;
+
+        .modal-title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            color: $primary;
+        }
+
+        .btn-close {
+            background: #e2e2e9;
+            opacity: 1;
+
+            i {
+                color: $primary;
+                font-weight: 900;
+                font-size: 20px;
+            }
         }
     }
 }

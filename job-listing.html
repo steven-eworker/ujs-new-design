@@ -429,7 +429,7 @@
                                             <input class="btn cta" type="button" value="Apply Filters">
                                         </div>
                                         <div class="field-item green">
-                                            <a href="#" class="btn"><i class="fas fa-bell"></i> Set Up Job Alerts <span
+                                            <a class="btn" data-bs-toggle="modal" href="#JobAlerts" role="button"><i class="fas fa-bell"></i> Set Up Job Alerts <span
                                                     class="cstm-tooltip"><i class="fas fa-info-circle"></i>You will be
                                                     sent an email whenever a job that matches your search criteria is
                                                     added to Urology Job Search.</span></a>
@@ -644,6 +644,110 @@
 
             </div>
         </section>
+        <div class="jobs job-detail modal fade" id="JobAlerts" tabindex="-1" aria-labelledby="JobAlertsTitle" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered main-content">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="JobAlertsTitle">Subscribe to Job Alerts</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+                </div>
+                <form class="container modal-body">
+                    <div class="row list-sec border-0 p-0 mt-0" style="margin-bottom: 20px;">
+                        <div class="col">
+                            <input class="form-control" type="text" name="Firstname" id="" placeholder="Firstname">
+                        </div>
+                        <div class="col">
+                            <input class="form-control" type="text" name="Lastname" id="" placeholder="Lastname">
+                        </div>
+                    </div>
+                    <input type="email" class="form-control" name="email" placeholder="Email address">
+                    <select name="states" id="states" class="form-control">
+                        <option value="States">States</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                    </select>
+                    <select name="practice" id="practice" class="form-control">
+                        <option>Practice Type(s)</option>
+                        <option>Hospital</option>
+                        <option>Academic Institution</option>
+                        <option selected>Group Practice</option>
+                        <option>Solo Practice</option>
+                        <option>Multispecialty Group</option>
+                    </select>
+                    <select class="form-control" name="subspecialty" id="subspecialty">
+                        <option>Subspecialty(s)</option>
+                        <option>General Urology</option>
+                        <option>Urologic Oncology</option>
+                        <option>Pediatric Urology</option>
+                        <option>Reconstructive Urology</option>
+                        <option>FPMRS/Urogynecology</option>
+                        <option>Robotic/Minimally Invasive Surgery</option>
+                        <option>Endourology</option>
+                        <option selected>Neurourology</option>
+                        <option>Andrology/Men’s Health</option>
+                    </select>
+                    <select class="form-control" name="visa" id="visa">
+                        <option>Visa Candidates Accepted?</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                    <div class="row list-sec detail form submit p-0 border-0">
+                        <button class="submit pay-now-later" type="submit">
+                            <i class="fas fa-paper-plane"></i> Subscribe
+                        </button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
         <footer class="site-footer">
             <div class="container">
                 <div class="row justify-content-between align-items-end">
