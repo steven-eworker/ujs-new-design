@@ -304,8 +304,8 @@ a::before {
   background: rgba(60, 61, 107, 0.05);
   position: absolute;
   width: 100%;
-  height: 114%;
-  top: -12px;
+  height: 150%;
+  top: -22px;
   left: 0;
   z-index: 2;
   opacity: 0;
@@ -2165,6 +2165,11 @@ a::before {
   color: rgba(60, 61, 107, 0.5);
 }
 
+.cv-db .table tbody tr td.activity.bold {
+  color: #3C3D6B;
+  font-weight: 500;
+}
+
 .cv-db .table tbody tr td.hyperlink {
   font-weight: 500;
   -webkit-text-decoration-line: underline;
@@ -2326,6 +2331,15 @@ a::before {
 
 .admin-job-list .table tbody tr td.mob-cta a:first-child {
   margin-right: 10px;
+}
+
+.employer-profile .table tbody tr td {
+  font-size: 16px;
+}
+
+.employer-profile .table tbody tr td.activity {
+  font-weight: 400;
+  color: rgba(60, 61, 107, 0.75);
 }
 
 .post-a-job.jobs.contact-us {
@@ -3339,6 +3353,42 @@ a::before {
   line-height: 18px;
 }
 
+.jobs.employer-profile .emp-listing .job-list {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #E2E2E9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.jobs.employer-profile .emp-listing .job-list .job-item {
+  background: #F8F9FA;
+}
+
+.jobs.employer-profile .emp-listing .list-title {
+  margin-bottom: 0;
+}
+
+.jobs.employer-profile .emp-listing .list-title .detail, .jobs.employer-profile .emp-listing .list-title .heading {
+  font-weight: 500;
+}
+
+.jobs.employer-profile .emp-listing .list-title .detail {
+  line-height: 20px;
+}
+
+.jobs.employer-profile .emp-listing .list-title .heading:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.jobs.employer-profile .emp-listing .emp-profile .list-sec {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .about-us h2 {
   color: #3C3D6B;
   font-weight: bold;
@@ -4120,7 +4170,7 @@ a::before {
 }
 
 @media (min-width: 64em) {
-  .job-listing.emp-dashboard .emp-sidebar {
+  .job-listing.emp-dashboard .emp-sidebar:not(.emp-profile) {
     width: 26%;
   }
 }

@@ -444,8 +444,9 @@
                     .toggle-box {
                         padding: 0;
                         padding-top: 20px;
-                        .row{
-                            > :first-child{
+
+                        .row {
+                            > :first-child {
                                 padding: 0;
                             }
                         }
@@ -931,13 +932,15 @@
 
             .summary {
                 padding-bottom: 25px;
+
                 .list {
                     width: 100%;
 
                     .first {
                         float: left;
                         margin-right: 0.5em;
-                        @include breakpoint-down(small){
+
+                        @include breakpoint-down(small) {
                             width: 68%;
                         }
                     }
@@ -948,15 +951,17 @@
                         width: auto;
                         text-align: right;
                     }
+
                     &:after {
-                        content:'';
-                         border-bottom:dotted 2px vsPrimaryOpacity(0.75);
-                        display:block;
-                        overflow:hidden;
-                        height:18px;
+                        content: '';
+                        border-bottom: dotted 2px vsPrimaryOpacity(0.75);
+                        display: block;
+                        overflow: hidden;
+                        height: 18px;
                     }
                 }
-                .total{
+
+                .total {
                     text-align: right;
                     color: $primary;
                     font-weight: 500;
@@ -965,9 +970,49 @@
         }
     }
 }
-.add-remove{
-    .note{
+
+.add-remove {
+    .note {
         font-size: 15px;
         line-height: 18px;
+    }
+}
+
+.jobs {
+    &.employer-profile {
+        .emp-listing {
+
+            .job-list {
+                padding: 20px;
+                background: $white;
+                border: 1px solid #E2E2E9;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+
+                .job-item {
+                    background: $light-bg;
+                }
+            }
+            .list-title{
+                margin-bottom: 0;
+                .detail, .heading{
+                    font-weight: 500;
+                }
+                .detail{
+                    line-height: 20px;
+                }
+                .heading{
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .emp-profile{
+                .list-sec{
+                    box-shadow: none;
+                }
+            }
+        }
     }
 }

@@ -11,7 +11,9 @@
             padding: 0;
 
             @include breakpoint-up(large) {
-                width: 26%;
+                &:not(.emp-profile){
+                    width: 26%;
+                }
             }
 
             .list-sec {

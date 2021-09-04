@@ -587,6 +587,10 @@
 
                     &.activity {
                         color: vsPrimaryOpacity(0.5);
+                        &.bold{
+                            color: $primary;
+                            font-weight: 500;
+                        }
                     }
 
                     &.hyperlink {
@@ -762,6 +766,22 @@
                                 margin-right: 10px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+.employer-profile{
+    .table{
+        tbody{
+            tr{
+
+                td{
+                    font-size: 16px;
+                    &.activity{
+                        font-weight: 400;
+                        color: vsPrimaryOpacity(0.75);
                     }
                 }
             }
