@@ -11,7 +11,7 @@
             padding: 0;
 
             @include breakpoint-up(large) {
-                &:not(.emp-profile){
+                &:not(.emp-profile) {
                     width: 26%;
                 }
             }
@@ -260,19 +260,22 @@
 }
 
 .emp-account {
-    &.jobs{
+    &.jobs {
         margin-top: 35px;
-        .main-content{
+
+        .main-content {
             margin-right: 0;
         }
     }
-    .no-padding{
-        > * {
-            @include breakpoint-down(medium){
+
+    .no-padding {
+        >* {
+            @include breakpoint-down(medium) {
                 padding: 0;
             }
         }
     }
+
     .note {
         font-size: 14px;
         line-height: 16px;
@@ -284,8 +287,9 @@
         line-height: 16px;
         text-transform: uppercase;
         color: $hyperlink;
-        .not-mob{
-            @include breakpoint-down(medium){
+
+        .not-mob {
+            @include breakpoint-down(medium) {
                 display: none;
             }
         }
@@ -296,13 +300,14 @@
         padding-left: 0 !important;
         color: vsPrimaryOpacity(0.75) !important;
 
-        span:not(.checkmark){
-            @include breakpoint-down(medium){
+        span:not(.checkmark) {
+            @include breakpoint-down(medium) {
 
                 display: inline-block;
                 width: 80%;
             }
         }
+
         .checkmark {
             left: unset !important;
             right: 0;
@@ -331,16 +336,18 @@
             text-align: center;
             display: block !important;
             border-color: transparent !important;
-            &:hover{
+
+            &:hover {
                 border-color: $primary !important;
             }
         }
     }
-    @include breakpoint-up(medium){
+
+    @include breakpoint-up(medium) {
         .row> :first-child {
             padding-left: 0;
         }
-        
+
         .row> :last-child {
             padding-right: 0;
         }
@@ -360,6 +367,64 @@
 
         .submit {
             width: 55%;
+        }
+    }
+}
+
+.employers {
+    &.job-listing {
+        .filter-bar {
+            @include breakpoint-down(medium) {
+                flex-direction: column-reverse;
+            }
+
+            .submit {
+                @include breakpoint-down(medium) {
+                    font-size: 14px;
+                    line-height: 16px;
+                    width: 100%;
+                    display: block;
+                    margin-left: 0;
+                    margin-bottom: 15px;
+                }
+
+                span {
+                    @media (max-width: 992px) {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .search-bar,
+            .form-action {
+                padding: 0;
+            }
+            .search-bar{
+                flex-basis: 65%;
+            }
+        }
+
+        .table {
+            thead {
+                th {
+                    @include breakpoint-down(medium) {
+                        font-size: 13px;
+                        line-height: 15px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        &.name {
+                            @include breakpoint-down(medium) {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

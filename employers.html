@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urologu Job Search | Employers</title>
+    <link href="dist/bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dist/style.css">
+
+</head>
+
+<body>
+    <main>
+        <header class="container-fluid navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/new-logo.png" alt="UJS Logo"></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon d-flex flex-column justify-content-center">
+                        <img src="images/hamburger-line.svg" alt="">
+                        <img src="images/hamburger-line.svg" alt="">
+                    </span>
+                </button>
+
+                <div class="navbar-collapse collapse flex-grow-0" id="main-navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown"
+                                aria-expanded="false">About<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="the-team.html">The Team</a></li>
+                                <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-bs-toggle="dropdown"
+                                aria-expanded="false">Job Seekers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                <li><a class="dropdown-item" href="job-listing.html">View Job Listing</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                aria-expanded="false">Employers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <li><a class="dropdown-item" href="post-a-job.html">Post a Job</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an Account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="post-a-job.html" class="btn btn-outline-primary me-2 cta">Post a Job</a>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid banner job-listing job-detail d-none d-md-block"
+            style="background-image: url('images/small-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Employers</h1>
+            </div>
+        </section>
+        <section class="container-fluid banner job-listing job-detail d-md-none"
+            style="background-image: url('images/mob-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Employers</h1>
+            </div>
+        </section>
+        <section class="jobs blog employers job-listing cv-db admin-job-list">
+            <div class="container">
+                <form class="row filter-bar">
+                    <div class="form-group search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="form-control" placeholder="Search Name / Employer">
+                    </div>
+                    <div class="form-action">
+                        <button class="submit" type="submit">
+                            <span>Create New Employer Account</span>
+                            <i class="fas fa-arrow-circle-right"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-12 p-0">
+                        <table class="table">
+                            <thead>
+                                <th class="d-md-none"></th>
+                                <th>#</th>
+                                <th>Name <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">Employer <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">EMAIL</th>
+                                <th class="d-none d-md-block">JOINED <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">LAST ACTIVITY <i class="fas fa-sort"></i></th>
+                                <th>CREDITS <i class="fas fa-sort"></i></th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">1</td>
+                                    <td class="name"><a href="">Peg Legge</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Champlin LLC</a></td>
+                                    <td class="d-none d-md-block created">drutherford@kuphal.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">44</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Champlin LLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">drutherford@kuphal.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">2</td>
+                                    <td class="name"><a href="">Allie Grater</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Gorczany-Weimann</a></td>
+                                    <td class="d-none d-md-block created">ssipes@gmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">18</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Gorczany-Weimann</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">ssipes@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">3</td>
+                                    <td class="name"><a href="">Liz Erd</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Hintz Group</a></td>
+                                    <td class="d-none d-md-block created">malika.turcotte@ullrich.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">75</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Hintz Group</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">malika.turcotte@ullrich.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">4</td>
+                                    <td class="name"><a href="">A. Mused</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Keebler, Labadie</a></td>
+                                    <td class="d-none d-md-block created">brisa23@hotmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">80</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Keebler, Labadie</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">brisa23@hotmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">5</td>
+                                    <td class="name"><a href="">Constance Noring</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Bosco and Sons</a></td>
+                                    <td class="d-none d-md-block created">nolan.oleta@gmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">68</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Bosco and Sons</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">nolan.oleta@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">6</td>
+                                    <td class="name"><a href="">Lois Di Nominator</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Blick and Bosco</a></td>
+                                    <td class="d-none d-md-block created">korbin.shields@gmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">21</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Blick and Bosco</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">korbin.shields@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">7</td>
+                                    <td class="name"><a href="">Minnie Van Ryder</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Rogahn PLC</a></td>
+                                    <td class="d-none d-md-block created">sstrosin@cole.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">11</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Rogahn PLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">sstrosin@cole.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">8</td>
+                                    <td class="name"><a href="">Lynn O’Leeum</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Renner Group</a></td>
+                                    <td class="d-none d-md-block created">clement21@gleichner.net</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">88</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Renner Group</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">clement21@gleichner.net</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">9</td>
+                                    <td class="name"><a href="">P. Ann O’Recital</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Wiza-Breitenberg</a></td>
+                                    <td class="d-none d-md-block created">mckenzie.fiona@hotmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">51</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Wiza-Breitenberg</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">mckenzie.fiona@hotmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">10</td>
+                                    <td class="name"><a href="">Ray O’Sun</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Kovacek PLC</a></td>
+                                    <td class="d-none d-md-block created">nathen.gorczany@gmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">98</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Kovacek PLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">nathen.gorczany@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">11</td>
+                                    <td class="name"><a href="">Lee A. Sun</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Ziemann Inc</a></td>
+                                    <td class="d-none d-md-block created">nathen.gorczany@gmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">64</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Ziemann Inc</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">nathen.gorczany@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">12</td>
+                                    <td class="name"><a href="">Ray Sin</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Jast-Wehner</a></td>
+                                    <td class="d-none d-md-block created">icrist@buckridge.biz</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">74</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Jast-Wehner</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">icrist@buckridge.biz</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">13</td>
+                                    <td class="name"><a href="">Isabelle Ringing</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Wiegand LLC</a></td>
+                                    <td class="d-none d-md-block created">jaime.okeefe@kautzer.net</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">65</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Wiegand LLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">jaime.okeefe@kautzer.net</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">14</td>
+                                    <td class="name"><a href="">Eileen Sideways</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Gleichner LLC</a></td>
+                                    <td class="d-none d-md-block created">anne.murphy@hotmail.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">97</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Gleichner LLC</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">anne.murphy@hotmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">15</td>
+                                    <td class="name"><a href="">Rita Book</a></td>
+                                    <td class="d-none d-md-block name"><a href="">Price Group</a></td>
+                                    <td class="d-none d-md-block created">demario.gaylord@yahoo.com</td>
+                                    <td class="d-none d-md-block created">August 18, 2021</td>
+                                    <td class="d-none d-md-block expired">August 30, 2021</td>
+                                    <td class="status published">44</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td></td>
+                                    <td class="inner-table" colspan="3">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Employer</td>
+                                                    <td class="inner-table"><a href="">Price Group</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">demario.gaylord@yahoo.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Joined</td>
+                                                    <td class="inner-table created">August 18, 2021</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Last Activity</td>
+                                                    <td class="inner-table expired">August 30, 2021</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-center align-items-center all-jobs cta pagination">
+                            <a href="#" class="btn btn-outline-primary prev"><i class="fas fa-angle-left"></i>
+                                <span>Previous</span></a>
+                            <ul class="numbers">
+                                <li class="current"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary next"><span>Next</span> <i
+                                    class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row justify-content-between align-items-end">
+                    <div class="col-md-6 col-lg-3 content">
+                        <a href="#" class="footer-logo"><img src="images/footer-new.png" alt="Footer Logo"></a>
+                        <div class="d-flex justify-content-between footer-links">
+                            <div class="menu">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">The Team</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu">
+                                <h4>Jobs</h4>
+                                <ul>
+                                    <li><a href="#">Find a Job</a></li>
+                                    <li><a href="#">Post a Job</a></li>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 sponsored">
+                        <div class="advert">
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&#169; 2021 Urology Job Search. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="dist/bootstrap5/bootstrap.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/qkuo0xyra9a3nkzqcx58cza2dil7u2haiqreab0luj086q8w/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>

@@ -272,6 +272,13 @@
             }
         }
     }
+    &.employers{
+        .filter-bar {
+            .submit{
+                flex-basis: 100%;
+            }
+        }
+    }
 }
 
 .blog-detail {

@@ -78,9 +78,9 @@
                     &:not(:first-child):before {
                         content: '';
                         width: 2px;
-                        height: 128%;
+                        height: 96%;
                         background: #E2E2E9;
-                        bottom: 52px;
+                        bottom: 56px;
                         position: absolute;
                         left: 22px;
                         z-index: -1;
@@ -96,9 +96,15 @@
                         }
                     }
 
-                    &:nth-child(3):before {
-                        bottom: 37px;
+                    &.emp-profile{
+                        &:not(:first-child):before {
+                            bottom: 50px;
+                        }
                     }
+
+                    // &:nth-child(3):before {
+                    //     // bottom: 37px;
+                    // }
 
                     &.active {
                         .number {
