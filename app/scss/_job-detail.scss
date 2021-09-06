@@ -587,10 +587,10 @@
 
                     &.activity {
                         color: vsPrimaryOpacity(0.5);
-                        &.bold{
-                            color: $primary;
-                            font-weight: 500;
-                        }
+                    }
+                    &.bold{
+                        color: $primary !important;
+                        font-weight: 500 !important;
                     }
 
                     &.hyperlink {
@@ -776,6 +776,11 @@
     .table{
         tbody{
             tr{
+                &.open{
+                    .action{
+                        border:none;
+                    }
+                }
 
                 td{
                     font-size: 16px;
@@ -783,8 +788,54 @@
                         font-weight: 400;
                         color: vsPrimaryOpacity(0.75);
                     }
+                    &.move-right{
+                        @include breakpoint-down(medium){
+                            padding-right: 22px;
+                            text-align: right;
+                            right: 0 !important;
+                        }
+                    }
                 }
             }
         }
+    }
+    .emp-dashboard{
+        &.job-listing{
+            margin: 15px;
+            padding: 20px 15px;
+            > :first-child{
+                padding: 0;
+            }
+            .row{
+                > *{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    .job-list{
+        @include breakpoint-down(medium){
+            padding: 20px 15px !important;
+        }
+    }
+    &.job-listing{
+        .emp-dashboard{
+            .emp-sidebar{
+                .list-sec{
+                    .note-check {
+                        .greyed{
+                            border-color: transparent;
+                            @include breakpoint-down(medium){
+                                width: 100%;
+                                text-align: center;
+                            }
+                            &:hover{
+                                border-color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
     }
 }

@@ -151,7 +151,7 @@
                                     </div>   
                             </div>
                             </div>
-                            <div class="col-lg-5 main-content emp-sidebar emp-profile m-0">
+                            <div class="col-lg-5 main-content emp-sidebar emp-profile m-0 d-none d-lg-block">
                                 <div class="row list-sec detail form">
                                     <div class="row justify-content-between note-check mb-0">
                                         <div class="col">
@@ -162,7 +162,25 @@
                                     </div>
                                     <div class="row note-check">
                                         <div class="col">
-                                            <a href="#" class="greyed">Click here to purchase more credits  <i class="fas fa-arrow-right"></i></a>
+                                            <a href="#" class="greyed">Add/remove credits <i class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row list-sec mb-4 job-listing emp-dashboard mt-0 border-0 p-0">
+                            <div class="col-lg-5 main-content emp-sidebar emp-profile m-0 d-lg-none">
+                                <div class="row list-sec detail form">
+                                    <div class="row justify-content-between note-check mb-0">
+                                        <div class="col">
+                                            <h2 class="mb-2">Available Credits</h2>
+                                            <span class="credit-count">23</span>
+                                            <p>Publishing credit in your account.</p>
+                                        </div>
+                                    </div>
+                                    <div class="row note-check">
+                                        <div class="col">
+                                            <a href="#" class="greyed">Add/remove credits <i class="fas fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -352,16 +370,16 @@
                               <th>Date</th>
                               <th>Credits</th>
                               <th class="d-none d-md-block">$</th>
-                              <th>Method</th>
-                              <th>Notes</th>
-                              <th>Status</th>
-                              <th>User</th>
+                              <th class="d-none d-md-block">Method</th>
+                              <th class="d-none d-md-block">Notes</th>
+                              <th class="d-none d-md-block">Status</th>
+                              <th class="d-none d-md-block">User</th>
                             </thead>
                             <tbody>
                               <tr>
                                   <td class="action d-md-none"><a href="javascript:void(0)"><i class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a></td>
-                                  <td class="activity d-none d-md-block">August 18, 2021</td>
-                                  <td class="activity bold d-none d-md-block">200</td>
+                                  <td class="activity">August 18, 2021</td>
+                                  <td class="activity bold move-right">200</td>
                                   <td class="activity bold d-none d-md-block">$500</td>
                                   <td class="activity d-none d-md-block">Credit Card</td>
                                   <td class="activity d-none d-md-block">HCA roll out of job listings</td>
@@ -369,14 +387,38 @@
                                   <td class="activity d-none d-md-block">Peg Legge</td>
                               </tr>
                               <tr class="mobile-activity d-md-none">
-                                  <td></td>
-                                  <td colspan="2">Last active</td>
-                                  <td>July 28, 2021</td>
-                              </tr>
+                                <td></td>
+                                <td class="inner-table" colspan="2">
+                                    <table class="table m-0">
+                                        <tbody>
+                                              <tr>
+                                                  <td class="bold">$</td>
+                                                  <td class="move-right">$500</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Method</td>
+                                                  <td class="move-right">Credit Card</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Notes</td>
+                                                  <td class="move-right">HCA roll out of job listings</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Status</td>
+                                                  <td class="move-right"><i class="far fa-check-circle"></i> Completed</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">User</td>
+                                                  <td class="move-right">Peg Legge</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </td>
+                            </tr>
                               <tr>
                                 <td class="action d-md-none"><a href="javascript:void(0)"><i class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a></td>
-                                <td class="activity d-none d-md-block">September 16, 2021</td>
-                                <td class="activity bold d-none d-md-block">150</td>
+                                <td class="activity">September 16, 2021</td>
+                                <td class="activity bold move-right">150</td>
                                 <td class="activity bold d-none d-md-block">$0</td>
                                 <td class="activity d-none d-md-block">NEFT</td>
                                 <td class="activity d-none d-md-block">Start up trial</td>
@@ -385,13 +427,37 @@
                             </tr>
                             <tr class="mobile-activity d-md-none">
                                 <td></td>
-                                <td colspan="2">Last active</td>
-                                <td>July 28, 2021</td>
+                                <td class="inner-table" colspan="2">
+                                    <table class="table m-0">
+                                        <tbody>
+                                              <tr>
+                                                  <td class="bold">$</td>
+                                                  <td class="move-right">$0</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Method</td>
+                                                  <td class="move-right">NEFT</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Notes</td>
+                                                  <td class="move-right">Start up trial</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Status</td>
+                                                  <td class="move-right"><i class="far fa-check-circle"></i> Completed</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">User</td>
+                                                  <td class="move-right">Ian Thompson</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </td>
                             </tr>
                             <tr>
                                 <td class="action d-md-none"><a href="javascript:void(0)"><i class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a></td>
-                                <td class="activity d-none d-md-block">November 12, 2021</td>
-                                <td class="activity bold d-none d-md-block">180</td>
+                                <td class="activity">November 12, 2021</td>
+                                <td class="activity bold move-right">180</td>
                                 <td class="activity bold d-none d-md-block">$450</td>
                                 <td class="activity d-none d-md-block">Credit Card</td>
                                 <td class="activity d-none d-md-block"></td>
@@ -400,8 +466,32 @@
                             </tr>
                             <tr class="mobile-activity d-md-none">
                                 <td></td>
-                                <td colspan="2">Last active</td>
-                                <td>July 28, 2021</td>
+                                <td class="inner-table" colspan="2">
+                                    <table class="table m-0">
+                                        <tbody>
+                                              <tr>
+                                                  <td class="bold">$</td>
+                                                  <td class="move-right">$450</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Method</td>
+                                                  <td class="move-right">Credit Card</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Notes</td>
+                                                  <td class="move-right"></td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">Status</td>
+                                                  <td class="move-right"><i class="far fa-check-circle"></i> Completed</td>
+                                              </tr>
+                                              <tr>
+                                                  <td class="bold">User</td>
+                                                  <td class="move-right">Peg Legge</td>
+                                              </tr>
+                                          </tbody>
+                                      </table>
+                                  </td>
                             </tr>
                             </tbody>
                           </table>

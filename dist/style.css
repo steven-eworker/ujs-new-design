@@ -2165,9 +2165,9 @@ a::before {
   color: rgba(60, 61, 107, 0.5);
 }
 
-.cv-db .table tbody tr td.activity.bold {
-  color: #3C3D6B;
-  font-weight: 500;
+.cv-db .table tbody tr td.bold {
+  color: #3C3D6B !important;
+  font-weight: 500 !important;
 }
 
 .cv-db .table tbody tr td.hyperlink {
@@ -2333,6 +2333,10 @@ a::before {
   margin-right: 10px;
 }
 
+.employer-profile .table tbody tr.open .action {
+  border: none;
+}
+
 .employer-profile .table tbody tr td {
   font-size: 16px;
 }
@@ -2340,6 +2344,48 @@ a::before {
 .employer-profile .table tbody tr td.activity {
   font-weight: 400;
   color: rgba(60, 61, 107, 0.75);
+}
+
+@media (max-width: 63.9375em) {
+  .employer-profile .table tbody tr td.move-right {
+    padding-right: 22px;
+    text-align: right;
+    right: 0 !important;
+  }
+}
+
+.employer-profile .emp-dashboard.job-listing {
+  margin: 15px;
+  padding: 20px 15px;
+}
+
+.employer-profile .emp-dashboard.job-listing > :first-child {
+  padding: 0;
+}
+
+.employer-profile .emp-dashboard.job-listing .row > * {
+  padding-left: 0;
+}
+
+@media (max-width: 63.9375em) {
+  .employer-profile .job-list {
+    padding: 20px 15px !important;
+  }
+}
+
+.employer-profile.job-listing .emp-dashboard .emp-sidebar .list-sec .note-check .greyed {
+  border-color: transparent;
+}
+
+@media (max-width: 63.9375em) {
+  .employer-profile.job-listing .emp-dashboard .emp-sidebar .list-sec .note-check .greyed {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.employer-profile.job-listing .emp-dashboard .emp-sidebar .list-sec .note-check .greyed:hover {
+  border-color: #3C3D6B;
 }
 
 .post-a-job.jobs.contact-us {
