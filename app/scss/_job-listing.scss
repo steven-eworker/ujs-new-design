@@ -502,6 +502,7 @@
 
             .row {
                 box-shadow: none !important;
+
                 .col {
                     margin-bottom: 0;
 
@@ -531,6 +532,25 @@
                     color: vsPrimaryOpacity(0.5);
                 }
             }
+
+            &.login-required {
+                .list-sec.form {
+                    background: transparent;
+                    box-shadow: none;
+                }
+
+                .note-check {
+                    .greyed {
+                        font-size: 14px;
+                        line-height: 16px;
+                        border-color: transparent;
+                        margin-top: 15px;
+                        &:hover{
+                            border-color: $primary;
+                        }
+                    }
+                }
+            }
         }
 
     }
@@ -545,6 +565,10 @@
             font-size: 24px;
             line-height: 28px;
             color: $primary;
+
+            &.login-required {
+                color: $yellow;
+            }
         }
 
         .btn-close {

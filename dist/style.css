@@ -1523,6 +1523,23 @@ a::before {
   color: rgba(60, 61, 107, 0.5);
 }
 
+.modal .modal-content .modal-body.login-required .list-sec.form {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal .modal-content .modal-body.login-required .note-check .greyed {
+  font-size: 14px;
+  line-height: 16px;
+  border-color: transparent;
+  margin-top: 15px;
+}
+
+.modal .modal-content .modal-body.login-required .note-check .greyed:hover {
+  border-color: #3C3D6B;
+}
+
 .modal .modal-header {
   padding: 0;
   margin-bottom: 20px;
@@ -1534,6 +1551,10 @@ a::before {
   font-size: 24px;
   line-height: 28px;
   color: #3C3D6B;
+}
+
+.modal .modal-header .modal-title.login-required {
+  color: #EFAC00;
 }
 
 .modal .modal-header .btn-close {
