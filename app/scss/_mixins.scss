@@ -27,3 +27,7 @@ $breakpoints-down:("xsmall": "25rem", "small":"39.9375em", "medium": "63.9375em"
 @function vsSuccessOpacity($opacity){
     @return rgba(10, 209, 136,$opacity);
 }
+
+@function vsHyperlinkOpacity($opacity){
+    @return rgba(10, 88, 202, $opacity);
+}
