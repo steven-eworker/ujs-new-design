@@ -545,14 +545,48 @@
                         line-height: 16px;
                         border-color: transparent;
                         margin-top: 15px;
-                        &:hover{
+
+                        &:hover {
                             border-color: $primary;
                         }
                     }
                 }
             }
+
         }
 
+    }
+
+    .delete-confirm {
+        .red {
+            color: $danger;
+        }
+        .cta-box{
+            display: flex;
+            justify-content: space-between;
+            .btn{
+                padding: 15px;
+                display: inline-block;
+                width: 44%;
+                flex-basis: 44%;
+                border-color: $danger;
+                &.red-border{
+                    color: $danger;
+                    &:hover{
+                        color: $white;
+                        background: $danger;
+                    }
+                }
+                &.full-red{
+                    background: $danger;
+                    color: $white;
+                    &:hover{
+                        background: $white;
+                        color: $danger;
+                    }
+                }
+            }
+        }
     }
 
     .modal-header {
@@ -568,6 +602,9 @@
 
             &.login-required {
                 color: $yellow;
+            }
+            &.delete-confirm{
+                color: $danger;
             }
         }
 

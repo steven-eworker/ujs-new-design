@@ -205,3 +205,17 @@ if( checkboxSwitch != undefined ){
         });
     });
 }
+
+var tabToggles = document.querySelectorAll('.setting-tabs .tab-item a');
+if( tabToggles != undefined ){
+    tabToggles.forEach(function(tbt){
+        tbt.addEventListener('click', function(e){
+            e.target.parentNode.parentNode.querySelector('.active').classList.remove('active');
+            e.target.parentNode.classList.add('active');
+            document.querySelectorAll('.tab-content .tab-data.active').forEach(function(tbc){
+                tbc.classList.remove('active');
+            })
+            document.getElementById(e.target.dataset.target).classList.add('active');
+        })
+    });
+}

@@ -1,0 +1,241 @@
+.jobs.job-listing {
+    @include breakpoint-down(medium) {
+        padding: 0;
+
+        .container {
+            padding: 0;
+        }
+    }
+
+    &.settings {
+        .fltr-wrap {
+            padding-right: 45px;
+
+            @include breakpoint-down(medium) {
+                padding: 0;
+            }
+
+            .setting-tabs {
+                background: $white;
+                border: 1px solid #E2E2E9;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+                border-radius: 8px;
+                padding: 0;
+                padding-top: 25px;
+                padding-left: 22px;
+                height: 430px;
+
+                @include breakpoint-down(medium) {
+                    height: unset;
+                }
+
+                .tab-nav {
+                    list-style-type: none;
+                    padding: 0;
+
+                    .tab-item {
+                        padding: 15px 30px;
+                        border-radius: 8px 0px 0px 8px;
+
+                        a {
+                            font-size: 16px;
+                            line-height: 18px;
+                            color: vsPrimaryOpacity(0.75);
+                        }
+
+                        &.active {
+                            background: vsSuccessOpacity(0.15);
+
+                            a {
+                                color: $success;
+                            }
+                        }
+                    }
+                }
+
+                &.mobile-tabs {
+                    padding: 8px 18px 0;
+
+                    .tab-nav {
+                        margin-bottom: 0;
+                        .tab-item {
+                            padding: 12px;
+                            border-radius: 5px 5px 0px 0px;
+                            flex-basis: 33%;
+                            text-align: center;
+                            a {
+                                font-size: 14px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-content {
+            margin-right: 0;
+            .tab-content{
+                @include breakpoint-down(medium){
+                    margin: 20px 30px;
+                }
+            }
+            .tab-content{
+                .tab-data{
+                    display: none;
+                    &.active{
+                        display: block;
+                    }
+                }
+            }
+
+            .row {
+                @include breakpoint-down(medium){
+                    flex-direction: row-reverse;
+                }
+                .p-check {
+                    position: relative;
+
+                    &:first-child {
+                        padding-left: 0;
+                        padding-right: 24px;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                        padding-left: 24px;
+                    }
+                    @include breakpoint-down(medium){
+                        &:not(.has-checkbox){
+                            padding: 0;
+                        }
+                    }
+                    .check-wrap{
+                        padding: 8px 12px;
+                        .label{
+                            &.checks{
+                                display: inline-block;
+                                margin-bottom: 4px;
+                                label{
+                                    padding-left: 36px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .has-checkbox {
+                    background: $white;
+                    border: 1px solid #E2E2E9;
+                    box-sizing: border-box;
+                    border-radius: 8px;
+                    padding: 25px 30px;
+
+                    .title {
+                        margin-bottom: 12px;
+                    }
+
+                    .note-check {
+                        display: flex;
+                        align-items: center;
+
+                        .active {
+                            display: none;
+                            margin-left: 10px;
+                            margin-bottom: 0;
+                            color: $success;
+
+                            &.not {
+                                display: inline-block;
+                                color: $yellow;
+                            }
+                        }
+
+                        .switch {
+                            display: inline-block;
+
+                            .slider.round:before {
+                                background: $yellow;
+                            }
+                        }
+                    }
+                    .submit{
+                        @include breakpoint-down(medium){
+                            width: 100%;
+                        }
+                    }
+
+                    &.checking {
+                        .note-check {
+                            .switch {
+                                .slider.round:before {
+                                    background: $success;
+                                }
+                            }
+
+                            .active {
+                                display: inline-block;
+
+                                &.not {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .table {
+                th{
+                    &.mob-end{
+                        padding-right: 25px;
+                        border-radius: 0px 8px 0px 0px;
+                    }
+                }
+                tbody {
+                    td {
+                        &.round {
+                            text-align: center;
+
+                            &:after {
+                                content: '';
+                                width: 20px;
+                                height: 20px;
+                                display: inline-block;
+                                border-radius: 50%;
+                            }
+
+                            &.published {
+                                &:after {
+                                    background: $success;
+                                }
+                            }
+
+                            &.pending {
+                                &:after {
+                                    background: $yellow;
+                                }
+                            }
+
+                        }
+
+                        &.edit-action {
+                            text-align: center;
+                        }
+                        &.bold{
+                            @include breakpoint-down(medium){
+                                border: 0;
+                            }
+                        }
+                        &.mob-cta{
+                            @include breakpoint-down(medium){
+                                padding-bottom: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

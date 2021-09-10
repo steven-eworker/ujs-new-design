@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urologu Job Search | Settings</title>
+    <link href="dist/bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dist/style.css">
+
+</head>
+
+<body>
+    <main>
+        <header class="container-fluid navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/new-logo.png" alt="UJS Logo"></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon d-flex flex-column justify-content-center">
+                        <img src="images/hamburger-line.svg" alt="">
+                        <img src="images/hamburger-line.svg" alt="">
+                    </span>
+                </button>
+
+                <div class="navbar-collapse collapse flex-grow-0" id="main-navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown"
+                                aria-expanded="false">About<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="the-team.html">The Team</a></li>
+                                <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-bs-toggle="dropdown"
+                                aria-expanded="false">Job Seekers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                <li><a class="dropdown-item" href="job-listing.html">View Job Listing</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                aria-expanded="false">Employers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <li><a class="dropdown-item" href="post-a-job.html">Post a Job</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an Account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="post-a-job.html" class="btn btn-outline-primary me-2 cta">Post a Job</a>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid banner job-listing d-none d-md-block"
+            style="background-image: url('images/small-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Settings</h1>
+            </div>
+        </section>
+        <section class="container-fluid banner job-listing d-md-none"
+            style="background-image: url('images/mob-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Settings</h1>
+            </div>
+        </section>
+        <section class="jobs job-listing job-detail post-a-job cv-db admin-job-list settings">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 fltr-wrap">
+                        <div class="setting-tabs d-none d-lg-block">
+                            <ul class="tab-nav">
+                                <li class="tab-item active"><a href="javascript:void(0)" data-target="add-ons"><i
+                                            class="fas fa-puzzle-piece"></i> Add-ons</a></li>
+                                <li class="tab-item"><a href="javascript:void(0)" data-target="coupon-codes"><i
+                                            class="fas fa-tag"></i> Coupon Codes</a></li>
+                                <li class="tab-item"><a href="javascript:void(0)" data-target="purchase-credits"><i
+                                            class="fas fa-coins"></i> Purchase credits</a></li>
+                            </ul>
+                        </div>
+                        <div class="setting-tabs mobile-tabs d-lg-none">
+                            <ul class="tab-nav d-flex">
+                                <li class="tab-item active"><a href="javascript:void(0)" data-target="add-ons"><i
+                                            class="fas fa-puzzle-piece"></i> Add-ons</a></li>
+                                <li class="tab-item"><a href="javascript:void(0)" data-target="coupon-codes"><i
+                                            class="fas fa-tag"></i> Coupon</a></li>
+                                <li class="tab-item"><a href="javascript:void(0)" data-target="purchase-credits"><i
+                                            class="fas fa-coins"></i> Credits</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 main-content listing-wrap">
+                        <div class="tab-content">
+                            <div id="add-ons" class="tab-data active">
+                                <div class="row list-sec detail form">
+                                    <h2>Add New Add-On</h2>
+                                    <div class="label-wrap">
+                                        <input type="text" id="text" name="text" class="form-control" placeholder="Text">
+                                        <label for="text">Text</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-check">
+                                            <div class="label-wrap">
+                                                <input type="number" id="price" name="price" class="form-control" placeholder="Price ($)">
+                                                <label for="price">Price ($)</label>
+                                            </div>
+                                            <button class="submit w-100 d-none d-lg-block" type="submit">
+                                                Add Now <i class="fas fa-arrow-circle-right"></i>
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-6 p-check has-checkbox">
+                                            <h2 class="title">Status</h2>
+                                            <div class="note-check">
+                                                <label class="switch">
+                                                    <input class="checkbox" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <p class="active">(Activated)</p>
+                                                <p class="not active">(Deactivated)</p>
+                                            </div>
+                                        </div>
+                                        <button class="submit w-100 d-lg-none mt-3" type="submit">
+                                            Add Now <i class="fas fa-arrow-circle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center intro mt-4 mb-4">
+                                    <h2 class="title m-0">List of Add-ons</h2>
+                                </div>
+                                <table class="table emp-profile">
+                                    <thead>
+                                        <th class="d-md-none"></th>
+                                        <th class="d-none d-md-block text-center">Status</th>
+                                        <th>Text</th>
+                                        <th class="d-none d-md-block">Price</th>
+                                        <th class="d-md-none mob-end">Status</th>
+                                        <th class="d-none d-md-block"></th>
+                                        <th class="d-none d-md-block"></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">Highlight my post in yellow</td>
+                                            <td class="bold d-none d-md-block">$10</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$10</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">Highlight my post with a custom brand color</td>
+                                            <td class="bold d-none d-md-block">$15</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$15</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block pending round"></td>
+                                            <td class="note">Sticky my post so it stays on the front page for 1 month</td>
+                                            <td class="bold d-none d-md-block">$150</td>
+                                            <td class="d-md-none pending round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$150</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">Sticky my post so it stays on the front page for 3 months</td>
+                                            <td class="bold d-none d-md-block">$200</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$200</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="coupon-codes" class="tab-data">
+                                <div class="row list-sec detail form">
+                                    <h2>Add New Coupon</h2>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-check">
+                                            <div class="label-wrap">
+                                                <input type="text" name="code-text" id="code-text" class="form-control" placeholder="Code Text">
+                                                <label for="code-value">Code Text</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 p-check">
+                                            <div class="form-control check-wrap">
+
+                                                <div class="label checks">
+                                                    <label class="">Fixed Value
+                                                        <input type="radio" name="purchase">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="label checks">
+                                                <label class="">Fixed Percentage
+                                                    <input type="radio" name="purchase">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-check">
+                                            <div class="label-wrap">
+                                                <input type="text" name="code-value" id="code-value" class="form-control" placeholder="Code Value">
+                                                <label for="code-value">Code Value</label>
+                                            </div>
+                                            <button class="submit w-100 d-none d-lg-block" type="submit">
+                                                Add Now <i class="fas fa-arrow-circle-right"></i>
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-6 p-check has-checkbox">
+                                            <h2 class="title">Status</h2>
+                                            <div class="note-check">
+                                                <label class="switch">
+                                                    <input class="checkbox" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <p class="active">(Activated)</p>
+                                                <p class="not active">(Deactivated)</p>
+                                            </div>
+                                        </div>
+                                        <button class="submit w-100 d-lg-none mt-3" type="submit">
+                                            Add Now <i class="fas fa-arrow-circle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center intro mt-4 mb-4">
+                                    <h2 class="title m-0">List of Coupons</h2>
+                                </div>
+                                <table class="table emp-profile">
+                                    <thead>
+                                        <th class="d-md-none"></th>
+                                        <th class="d-none d-md-block text-center">Status</th>
+                                        <th>Text</th>
+                                        <th class="d-none d-md-block">Value</th>
+                                        <th class="d-md-none mob-end">Status</th>
+                                        <th class="d-none d-md-block"></th>
+                                        <th class="d-none d-md-block"></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">UJS0521C</td>
+                                            <td class="bold d-none d-md-block">50 $</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Value</td>
+                                                            <td class="bold">50 $</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">CST2104E</td>
+                                            <td class="bold d-none d-md-block">20 %</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Value</td>
+                                                            <td class="bold">20 %</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block pending round"></td>
+                                            <td class="note">25DEC50OFF</td>
+                                            <td class="bold d-none d-md-block">50 %</td>
+                                            <td class="d-md-none pending round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Value</td>
+                                                            <td class="bold">50 %</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">TRIAL30</td>
+                                            <td class="bold d-none d-md-block">30 $</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Value</td>
+                                                            <td class="bold">30 $</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="purchase-credits" class="tab-data">
+                                <div class="row list-sec detail form">
+                                    <h2>Add New Purchase Credit</h2>
+                                    <div class="label-wrap">
+                                        <input type="text" id="text" name="text" class="form-control" placeholder="Text">
+                                        <label for="text">Text</label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 p-check">
+                                            <div class="label-wrap">
+                                                <input type="number" id="price" name="price" class="form-control" placeholder="Price ($)">
+                                                <label for="price">Price ($)</label>
+                                            </div>
+                                            <button class="submit w-100 d-none d-lg-block" type="submit">
+                                                Add Now <i class="fas fa-arrow-circle-right"></i>
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-6 p-check has-checkbox">
+                                            <h2 class="title">Status</h2>
+                                            <div class="note-check">
+                                                <label class="switch">
+                                                    <input class="checkbox" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <p class="active">(Activated)</p>
+                                                <p class="not active">(Deactivated)</p>
+                                            </div>
+                                        </div>
+                                        <button class="submit w-100 d-lg-none mt-3" type="submit">
+                                            Add Now <i class="fas fa-arrow-circle-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center intro mt-4 mb-4">
+                                    <h2 class="title m-0">List of Purchase credits</h2>
+                                </div>
+                                <table class="table emp-profile">
+                                    <thead>
+                                        <th class="d-md-none"></th>
+                                        <th class="d-none d-md-block text-center">Status</th>
+                                        <th>Text</th>
+                                        <th class="d-none d-md-block">Price</th>
+                                        <th class="d-md-none mob-end">Status</th>
+                                        <th class="d-none d-md-block"></th>
+                                        <th class="d-none d-md-block"></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">Pre-purchase 1 credit</td>
+                                            <td class="bold d-none d-md-block">$5</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$5</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">Pre-purchase a package of 5 credits and save 25%</td>
+                                            <td class="bold d-none d-md-block">$20</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$20</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block pending round"></td>
+                                            <td class="note">Pre-purchase a package of 10 credits and save 30%</td>
+                                            <td class="bold d-none d-md-block">$35</td>
+                                            <td class="d-md-none pending round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$35</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">Pre-purchase a package of 15 credits and save 35%</td>
+                                            <td class="bold d-none d-md-block">$50</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                        class="fas fa-plus opened"></i><i
+                                                        class="fas fa-times closed"></i></a></td>
+                                            <td class="d-none d-md-block published round"></td>
+                                            <td class="note">Pre-purchase a package of 20 credits and save 40%</td>
+                                            <td class="bold d-none d-md-block">$60</td>
+                                            <td class="d-md-none published round"></td>
+                                            <td class="d-none d-md-block edit-action"><a href=""><i
+                                                        class="fas fa-edit"></i></a></td>
+                                            <td class="d-none d-md-block edit-action trash"><a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                        class="fas fa-trash"></i></a></td>
+                                        </tr>
+                                        <tr class="mobile-activity d-md-none">
+                                            <td></td>
+                                            <td class="inner-table" colspan="2">
+                                                <table class="table m-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="bold">Price</td>
+                                                            <td class="bold">$60</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="inner-table mob-cta" colspan="2">
+                                                                <a href="javascript:void(0)"><i class="fas fa-edit"></i>
+                                                                    Edit</a>
+                                                                <a data-bs-toggle="modal" href="#deleteConfirmation" role="button"><i
+                                                                        class="fas fa-trash"></i> Delete</a>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div class="jobs post-a-job job-detail modal fade" id="deleteConfirmation" tabindex="-1" aria-labelledby="deleteConfirmationTitle" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered main-content delete-confirm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title delete-confirm" id="deleteConfirmationTitle">Warning</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body delete-confirm">
+                    <p><span class="red">Are you sure want to delete?</span> You won’t be able to recover once deleted. Instead deactivate it by clicking on Edit button.</p>
+                    <div class="cta-box">
+                        <a href="#" class="btn red-border">Don’t delete</a>
+                        <a href="#" class="btn full-red">Yes, Delete it</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row justify-content-between align-items-end">
+                    <div class="col-md-6 col-lg-3 content">
+                        <a href="#" class="footer-logo"><img src="images/footer-new.png" alt="Footer Logo"></a>
+                        <div class="d-flex justify-content-between footer-links">
+                            <div class="menu">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">The Team</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu">
+                                <h4>Jobs</h4>
+                                <ul>
+                                    <li><a href="#">Find a Job</a></li>
+                                    <li><a href="#">Post a Job</a></li>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 sponsored">
+                        <div class="advert">
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&#169; 2021 Urology Job Search. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="dist/bootstrap5/bootstrap.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/qkuo0xyra9a3nkzqcx58cza2dil7u2haiqreab0luj086q8w/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>
