@@ -1,5 +1,20 @@
 .job-detail {
+    .container{
+        @include breakpoint-down(small){
+            padding: 0;
+        }
+    }
     &.banner {
+        @include breakpoint-down(small){
+            background-image: url('../images/mob-bg.png') !important;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .job-list{
+            @include breakpoint-down(small){
+                padding: 0;
+            }
+        }
         .job-item {
             .img {
                 @include breakpoint-up(medium) {
@@ -33,7 +48,7 @@
                 @include breakpoint-down(small) {
                     flex-direction: column;
                     text-align: left;
-                    padding: 0 40px;
+                    padding: 0 30px;
                 }
             }
         }
@@ -48,7 +63,7 @@
 
         .intro {
             @include breakpoint-down(small) {
-                margin-left: 20px;
+                margin-left: 30px;
                 justify-content: start !important;
             }
 
@@ -81,7 +96,7 @@
 
             @include breakpoint-down(small) {
                 padding: 15px;
-                margin: 15px 20px;
+                margin: 15px 30px;
             }
 
             &.detail {
@@ -153,18 +168,23 @@
                 &.detail,
                 p,
                 a,
-                .heading {
+                &.heading {
                     font-weight: normal;
                     font-size: 16px;
                     line-height: 40px;
                     color: vsPrimaryOpacity(0.65);
 
                     @include breakpoint-down(small) {
-                        line-height: 20px;
+                        line-height: 26px;
                     }
                 }
 
                 &.detail {
+                    @include breakpoint-down(small){
+                        margin-bottom: 16px;
+                        line-height: 26px;
+
+                    }
                     .heading {
                         text-decoration: underline;
                     }
@@ -193,6 +213,9 @@
 
         .main-content:not(.modal-dialog) {
             margin-right: 14px;
+            @include breakpoint-down(small){
+                padding: 0;
+            }
         }
 
         &.cv-db {
@@ -456,6 +479,7 @@
                             flex-basis: 50%;
                             width: unset;
                             padding: 0;
+                            font-size: 24px;
                         }
 
                         i {
@@ -463,7 +487,6 @@
 
                             &.star {
                                 color: $yellow;
-                                border-right: 1px solid #E2E2E9;
                             }
                         }
                     }

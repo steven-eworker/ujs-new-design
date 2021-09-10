@@ -5,6 +5,7 @@
 
         @include breakpoint-down(small) {
             text-align: center;
+            padding: 25px 0px;
         }
 
         .main-heading {
@@ -47,7 +48,7 @@
                 .title:not(.in-accordion) {
                     font-size: 22px;
                     color: $primary;
-                    max-width: 500px;
+                    max-width: 400px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;

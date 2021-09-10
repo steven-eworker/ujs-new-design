@@ -115,7 +115,7 @@
             }
 
             .details {
-                flex-basis: 50%;
+                flex-basis: 62%;
 
                 @include breakpoint-down(medium) {
                     flex-direction: column;

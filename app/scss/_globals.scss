@@ -131,7 +131,7 @@ p {
 .form-control {
     color: $primary;
     @include breakpoint-down(small) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 19px;
     }
 }

@@ -1,13 +1,13 @@
 .jobs.job-listing {
-    @include breakpoint-down(medium) {
-        padding: 0;
-
-        .container {
-            padding: 0;
-        }
-    }
-
+    
     &.settings {
+        @include breakpoint-down(medium) {
+            padding: 0;
+    
+            .container {
+                padding: 0;
+            }
+        }
         .fltr-wrap {
             padding-right: 45px;
 
