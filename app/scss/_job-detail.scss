@@ -1,3 +1,177 @@
+.cv-db {
+    .table {
+        background: #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        border-collapse: separate !important;
+        border-spacing: 0;
+
+        thead {
+            background-color: #E2E2E9;
+            border-style: none;
+
+            tr {
+                border: none;
+                border-style: unset;
+                box-sizing: border-box;
+                // border-radius: 8px 8px 0px 0px;
+
+            }
+        }
+
+        th {
+            color: $primary;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            text-align: left;
+
+            &:first-child {
+                padding-left: 25px;
+                border-radius: 8px 0px 0px 0px;
+            }
+
+            &:nth-child(2) {
+                padding-left: 25px;
+
+                @include breakpoint-up(medium) {
+                    border-radius: 8px 0px 0px 0px;
+                }
+            }
+
+            &:last-child {
+                padding-right: 25px;
+                border-radius: 0px 8px 0px 0px;
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    text-align: left;
+                    font-size: 14px;
+                    line-height: 40px;
+                    border-bottom: 1px solid #E2E2E9;
+                    vertical-align: middle;
+
+                    @include breakpoint-down(small) {
+                        line-height: 24px;
+                    }
+
+                    &.sn {
+                        color: vsPrimaryOpacity(0.75);
+                    }
+
+                    &.name {
+                        color: $primary;
+                        font-weight: 400;
+                        font-size: 16px;
+                    }
+
+                    &.activity {
+                        color: vsPrimaryOpacity(0.5);
+                    }
+                    &.bold{
+                        color: $primary !important;
+                        font-weight: 500 !important;
+                    }
+
+                    &.hyperlink {
+                        font-weight: 500;
+                        text-decoration-line: underline;
+                        color: $hyperlink;
+
+                        @include breakpoint-down(small) {
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        padding-left: 25px;
+                    }
+
+                    &:first-child {
+                        padding-left: 25px;
+                    }
+
+                    &:last-child {
+                        padding-right: 25px;
+                    }
+
+                    &.action {
+                        a {
+                            color: $yellow;
+                        }
+
+                        .closed {
+                            display: none;
+                        }
+
+                        .opened {
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                &.mobile-activity {
+                    opacity: 0;
+                    z-index: -2;
+                    position: absolute;
+                    transition: all 250ms ease-in-out;
+
+                    td {
+                        &:nth-child(2) {
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: vsPrimaryOpacity(0.75);
+                            line-height: 24px;
+                        }
+
+                        &:not(.inner-table):last-child {
+                            font-size: 14px;
+                            font-weight: 400;
+                            position: absolute;
+                            right: 4%;
+                            color: vsPrimaryOpacity(0.75);
+                        }
+
+                        &.inner-table:not(.position) {
+                            padding: 0;
+
+                            .table {
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+
+                &.open {
+                    .action {
+                        .closed {
+                            display: inline-block;
+                        }
+
+                        .opened {
+                            display: none;
+                        }
+                    }
+
+                    +.mobile-activity {
+                        opacity: 1;
+                        z-index: 2;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+}
 .job-detail {
     .container{
         @include breakpoint-down(small){
@@ -527,181 +701,6 @@
                                 }
                             }
                         }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.cv-db {
-    .table {
-        background: #FFFFFF;
-        box-sizing: border-box;
-        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
-        border-radius: 8px;
-        border-collapse: separate !important;
-        border-spacing: 0;
-
-        thead {
-            background-color: #E2E2E9;
-            border-style: none;
-
-            tr {
-                border: none;
-                border-style: unset;
-                box-sizing: border-box;
-                // border-radius: 8px 8px 0px 0px;
-
-            }
-        }
-
-        th {
-            color: $primary;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
-            text-transform: uppercase;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            text-align: left;
-
-            &:first-child {
-                padding-left: 25px;
-                border-radius: 8px 0px 0px 0px;
-            }
-
-            &:nth-child(2) {
-                padding-left: 25px;
-
-                @include breakpoint-up(medium) {
-                    border-radius: 8px 0px 0px 0px;
-                }
-            }
-
-            &:last-child {
-                padding-right: 25px;
-                border-radius: 0px 8px 0px 0px;
-            }
-        }
-
-        tbody {
-            tr {
-                td {
-                    text-align: left;
-                    font-size: 14px;
-                    line-height: 40px;
-                    border-bottom: 1px solid #E2E2E9;
-                    vertical-align: middle;
-
-                    @include breakpoint-down(small) {
-                        line-height: 24px;
-                    }
-
-                    &.sn {
-                        color: vsPrimaryOpacity(0.75);
-                    }
-
-                    &.name {
-                        color: $primary;
-                        font-weight: 400;
-                        font-size: 16px;
-                    }
-
-                    &.activity {
-                        color: vsPrimaryOpacity(0.5);
-                    }
-                    &.bold{
-                        color: $primary !important;
-                        font-weight: 500 !important;
-                    }
-
-                    &.hyperlink {
-                        font-weight: 500;
-                        text-decoration-line: underline;
-                        color: $hyperlink;
-
-                        @include breakpoint-down(small) {
-                            a {
-                                font-size: 12px;
-                            }
-                        }
-                    }
-
-                    &:nth-child(2) {
-                        padding-left: 25px;
-                    }
-
-                    &:first-child {
-                        padding-left: 25px;
-                    }
-
-                    &:last-child {
-                        padding-right: 25px;
-                    }
-
-                    &.action {
-                        a {
-                            color: $yellow;
-                        }
-
-                        .closed {
-                            display: none;
-                        }
-
-                        .opened {
-                            display: inline-block;
-                        }
-                    }
-                }
-
-                &.mobile-activity {
-                    opacity: 0;
-                    z-index: -2;
-                    position: absolute;
-                    transition: all 250ms ease-in-out;
-
-                    td {
-                        &:nth-child(2) {
-                            font-weight: 500;
-                            font-size: 14px;
-                            color: vsPrimaryOpacity(0.75);
-                            line-height: 24px;
-                        }
-
-                        &:not(.inner-table):last-child {
-                            font-size: 14px;
-                            font-weight: 400;
-                            position: absolute;
-                            right: 4%;
-                            color: vsPrimaryOpacity(0.75);
-                        }
-
-                        &.inner-table:not(.position) {
-                            padding: 0;
-
-                            .table {
-                                box-shadow: none;
-                            }
-                        }
-                    }
-                }
-
-                &.open {
-                    .action {
-                        .closed {
-                            display: inline-block;
-                        }
-
-                        .opened {
-                            display: none;
-                        }
-                    }
-
-                    +.mobile-activity {
-                        opacity: 1;
-                        z-index: 2;
-                        position: relative;
                     }
                 }
             }
