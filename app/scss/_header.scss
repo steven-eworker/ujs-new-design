@@ -87,7 +87,7 @@
     .navbar-nav {
         @include breakpoint-down(medium) {
             margin-left: 10px;
-            align-items: end !important;
+            align-items: start !important;
         }
 
         .nav-item {

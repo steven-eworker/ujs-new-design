@@ -259,9 +259,9 @@ a::before {
 @media (max-width: 63.9375em) {
   .site-header .navbar-nav {
     margin-left: 10px;
-    -webkit-box-align: end !important;
-        -ms-flex-align: end !important;
-            align-items: end !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: start !important;
   }
 }
 
@@ -992,7 +992,7 @@ a::before {
 
 @media (max-width: 87.4375em) {
   .job-listing .job-list .job-item .details .title:not(.in-accordion) {
-    max-width: 340px;
+    max-width: 300px;
   }
 }
 
@@ -1134,8 +1134,27 @@ a::before {
   margin-right: 15px;
 }
 
+@media (max-width: 1400px) {
+  .job-listing .filters .form .field-item.btns .cta:first-child {
+    margin-right: 0;
+  }
+}
+
 .job-listing .filters .form .field-item.btns .cta:last-child {
   border-color: #3C3D6B;
+}
+
+@media (max-width: 1400px) {
+  .job-listing .filters .form .field-item.btns .cta:last-child {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .job-listing .filters .form .field-item.btns .cta:last-child {
+    margin-top: 0;
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 39.9375em) {
@@ -1738,6 +1757,67 @@ a::before {
   display: inline-block;
 }
 
+.cv-db .table tbody tr td.status .nav-link:not(.dash) {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.cv-db .table tbody tr td.status.red {
+  color: #FF0000;
+}
+
+.cv-db .table tbody tr td.status.red .nav-link {
+  border-color: #FF0000;
+  color: #FF0000;
+}
+
+.cv-db .table tbody tr td.status.red .nav-link:after {
+  content: none;
+}
+
+.cv-db .table tbody tr td.status.red .dropdown-menu {
+  border-color: #FF0000;
+}
+
+.cv-db .table tbody tr td.status.hyperlink {
+  text-decoration: none;
+}
+
+.cv-db .table tbody tr td.status.hyperlink .nav-link {
+  color: #007BFF;
+  border-color: #007BFF;
+}
+
+.cv-db .table tbody tr td.status.hyperlink .nav-link:after {
+  content: none;
+}
+
+.cv-db .table tbody tr td.status.hyperlink .dropdown-menu {
+  border-color: #007BFF;
+}
+
+.cv-db .table tbody tr td.status.green {
+  color: #0AD188;
+}
+
+.cv-db .table tbody tr td.status.green .nav-link {
+  color: #0AD188;
+  border-color: #0AD188;
+}
+
+.cv-db .table tbody tr td.status.green .nav-link:after {
+  content: none;
+}
+
+.cv-db .table tbody tr td.status.green .dropdown-menu {
+  border-color: #0AD188;
+}
+
+.cv-db .table tbody tr td.status.dash {
+  color: #0AD188;
+}
+
 .cv-db .table tbody tr.mobile-activity {
   opacity: 0;
   z-index: -2;
@@ -1782,6 +1862,15 @@ a::before {
   opacity: 1;
   z-index: 2;
   position: relative;
+}
+
+.cv-db.job-listing.job-seekers .filter-bar .search-bar {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.cv-db.job-listing .table tr td.created, .cv-db.job-listing .table tr td.expired {
+  font-weight: 400;
 }
 
 @media (max-width: 39.9375em) {

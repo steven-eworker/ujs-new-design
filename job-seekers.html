@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urologu Job Search | Job Seekers</title>
+    <link href="dist/bootstrap5/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="dist/style.css">
+
+</head>
+
+<body>
+    <main>
+        <header class="container-fluid navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="images/new-logo.png" alt="UJS Logo"></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon d-flex flex-column justify-content-center">
+                        <img src="images/hamburger-line.svg" alt="">
+                        <img src="images/hamburger-line.svg" alt="">
+                    </span>
+                </button>
+
+                <div class="navbar-collapse collapse flex-grow-0" id="main-navbar">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end align-items-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-bs-toggle="dropdown"
+                                aria-expanded="false">About<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                                <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="the-team.html">The Team</a></li>
+                                <li><a class="dropdown-item" href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown2" data-bs-toggle="dropdown"
+                                aria-expanded="false">Job Seekers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                                <li><a class="dropdown-item" href="job-listing.html">View Job Listing</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown3" data-bs-toggle="dropdown"
+                                aria-expanded="false">Employers<i class="fas fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown3">
+                                <li><a class="dropdown-item" href="post-a-job.html">Post a Job</a></li>
+                                <li><a class="dropdown-item" href="register.html">Create an Account</a></li>
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="post-a-job.html" class="btn btn-outline-primary me-2 cta">Post a Job</a>
+                </div>
+            </div>
+        </header>
+        <section class="container-fluid banner job-listing job-detail d-none d-md-block"
+            style="background-image: url('images/small-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Job Seekers</h1>
+            </div>
+        </section>
+        <section class="container-fluid banner job-listing job-detail d-md-none"
+            style="background-image: url('images/mob-bg.png');">
+            <div class="container">
+                <h1 class="main-heading">Job Seekers</h1>
+            </div>
+        </section>
+        <section class="jobs blog employers job-listing cv-db admin-job-list job-seekers">
+            <div class="container">
+                <form class="row filter-bar">
+                    <div class="form-group search-bar w-100">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-12 p-0">
+                        <table class="table">
+                            <thead>
+                                <th class="d-md-none"></th>
+                                <th>#</th>
+                                <th>Name <i class="fas fa-sort"></i></th>
+                                <th class="d-none d-md-block">EMAIL</th>
+                                <th class="d-none d-md-block">Residency Program</th>
+                                <th class="d-none d-md-block">Fellowship Program</th>
+                                <th class="d-none d-md-block">Graduation Year</th>
+                                <th>CV ACCESS</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">1</td>
+                                    <td class="name"><a href="">Peg Legge</a></td>
+                                    <td class="d-none d-md-block created">drutherford@kuphal.com</td>
+                                    <td class="d-none d-md-block created">Kaiser Los Angeles</td>
+                                    <td class="d-none d-md-block expired">Nova Southeastern Univ</td>
+                                    <td class="d-none d-md-block year">2009</td>
+                                    <td class="status red">Inactive</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">drutherford@kuphal.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">Kaiser Los Angeles</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">Nova Southeastern Univ</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2009</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">2</td>
+                                    <td class="name"><a href="">Allie Grater</a></td>
+                                    <td class="d-none d-md-block created">ssipes@gmail.com</td>
+                                    <td class="d-none d-md-block created">The Ohio State</td>
+                                    <td class="d-none d-md-block expired">City of Hope</td>
+                                    <td class="d-none d-md-block year">1999</td>
+                                    <td class="status red">Inactive</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">ssipes@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">The Ohio State</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">City of Hope</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">1999</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">3</td>
+                                    <td class="name"><a href="">Liz Erd</a></td>
+                                    <td class="d-none d-md-block created">malika.turcotte@ullrich.com</td>
+                                    <td class="d-none d-md-block created"></td>
+                                    <td class="d-none d-md-block expired"></td>
+                                    <td class="d-none d-md-block year">2001</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">malika.turcotte@ullrich.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2001</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">4</td>
+                                    <td class="name"><a href="">A. Mused</a></td>
+                                    <td class="d-none d-md-block created">brisa23@hotmail.com</td>
+                                    <td class="d-none d-md-block created"></td>
+                                    <td class="d-none d-md-block expired">UT-Houston</td>
+                                    <td class="d-none d-md-block year">2008</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">brisa23@hotmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">UT-Houston</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2008</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">5</td>
+                                    <td class="name"><a href="">Constance Noring</a></td>
+                                    <td class="d-none d-md-block created">nolan.oleta@gmail.com</td>
+                                    <td class="d-none d-md-block created">Stony Brook Medicine</td>
+                                    <td class="d-none d-md-block expired">UPMC</td>
+                                    <td class="d-none d-md-block year">2012</td>
+                                    <td class="status red">Inactive</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">nolan.oleta@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">Stony Brook Medicine</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">UPMC</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table red">2012</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">6</td>
+                                    <td class="name"><a href="">Lois Di Nominator</a></td>
+                                    <td class="d-none d-md-block created">korbin.shields@gmail.com</td>
+                                    <td class="d-none d-md-block created"></td>
+                                    <td class="d-none d-md-block expired"></td>
+                                    <td class="d-none d-md-block year">2002</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">korbin.shields@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2002</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">7</td>
+                                    <td class="name"><a href="">Minnie Van Ryder</a></td>
+                                    <td class="d-none d-md-block created">sstrosin@cole.com</td>
+                                    <td class="d-none d-md-block created">Cleveland Clinic</td>
+                                    <td class="d-none d-md-block expired">None</td>
+                                    <td class="d-none d-md-block year">2000</td>
+                                    <td class="status red">Inactive</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">sstrosin@cole.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">Cleveland Clinic</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">None</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">8</td>
+                                    <td class="name"><a href="">Lynn O’Leeum</a></td>
+                                    <td class="d-none d-md-block created">clement21@gleichner.net</td>
+                                    <td class="d-none d-md-block created"></td>
+                                    <td class="d-none d-md-block expired"></td>
+                                    <td class="d-none d-md-block year">1999</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">clement21@gleichner.net</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">1999</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">9</td>
+                                    <td class="name"><a href="">P. Ann O’Recital</a></td>
+                                    <td class="d-none d-md-block created">mckenzie.fiona@hotmail.com</td>
+                                    <td class="d-none d-md-block created"></td>
+                                    <td class="d-none d-md-block expired">Vanderbilt</td>
+                                    <td class="d-none d-md-block year">2005</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">mckenzie.fiona@hotmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">Vanderbilt</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2005</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">10</td>
+                                    <td class="name"><a href="">Ray O’Sun</a></td>
+                                    <td class="d-none d-md-block created">nathen.gorczany@gmail.com</td>
+                                    <td class="d-none d-md-block created">Virginia Commonwealth University</td>
+                                    <td class="d-none d-md-block expired">Metro urology</td>
+                                    <td class="d-none d-md-block year">1996</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">nathen.gorczany@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">Virginia Commonwealth University</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">Metro urology</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">1996</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">11</td>
+                                    <td class="name"><a href="">Lee A. Sun</a></td>
+                                    <td class="d-none d-md-block created">nathen.gorczany@gmail.com</td>
+                                    <td class="d-none d-md-block created">University of Kentucky</td>
+                                    <td class="d-none d-md-block expired"></td>
+                                    <td class="d-none d-md-block year">2007</td>
+                                    <td class="status red">Inactive</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">nathen.gorczany@gmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">University of Kentucky</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2007</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">12</td>
+                                    <td class="name"><a href="">Ray Sin</a></td>
+                                    <td class="d-none d-md-block created">icrist@buckridge.biz</td>
+                                    <td class="d-none d-md-block created">Sparrow Hospital</td>
+                                    <td class="d-none d-md-block expired">Cincinnati Medical College</td>
+                                    <td class="d-none d-md-block year">2003</td>
+                                    <td class="status red">Inactive</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">icrist@buckridge.biz</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">Sparrow Hospital</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">Cincinnati Medical College</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2003</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">13</td>
+                                    <td class="name"><a href="">Isabelle Ringing</a></td>
+                                    <td class="d-none d-md-block created">jaime.okeefe@kautzer.net</td>
+                                    <td class="d-none d-md-block created"></td>
+                                    <td class="d-none d-md-block expired"></td>
+                                    <td class="d-none d-md-block year">2011</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">jaime.okeefe@kautzer.net</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2011</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">14</td>
+                                    <td class="name"><a href="">Eileen Sideways</a></td>
+                                    <td class="d-none d-md-block created">anne.murphy@hotmail.com</td>
+                                    <td class="d-none d-md-block created">University of New Mexico</td>
+                                    <td class="d-none d-md-block expired">None</td>
+                                    <td class="d-none d-md-block year">1995</td>
+                                    <td class="status green">Active</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                    
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">anne.murphy@hotmail.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created">University of New Mexico</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">None</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">1995</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="action d-md-none"><a href="javascript:void(0)"><i
+                                                class="fas fa-plus opened"></i><i class="fas fa-times closed"></i></a>
+                                    </td>
+                                    <td class="sn">15</td>
+                                    <td class="name"><a href="">Rita Book</a></td>
+                                    <td class="d-none d-md-block created">demario.gaylord@yahoo.com</td>
+                                    <td class="d-none d-md-block created"></td>
+                                    <td class="d-none d-md-block expired">None</td>
+                                    <td class="d-none d-md-block year">2000</td>
+                                    <td class="status red">Inactive</td>
+                                </tr>
+                                <tr class="mobile-activity d-md-none">
+                                    <td class="inner-table" colspan="4">
+                                        <table class="table m-0">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Email</td>
+                                                    <td class="inner-table created">demario.gaylord@yahoo.com</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Residency Program</td>
+                                                    <td class="inner-table created"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Fellowship Program</td>
+                                                    <td class="inner-table expired">None</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Graduation Year</td>
+                                                    <td class="inner-table">2000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-center align-items-center all-jobs cta pagination">
+                            <a href="#" class="btn btn-outline-primary prev"><i class="fas fa-angle-left"></i>
+                                <span>Previous</span></a>
+                            <ul class="numbers">
+                                <li class="current"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary next"><span>Next</span> <i
+                                    class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row justify-content-between align-items-end">
+                    <div class="col-md-6 col-lg-3 content">
+                        <a href="#" class="footer-logo"><img src="images/footer-new.png" alt="Footer Logo"></a>
+                        <div class="d-flex justify-content-between footer-links">
+                            <div class="menu">
+                                <h4>Company</h4>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">The Team</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="menu">
+                                <h4>Jobs</h4>
+                                <ul>
+                                    <li><a href="#">Find a Job</a></li>
+                                    <li><a href="#">Post a Job</a></li>
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7 sponsored">
+                        <div class="advert">
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                            <a href="#">
+                                <img src="images/footer-ad-placeholder.png">
+                                <span class="text">Sponsored</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&#169; 2021 Urology Job Search. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="dist/bootstrap5/bootstrap.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/qkuo0xyra9a3nkzqcx58cza2dil7u2haiqreab0luj086q8w/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script src="app/js/script.js"></script>
+</body>
+
+</html>

@@ -117,6 +117,57 @@
                             display: inline-block;
                         }
                     }
+                    &.status{
+                        .nav-link{
+                            &:not(.dash){
+                                border: 1px solid;
+                                border-radius: 8px;
+                                padding: 0;
+                            }
+                        }
+                        &.red{
+                            color: $danger;
+                            .nav-link{
+                                border-color: $danger;
+                                color: $danger;
+                                &:after{
+                                    content: none;
+                                }
+                            }
+                            .dropdown-menu{
+                                border-color: $danger;
+                            }
+                        }
+                        &.hyperlink{
+                            text-decoration: none;
+                            .nav-link{
+                                color: $hyperlink;
+                                border-color: $hyperlink;
+                                &:after{
+                                    content: none;
+                                }
+                            }
+                            .dropdown-menu{
+                                border-color: $hyperlink;
+                            }
+                        }
+                        &.green{
+                            color: $success;
+                            .nav-link{
+                                color: $success;
+                                border-color: $success;
+                                &:after{
+                                    content: none;
+                                }
+                            }
+                            .dropdown-menu{
+                                border-color: $success;
+                            }
+                        }
+                        &.dash{
+                            color:$success;
+                        }
+                    }
                 }
 
                 &.mobile-activity {
@@ -148,6 +199,7 @@
                                 box-shadow: none;
                             }
                         }
+                        
                     }
                 }
 
@@ -166,6 +218,25 @@
                         opacity: 1;
                         z-index: 2;
                         position: relative;
+                    }
+                }
+            }
+        }
+    }
+    &.job-listing{
+
+        &.job-seekers{
+            .filter-bar{
+                .search-bar{
+                    flex-basis: 100%;
+                }
+            }
+        }
+        .table{
+            tr{
+                td{
+                    &.created, &.expired{
+                        font-weight: 400;
                     }
                 }
             }
