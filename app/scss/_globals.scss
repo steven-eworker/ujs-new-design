@@ -135,6 +135,17 @@ p {
         line-height: 19px;
     }
 }
+.stickthis{
+    &.sticky-sidebar{
+    position: sticky;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    padding: 0;
+    z-index: 10;
+    }
+}
 
 select {
     &.form-control {

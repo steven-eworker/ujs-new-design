@@ -877,6 +877,9 @@
 
                 td{
                     font-size: 16px;
+                    @include breakpoint-down(large){
+                        line-height: 20px;
+                    }
                     &.activity{
                         font-weight: 400;
                         color: vsPrimaryOpacity(0.75);

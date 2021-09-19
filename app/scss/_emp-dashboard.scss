@@ -81,7 +81,9 @@
 
             .job-item {
                 border: 1px solid #E2E2E9;
-                padding-top: 32px;
+                @include breakpoint-down(small){
+                    padding-top: 32px;
+                }
 
                 &.job-open {
                     .job-status {
@@ -112,6 +114,7 @@
                 .copy {
                     .title {
                         max-width: unset;
+                        margin-top: 0;
                     }
                 }
 
@@ -210,6 +213,7 @@
                 }
 
                 .action-box {
+                    margin-left: 20px;
                     .action {
                         position: relative;
                         border-color: #E2E2E9;
