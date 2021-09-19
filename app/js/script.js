@@ -219,3 +219,22 @@ if( tabToggles != undefined ){
         })
     });
 }
+
+var accessToggle = document.querySelectorAll('.toggle-button-cover .link');
+if( accessToggle != undefined ){
+    accessToggle.forEach(function(togg){
+        togg.addEventListener('click', function(tgbtn){
+            if( tgbtn.target.classList.contains('submit') ){
+                tgbtn.target.parentNode.querySelector('.transparent').classList.add('submit');
+                tgbtn.target.parentNode.querySelector('.transparent').classList.remove('transparent');
+                tgbtn.target.classList.add('transparent');
+                tgbtn.target.classList.remove('submit');
+            } else {
+                tgbtn.target.parentNode.querySelector('.submit').classList.add('transparent');
+                tgbtn.target.parentNode.querySelector('.submit').classList.remove('submit');
+                tgbtn.target.classList.remove('transparent');
+                tgbtn.target.classList.add('submit');
+            }
+        });
+    });
+}

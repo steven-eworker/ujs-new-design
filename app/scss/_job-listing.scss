@@ -563,6 +563,37 @@
                     }
                 }
             }
+            .note{
+                font-weight: 400;
+                .link{
+                    font-weight: 500;
+                }
+            }
+            .label{
+                label{
+                    font-weight: normal;
+                    .checkmark{
+                        top: 4px !important;
+                        border-width: 2px !important;
+                    }
+                }
+            }
+            .toggle-button-cover{
+                padding: 3px !important;
+                background: $light-bg;
+                .link{
+                    @include breakpoint-down(small){
+                        font-size: 14px !important;
+                        line-height: 16px !important;
+                    }
+                }
+                .transparent{
+                    padding: 15px 0;
+                    color: $primary;
+                    background: transparent;
+                    border: 1px solid transparent;
+                }
+            }
 
         }
 
@@ -610,6 +641,10 @@
             font-size: 24px;
             line-height: 28px;
             color: $primary;
+            @include breakpoint-down(small){
+                font-size: 18px;
+                line-height: 21px;
+            }
 
             &.login-required {
                 color: $yellow;

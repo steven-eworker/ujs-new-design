@@ -1560,6 +1560,42 @@ a::before {
   border-color: #3C3D6B;
 }
 
+.modal .modal-content .modal-body .note {
+  font-weight: 400;
+}
+
+.modal .modal-content .modal-body .note .link {
+  font-weight: 500;
+}
+
+.modal .modal-content .modal-body .label label {
+  font-weight: normal;
+}
+
+.modal .modal-content .modal-body .label label .checkmark {
+  top: 4px !important;
+  border-width: 2px !important;
+}
+
+.modal .modal-content .modal-body .toggle-button-cover {
+  padding: 3px !important;
+  background: #F8F9FA;
+}
+
+@media (max-width: 39.9375em) {
+  .modal .modal-content .modal-body .toggle-button-cover .link {
+    font-size: 14px !important;
+    line-height: 16px !important;
+  }
+}
+
+.modal .modal-content .modal-body .toggle-button-cover .transparent {
+  padding: 15px 0;
+  color: #3C3D6B;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
 .modal .delete-confirm .red {
   color: #FF0000;
 }
@@ -1612,6 +1648,13 @@ a::before {
   font-size: 24px;
   line-height: 28px;
   color: #3C3D6B;
+}
+
+@media (max-width: 39.9375em) {
+  .modal .modal-header .modal-title {
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .modal .modal-header .modal-title.login-required {
