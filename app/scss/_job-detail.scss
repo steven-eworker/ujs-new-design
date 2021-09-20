@@ -793,6 +793,27 @@
             font-weight: bold;
             font-size: 16px;
             line-height: 19px;
+            &.btn{
+                border: none;
+                border-radius: 0;
+                position: relative;
+                &:hover{
+                    .cstm-tooltip{
+                        opacity: 1;
+                    }
+                }
+                .cstm-tooltip{
+                    width: auto;
+                    top: -150%;
+                    left: -45%;
+                    padding: 18px;
+                    &:before{
+                        bottom: unset;
+                        top: 100%;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
         }
 
         tbody {

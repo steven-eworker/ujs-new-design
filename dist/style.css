@@ -2523,6 +2523,30 @@ a::before {
   line-height: 19px;
 }
 
+.admin-job-list .table th.btn {
+  border: none;
+  border-radius: 0;
+  position: relative;
+}
+
+.admin-job-list .table th.btn:hover .cstm-tooltip {
+  opacity: 1;
+}
+
+.admin-job-list .table th.btn .cstm-tooltip {
+  width: auto;
+  top: -150%;
+  left: -45%;
+  padding: 18px;
+}
+
+.admin-job-list .table th.btn .cstm-tooltip:before {
+  bottom: unset;
+  top: 100%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .admin-job-list .table tbody tr td {
   font-weight: 500;
   color: rgba(60, 61, 107, 0.75);
