@@ -1060,7 +1060,7 @@ a::before {
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters {
+  .job-listing .filters:not(.modal-filters) {
     opacity: 0;
     z-index: -5;
     position: fixed;
@@ -1072,7 +1072,7 @@ a::before {
     -webkit-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
   }
-  .job-listing .filters.open {
+  .job-listing .filters:not(.modal-filters).open {
     opacity: 1;
     z-index: 5;
   }
@@ -1607,6 +1607,17 @@ a::before {
   border: 1px solid transparent;
 }
 
+.modal .modal-content .modal-body .filters .field-item {
+  padding: 12px 16px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #E2E2E9;
+}
+
+.modal .modal-content .modal-body .filters .field-item .accordion-header {
+  color: rgba(60, 61, 107, 0.5);
+}
+
 .modal .delete-confirm .red {
   color: #FF0000;
 }
@@ -1749,7 +1760,7 @@ a::before {
   vertical-align: middle;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 87.4375em) {
   .cv-db .table tbody tr td {
     line-height: 24px;
   }
@@ -1815,6 +1826,12 @@ a::before {
   border: 1px solid;
   border-radius: 8px;
   padding: 0;
+}
+
+@media (max-width: 39.9375em) {
+  .cv-db .table tbody tr td.status .nav-link:not(.dash) {
+    width: 50%;
+  }
 }
 
 .cv-db .table tbody tr td.status.red {
@@ -2584,7 +2601,7 @@ a::before {
 
 @media (max-width: 87.4375em) {
   .employer-profile .table tbody tr td {
-    line-height: 20px;
+    line-height: 24px;
   }
 }
 

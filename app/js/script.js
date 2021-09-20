@@ -98,43 +98,9 @@ if (searchInputs != undefined) {
     });
 }
 
-function filterListSearch1() {
+function filterListSearch(index) {
     var input, filter, ul, li, a, i, txtValue;
-    input = document.querySelectorAll('.search')[0];
-    filter = input.value.toUpperCase();
-    ul = input.parentNode.querySelector('.list-options');
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("label")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-function filterListSearch2() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.querySelectorAll('.search')[1];
-    filter = input.value.toUpperCase();
-    ul = input.parentNode.querySelector('.list-options');
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("label")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-function filterListSearch3() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.querySelectorAll('.search')[2];
+    input = document.querySelectorAll('.search')[index];
     filter = input.value.toUpperCase();
     ul = input.parentNode.querySelector('.list-options');
     li = ul.getElementsByTagName("li");
@@ -155,7 +121,9 @@ var scrollableSidebar = document.querySelector('.stickthis');
 if (header != undefined) {
     window.onscroll = fixTheHeader;
     var sticky = header.offsetTop;
-    var sidebarOffset = scrollableSidebar.offsetTop;
+    if( scrollableSidebar != undefined ){
+        var sidebarOffset = scrollableSidebar.offsetTop;
+    }
 
     function fixTheHeader() {
         if (window.innerWidth > 991) {
@@ -167,6 +135,8 @@ if (header != undefined) {
         }
 
             // var headerHeight = document.querySelector('.site-header').offsetHeight;
+        if( scrollableSidebar != undefined ){
+
             if (window.pageYOffset > 170) {
                 scrollableSidebar.classList.add('sticky-sidebar');
                 scrollableSidebar.style.top = '140px';
@@ -174,6 +144,7 @@ if (header != undefined) {
                 scrollableSidebar.classList.remove('sticky-sidebar');
                 scrollableSidebar.removeAttribute('style');
             }
+        }
     }
 }
 

@@ -58,7 +58,7 @@
                     border-bottom: 1px solid #E2E2E9;
                     vertical-align: middle;
 
-                    @include breakpoint-down(small) {
+                    @include breakpoint-down(large) {
                         line-height: 24px;
                     }
 
@@ -123,6 +123,9 @@
                                 border: 1px solid;
                                 border-radius: 8px;
                                 padding: 0;
+                                @include breakpoint-down(small){
+                                    width: 50%;
+                                }
                             }
                         }
                         &.red{
@@ -878,7 +881,7 @@
                 td{
                     font-size: 16px;
                     @include breakpoint-down(large){
-                        line-height: 20px;
+                        line-height: 24px;
                     }
                     &.activity{
                         font-weight: 400;
