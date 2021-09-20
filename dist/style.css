@@ -1339,7 +1339,7 @@ a::before {
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters .form .field-item .list-options {
+  .job-listing .filters .form .field-item .list-options:not(.modal-list) {
     overflow-y: scroll;
     position: absolute;
     background: #fff;

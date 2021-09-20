@@ -358,8 +358,8 @@
                         max-height: 325px;
                         overflow-y: scroll;
                     }
-
-                    @include breakpoint-down(small) {
+                    &:not(.modal-list){
+                        @include breakpoint-down(small) {
                         // max-height: 100px;
                         overflow-y: scroll;
                         position: absolute;
@@ -368,7 +368,8 @@
                         z-index: 5;
                         left: 38px;
                     }
-
+                    
+                }
                     li {
                         margin-bottom: 16px;
                         font-weight: 400;
