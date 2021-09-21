@@ -5873,7 +5873,7 @@ a::before {
 
 .jobs.job-listing.settings .main-content .row .p-check .check-wrap .label.checks {
   display: inline-block;
-  margin-bottom: 4px;
+  margin: 10px 0;
 }
 
 .jobs.job-listing.settings .main-content .row .p-check .check-wrap .label.checks label {
