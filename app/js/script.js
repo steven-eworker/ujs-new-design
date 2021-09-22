@@ -119,13 +119,13 @@ function filterListSearch(index) {
 var header = document.querySelector("header");
 var scrollableSidebar = document.querySelector('.stickthis');
 if (header != undefined) {
-    window.onscroll = fixTheHeader;
+    window.onscroll = scrollFunctions;
     var sticky = header.offsetTop;
     if( scrollableSidebar != undefined ){
         var sidebarOffset = scrollableSidebar.offsetTop;
     }
 
-    function fixTheHeader() {
+    function scrollFunctions() {
         if (window.innerWidth > 991) {
             if (window.pageYOffset > sticky) {
                 header.classList.add("sticky-head");
@@ -134,10 +134,10 @@ if (header != undefined) {
             }
         }
 
-            // var headerHeight = document.querySelector('.site-header').offsetHeight;
+        // Make Sidebar Sticky
         if( scrollableSidebar != undefined ){
 
-            if (window.pageYOffset > 170) {
+            if (window.pageYOffset + 200 > sidebarOffset) {
                 scrollableSidebar.classList.add('sticky-sidebar');
                 scrollableSidebar.style.top = '140px';
             } else {
@@ -145,6 +145,33 @@ if (header != undefined) {
                 scrollableSidebar.removeAttribute('style');
             }
         }
+
+        // Highlight Sidebar Section
+        var sections = ['profile-info', 'job-listing', 'credit-history'];
+        highlightSectionsSidebar(sections[1]);
+        highlightSectionsSidebar(sections[2]);
+        // sections.forEach(function(sec){
+        // });
+    }
+
+    function highlightSectionsSidebar(sec){
+        var section, sectionOffset, anchorTrigger;
+        section = document.getElementById(sec);
+        if( section != undefined ){
+            sectionOffset = section.offsetTop;
+            anchorTrigger = document.querySelector('a[href="#'+sec+'"]');
+            var windowScroll = window.scrollY + window.innerHeight - 200;
+            if( windowScroll > sectionOffset ){
+                anchorTrigger.classList.add('active');
+            } else{
+                anchorTrigger.classList.remove('active');
+            }
+        }
+    }
+
+    function offsetBottom(el, i) { 
+        i = i || 0; 
+        return document.querySelectorAll(el)[i].getBoundingClientRect().bottom 
     }
 }
 

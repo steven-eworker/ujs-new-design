@@ -116,6 +116,9 @@
 
             .details {
                 flex-basis: 62%;
+                @include breakpoint-up(medium){
+                    width: 55%;
+                }
 
                 @include breakpoint-down(medium) {
                     flex-direction: column;
@@ -241,8 +244,8 @@
                     &.tag {
                         color: $primary;
                         border: 1px solid $primary;
-                        margin-left: 24px;
-                        margin-right: 24px;
+                        margin-left: 14px;
+                        margin-right: 14px;
                         padding: 6px 14px;
 
                         @include breakpoint-down(medium) {
