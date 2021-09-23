@@ -352,6 +352,17 @@
                 font-size: 16px;
                 line-height: 25px;
                 font-weight: normal;
+                .mt-mob{
+                    @media(max-width:767px){
+                        margin-top: 16px;
+                    }
+                }
+
+                .form-control{
+                    &::placeholder{
+                        color: $primary;
+                    }
+                }
             }
 
             &.form {
@@ -488,6 +499,9 @@
                 @include breakpoint-up(large) {
                     width: 30%;
                 }
+            }
+            @include breakpoint-down(large) {
+                margin-left: 0;
             }
 
             @include breakpoint-down(small) {

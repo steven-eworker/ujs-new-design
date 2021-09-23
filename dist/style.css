@@ -2065,6 +2065,28 @@ a::before {
   font-weight: normal;
 }
 
+@media (max-width: 767px) {
+  .job-detail.jobs .list-sec.detail .mt-mob {
+    margin-top: 16px;
+  }
+}
+
+.job-detail.jobs .list-sec.detail .form-control::-webkit-input-placeholder {
+  color: #3C3D6B;
+}
+
+.job-detail.jobs .list-sec.detail .form-control:-ms-input-placeholder {
+  color: #3C3D6B;
+}
+
+.job-detail.jobs .list-sec.detail .form-control::-ms-input-placeholder {
+  color: #3C3D6B;
+}
+
+.job-detail.jobs .list-sec.detail .form-control::placeholder {
+  color: #3C3D6B;
+}
+
 .job-detail.jobs .list-sec.form {
   padding: 30px;
 }
@@ -2219,6 +2241,12 @@ a::before {
 @media (min-width: 64em) {
   .job-detail.jobs .sidebar:not(.in-accordion) {
     width: 30%;
+  }
+}
+
+@media (max-width: 87.4375em) {
+  .job-detail.jobs .sidebar {
+    margin-left: 0;
   }
 }
 
@@ -5566,7 +5594,7 @@ a::before {
 
 .overview.jobs.job-listing .activity-list .activity-wrap.has-sub-item {
   padding: 20px 40px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 63.9375em) {
@@ -5582,7 +5610,7 @@ a::before {
 
 .overview.jobs.job-listing .activity-list .activity-wrap .activity-item:not(.sub-activity) {
   padding: 20px 40px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 63.9375em) {

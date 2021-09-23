@@ -137,7 +137,7 @@ if (header != undefined) {
         // Make Sidebar Sticky
         if( scrollableSidebar != undefined ){
 
-            if (window.pageYOffset + 200 > sidebarOffset) {
+            if (window.innerWidth > 991 && window.pageYOffset + 200 > sidebarOffset) {
                 scrollableSidebar.classList.add('sticky-sidebar');
                 scrollableSidebar.style.top = '140px';
             } else {
