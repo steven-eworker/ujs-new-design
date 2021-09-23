@@ -1340,7 +1340,7 @@ a::before {
 }
 
 .job-listing .filters .form .field-item .list-options.states {
-  max-height: 325px;
+  max-height: 276px;
   overflow-y: scroll;
 }
 
