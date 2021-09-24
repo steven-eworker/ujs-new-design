@@ -2791,10 +2791,14 @@ a::before {
   position: relative;
 }
 
+.post-a-job.jobs .sidebar .create .create-item:last-child .number-wrap .fa-stack-1x {
+  width: 112%;
+}
+
 .post-a-job.jobs .sidebar .create .create-item:not(:first-child):before {
   content: '';
   width: 2px;
-  height: 96%;
+  height: 100%;
   background: #E2E2E9;
   bottom: 56px;
   position: absolute;
@@ -2825,7 +2829,7 @@ a::before {
 
 .post-a-job.jobs .sidebar .create .create-item.active:not(:first-child):before {
   background: #0AD188;
-  bottom: 52px;
+  bottom: 50px;
 }
 
 .post-a-job.jobs .sidebar .create .create-item.active .number-wrap .fa-circle {
