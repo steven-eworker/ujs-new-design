@@ -49,9 +49,9 @@
                     font-size: 22px;
                     color: $primary;
                     max-width: 400px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
+                    // white-space: nowrap;
+                    // overflow: hidden;
+                    // text-overflow: ellipsis;
                     margin-bottom: 4px;
                     font-weight: 500;
 
@@ -61,14 +61,10 @@
 
                     @include breakpoint-down(medium) {
                         max-width: unset;
-                        white-space: unset;
+                        // white-space: unset;
                         max-width: 220px;
                         line-height: 19px;
                         font-size: 16px;
-                    }
-
-                    @include breakpoint-down(small) {
-                        max-width: unset;
                     }
                 }
 

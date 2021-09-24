@@ -116,6 +116,15 @@
                             background: $success;
                             bottom: 52px;
                         }
+                        .number-wrap{
+                            .fa-circle{
+                                color: $success;
+                                border-radius: 50%;
+                            }
+                            .icon{
+                                color: $white;
+                            }
+                        }
                     }
 
                     &:not(:last-child) {
@@ -133,6 +142,19 @@
                         border-radius: 50%;
                         color: vsPrimaryOpacity(0.5);
                         background: #E2E2E9;
+                    }
+                    .number-wrap{
+                        width: 50px;
+                        height: 50px;
+                        margin-right: 20px;
+                        .fa-circle{
+                            color: #E2E2E9;
+                            font-size: 50px;
+                        }
+                        .icon{
+                            color: vsPrimaryOpacity(0.5);
+                            font-size: 20px;
+                        }
                     }
 
                     h2 {

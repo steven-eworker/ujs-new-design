@@ -1000,9 +1000,6 @@ a::before {
   font-size: 22px;
   color: #3C3D6B;
   max-width: 400px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin-bottom: 4px;
   font-weight: 500;
 }
@@ -1016,16 +1013,9 @@ a::before {
 @media (max-width: 63.9375em) {
   .job-listing .job-list .job-item .details .title:not(.in-accordion) {
     max-width: unset;
-    white-space: unset;
     max-width: 220px;
     line-height: 19px;
     font-size: 16px;
-  }
-}
-
-@media (max-width: 39.9375em) {
-  .job-listing .job-list .job-item .details .title:not(.in-accordion) {
-    max-width: unset;
   }
 }
 
@@ -2838,6 +2828,15 @@ a::before {
   bottom: 52px;
 }
 
+.post-a-job.jobs .sidebar .create .create-item.active .number-wrap .fa-circle {
+  color: #0AD188;
+  border-radius: 50%;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.active .number-wrap .icon {
+  color: #ffffff;
+}
+
 .post-a-job.jobs .sidebar .create .create-item:not(:last-child) {
   margin-bottom: 50px;
 }
@@ -2855,6 +2854,22 @@ a::before {
   border-radius: 50%;
   color: rgba(60, 61, 107, 0.5);
   background: #E2E2E9;
+}
+
+.post-a-job.jobs .sidebar .create .create-item .number-wrap {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.post-a-job.jobs .sidebar .create .create-item .number-wrap .fa-circle {
+  color: #E2E2E9;
+  font-size: 50px;
+}
+
+.post-a-job.jobs .sidebar .create .create-item .number-wrap .icon {
+  color: rgba(60, 61, 107, 0.5);
+  font-size: 20px;
 }
 
 .post-a-job.jobs .sidebar .create .create-item h2 {
