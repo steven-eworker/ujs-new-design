@@ -107,6 +107,10 @@
             background: #FFFFFF;
             box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
             position: relative;
+            transition: all 250ms ease-in-out;
+            &:hover{
+                background:#f8f9fa5e;
+            }
 
             @include breakpoint-down(medium) {
                 align-items: flex-start !important;

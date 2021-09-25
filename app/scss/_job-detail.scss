@@ -75,7 +75,8 @@
                     &.activity {
                         color: vsPrimaryOpacity(0.5);
                     }
-                    &.bold{
+
+                    &.bold {
                         color: $primary !important;
                         font-weight: 500 !important;
                     }
@@ -117,58 +118,73 @@
                             display: inline-block;
                         }
                     }
-                    &.status{
-                        .nav-link{
-                            &:not(.dash){
+
+                    &.status {
+                        .nav-link {
+                            &:not(.dash) {
                                 border: 1px solid;
                                 border-radius: 8px;
                                 padding: 0;
-                                @include breakpoint-down(small){
+
+                                @include breakpoint-down(small) {
                                     width: 50%;
                                 }
                             }
                         }
-                        &.red{
+
+                        &.red {
                             color: $danger;
-                            .nav-link{
+
+                            .nav-link {
                                 border-color: $danger;
                                 color: $danger;
-                                &:after{
+
+                                &:after {
                                     content: none;
                                 }
                             }
-                            .dropdown-menu{
+
+                            .dropdown-menu {
                                 border-color: $danger;
                             }
                         }
-                        &.hyperlink{
+
+                        &.hyperlink {
                             text-decoration: none;
-                            .nav-link{
+
+                            .nav-link {
                                 color: $hyperlink;
                                 border-color: $hyperlink;
-                                &:after{
+
+                                &:after {
                                     content: none;
                                 }
                             }
-                            .dropdown-menu{
+
+                            .dropdown-menu {
                                 border-color: $hyperlink;
                             }
                         }
-                        &.green{
+
+                        &.green {
                             color: $success;
-                            .nav-link{
+
+                            .nav-link {
                                 color: $success;
                                 border-color: $success;
-                                &:after{
+
+                                &:after {
                                     content: none;
                                 }
                             }
-                            .dropdown-menu{
+
+                            .dropdown-menu {
                                 border-color: $success;
                             }
                         }
-                        &.dash{
-                            color:$success;
+
+                        &.dash {
+                            color: $success;
                         }
                     }
                 }
@@ -202,7 +218,7 @@
                                 box-shadow: none;
                             }
                         }
-                        
+
                     }
                 }
 
@@ -226,43 +242,59 @@
             }
         }
     }
-    &.job-listing{
 
-        &.job-seekers{
-            .filter-bar{
-                .search-bar{
+    &.job-listing {
+
+        &.job-seekers {
+            .filter-bar {
+                .search-bar {
                     flex-basis: 100%;
                 }
             }
         }
-        .table{
-            tr{
-                td{
-                    &.created, &.expired{
+
+        .table {
+            tr {
+                td {
+
+                    &.created,
+                    &.expired {
                         font-weight: 400;
+                    }
+
+                    &:first-child {
+                        padding-left: 14px;
+                    }
+
+                    &:last-child {
+                        padding-right: 14px;
                     }
                 }
             }
         }
     }
 }
+
 .job-detail {
-    .container{
-        @include breakpoint-down(small){
+    .container {
+        @include breakpoint-down(small) {
             padding: 0;
         }
     }
+
     &.banner {
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             background-image: url('../images/mob-bg.png') !important;
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .job-list{
-            @include breakpoint-down(small){
+
+        .job-list {
+            @include breakpoint-down(small) {
                 padding: 0;
             }
         }
+
         .job-item {
             .img {
                 @include breakpoint-up(medium) {
@@ -352,14 +384,15 @@
                 font-size: 16px;
                 line-height: 25px;
                 font-weight: normal;
-                .mt-mob{
-                    @media(max-width:767px){
+
+                .mt-mob {
+                    @media(max-width:767px) {
                         margin-top: 16px;
                     }
                 }
 
-                .form-control{
-                    &::placeholder{
+                .form-control {
+                    &::placeholder {
                         color: $primary;
                     }
                 }
@@ -405,7 +438,8 @@
                     line-height: 21px;
                     letter-spacing: 0.5px;
                     transition: all 250ms ease-in-out;
-                    @include breakpoint-down(large){
+
+                    @include breakpoint-down(large) {
                         font-size: 16px;
                     }
 
@@ -442,11 +476,12 @@
                 }
 
                 &.detail {
-                    @include breakpoint-down(small){
+                    @include breakpoint-down(small) {
                         margin-bottom: 16px;
                         line-height: 26px;
 
                     }
+
                     .heading {
                         text-decoration: underline;
                     }
@@ -475,7 +510,8 @@
 
         .main-content:not(.modal-dialog) {
             margin-right: 14px;
-            @include breakpoint-down(small){
+
+            @include breakpoint-down(small) {
                 padding: 0;
             }
         }
@@ -500,6 +536,7 @@
                     width: 30%;
                 }
             }
+
             @include breakpoint-down(large) {
                 margin-left: 0;
             }
@@ -797,34 +834,65 @@
             }
         }
     }
+
+    .filters {
+        .form {
+            .form-control {
+                &::placeholder {
+                    color: $primary;
+                }
+
+                input,
+                textarea {
+                    color: $primary;
+                }
+            }
+
+            .field-item {
+                padding: 15px 20px;
+                margin-bottom: 20px;
+
+                .accordion-button {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
 }
 
 .admin-job-list {
     .table {
-        .d-md-block{
-            @media(min-width: 768px){
+        .d-md-block {
+            @media(min-width: 768px) {
                 display: table-cell !important;
             }
         }
+
         th {
             font-weight: bold;
             font-size: 16px;
             line-height: 19px;
-            &.btn{
+
+            &.btn {
                 border: none;
                 border-radius: 0;
                 position: relative;
-                &:hover{
-                    .cstm-tooltip{
+
+                &:hover {
+                    .cstm-tooltip {
                         opacity: 1;
                     }
                 }
-                .cstm-tooltip{
+
+                .cstm-tooltip {
                     width: auto;
                     top: -150%;
                     left: -45%;
                     padding: 18px;
-                    &:before{
+
+                    &:before {
                         bottom: unset;
                         top: 100%;
                         transform: rotate(180deg);
@@ -888,7 +956,7 @@
                     }
 
                     &.mob-cta {
-                        a{
+                        a {
                             border: 1px solid $hyperlink;
                             box-sizing: border-box;
                             border-radius: 5px;
@@ -896,7 +964,8 @@
                             width: 40%;
                             display: inline-block;
                             text-align: center;
-                            &:first-child{
+
+                            &:first-child {
                                 margin-right: 10px;
                             }
                         }
@@ -906,27 +975,31 @@
         }
     }
 }
-.employer-profile{
-    .table{
-        tbody{
-            tr{
-                &.open{
-                    .action{
-                        border:none;
+
+.employer-profile {
+    .table {
+        tbody {
+            tr {
+                &.open {
+                    .action {
+                        border: none;
                     }
                 }
 
-                td{
+                td {
                     font-size: 16px;
-                    @include breakpoint-down(large){
+
+                    @include breakpoint-down(large) {
                         line-height: 24px;
                     }
-                    &.activity{
+
+                    &.activity {
                         font-weight: 400;
                         color: vsPrimaryOpacity(0.75);
                     }
-                    &.move-right{
-                        @include breakpoint-down(medium){
+
+                    &.move-right {
+                        @include breakpoint-down(medium) {
                             padding-right: 22px;
                             text-align: right;
                             right: 0 !important;
@@ -936,43 +1009,50 @@
             }
         }
     }
-    .emp-dashboard{
-        &.job-listing{
+
+    .emp-dashboard {
+        &.job-listing {
             margin: 15px;
             padding: 20px 15px;
-            > :first-child{
+
+            > :first-child {
                 padding: 0;
             }
-            .row{
-                > *{
+
+            .row {
+                >* {
                     padding-left: 0;
                 }
             }
         }
     }
-    .job-list{
-        @include breakpoint-down(medium){
+
+    .job-list {
+        @include breakpoint-down(medium) {
             padding: 20px 15px !important;
         }
     }
-    &.job-listing{
-        .emp-dashboard{
-            .emp-sidebar{
-                .list-sec{
+
+    &.job-listing {
+        .emp-dashboard {
+            .emp-sidebar {
+                .list-sec {
                     .note-check {
-                        .greyed{
+                        .greyed {
                             border-color: transparent;
-                            @include breakpoint-down(medium){
+
+                            @include breakpoint-down(medium) {
                                 width: 100%;
                                 text-align: center;
                             }
-                            &:hover{
+
+                            &:hover {
                                 border-color: $primary;
                             }
                         }
                     }
                 }
             }
-        } 
+        }
     }
 }

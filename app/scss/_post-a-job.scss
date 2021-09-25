@@ -91,7 +91,7 @@
                         background: #E2E2E9;
                         bottom: 56px;
                         position: absolute;
-                        left: 22px;
+                        left: 25px;
                         z-index: -1;
 
                         @include breakpoint-down(small) {
@@ -338,7 +338,9 @@
                 margin-top: 0;
 
                 @include breakpoint-down(small) {
-                    margin: 0;
+                    &:not(.mob-mar){
+                        margin: 0;
+                    }
                 }
 
                 .label-wrap {
@@ -759,22 +761,32 @@
                         box-shadow: none;
                         background: none;
 
-                        @include breakpoint-up(medium) {
+                        &:not(.job-seek){
+                            @include breakpoint-up(medium) {
+                                &:after {
+                                    background: none;
+                                    content: 'HIDE';
+                                    transform: unset;
+                                    margin-right: 20px;
+                                }
+                            }
 
-                            &:after {
-                                background: none;
-                                content: 'HIDE';
-                                transform: unset;
-                                margin-right: 20px;
+
+                            &.collapsed {
+                                &:after {
+                                    @include breakpoint-up(medium) {
+                                        content: 'SHOW';
+                                    }
+                                }
                             }
                         }
-
-
-                        &.collapsed {
-                            &:after {
-                                @include breakpoint-up(medium) {
-                                    content: 'SHOW';
-                                }
+                        &.job-seek{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            text-transform: initial;
+                            &:after{
+                                height: 0.8rem;
                             }
                         }
                     }

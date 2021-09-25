@@ -525,6 +525,12 @@ a::before {
   -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
   position: relative;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.jobs .job-list .job-item:hover {
+  background: #f8f9fa5e;
 }
 
 @media (max-width: 63.9375em) {
@@ -1074,17 +1080,17 @@ a::before {
   }
 }
 
-.job-listing .filters .title {
+.job-listing .title {
   margin-bottom: 15px;
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters .title {
+  .job-listing .title {
     display: none !important;
   }
 }
 
-.job-listing .filters .results-count {
+.job-listing .results-count {
   font-size: 16px;
   line-height: 19px;
   color: #3C3D6B;
@@ -1092,20 +1098,21 @@ a::before {
   margin: 0;
 }
 
-.job-listing .filters .form .accordion.fields {
+.job-listing .form .accordion.fields {
   position: relative;
 }
 
-.job-listing .filters .form .field-item {
+.job-listing .form .field-item {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   padding: 25px 30px;
   margin-bottom: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.job-listing .filters .form .field-item.btns {
+.job-listing .form .field-item.btns {
   background: transparent;
   padding: 0;
   -webkit-box-shadow: none;
@@ -1113,7 +1120,7 @@ a::before {
 }
 
 @media (max-width: 87.4375em) {
-  .job-listing .filters .form .field-item.btns {
+  .job-listing .form .field-item.btns {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1122,7 +1129,7 @@ a::before {
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters .form .field-item.btns {
+  .job-listing .form .field-item.btns {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1130,52 +1137,52 @@ a::before {
   }
 }
 
-.job-listing .filters .form .field-item.btns .cta {
+.job-listing .form .field-item.btns .cta {
   padding: 15px 34px;
   background: #ffffff;
   border: 1px solid #E2E2E9;
   color: #3C3D6B;
 }
 
-.job-listing .filters .form .field-item.btns .cta:first-child {
+.job-listing .form .field-item.btns .cta:first-child {
   margin-right: 15px;
 }
 
 @media (max-width: 1400px) {
-  .job-listing .filters .form .field-item.btns .cta:first-child {
+  .job-listing .form .field-item.btns .cta:first-child {
     margin-right: 0;
   }
 }
 
-.job-listing .filters .form .field-item.btns .cta:last-child {
+.job-listing .form .field-item.btns .cta:last-child {
   border-color: #3C3D6B;
 }
 
 @media (max-width: 1400px) {
-  .job-listing .filters .form .field-item.btns .cta:last-child {
+  .job-listing .form .field-item.btns .cta:last-child {
     margin-top: 15px;
   }
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters .form .field-item.btns .cta:last-child {
+  .job-listing .form .field-item.btns .cta:last-child {
     margin-top: 0;
     margin-left: 15px;
   }
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters .form .field-item.btns .cta {
+  .job-listing .form .field-item.btns .cta {
     padding: 15px 38px;
   }
 }
 
-.job-listing .filters .form .field-item.btns .cta:hover {
+.job-listing .form .field-item.btns .cta:hover {
   color: #ffffff;
   background: #3C3D6B;
 }
 
-.job-listing .filters .form .field-item .accordion-button {
+.job-listing .form .field-item .accordion-button {
   color: #3C3D6B;
   font-size: 18px;
   line-height: 21px;
@@ -1185,24 +1192,24 @@ a::before {
   padding: 0;
 }
 
-.job-listing .filters .form .field-item .accordion-button::after {
+.job-listing .form .field-item .accordion-button::after {
   background-image: url("../images/angle-up.svg");
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   background-size: 16px;
 }
 
-.job-listing .filters .form .field-item .accordion-button:not(.collapsed):after {
+.job-listing .form .field-item .accordion-button:not(.collapsed):after {
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
 }
 
-.job-listing .filters .form .field-item.green {
+.job-listing .form .field-item.green {
   text-align: center;
   padding: 0px;
 }
 
-.job-listing .filters .form .field-item.green .btn {
+.job-listing .form .field-item.green .btn {
   width: 100%;
   position: relative;
   width: 100%;
@@ -1218,17 +1225,17 @@ a::before {
   border-radius: 8px;
 }
 
-.job-listing .filters .form .field-item.green .btn:hover {
+.job-listing .form .field-item.green .btn:hover {
   background: #ffffff;
   color: #0AD188;
 }
 
-.job-listing .filters .form .field-item.green .btn:hover .cstm-tooltip {
+.job-listing .form .field-item.green .btn:hover .cstm-tooltip {
   opacity: 0.5;
   z-index: 2;
 }
 
-.job-listing .filters .form .field-item .accordion-header {
+.job-listing .form .field-item .accordion-header {
   color: #3C3D6B;
   font-size: 18px;
   line-height: 21px;
@@ -1238,16 +1245,16 @@ a::before {
   padding: 0;
 }
 
-.job-listing .filters .form .field-item .confirmation {
+.job-listing .form .field-item .confirmation {
   padding-top: 20px;
 }
 
-.job-listing .filters .form .field-item .confirmation .check-box:last-child {
+.job-listing .form .field-item .confirmation .check-box:last-child {
   margin-left: 24px;
 }
 
-.job-listing .filters .form .field-item label {
-  color: #3C3D6B;
+.job-listing .form .field-item label {
+  color: #3C3D6B !important;
   font-size: 18px;
   line-height: 21px;
   position: relative;
@@ -1255,26 +1262,26 @@ a::before {
   cursor: pointer;
 }
 
-.job-listing .filters .form .field-item input[type="radio"],
-.job-listing .filters .form .field-item input[type="checkbox"] {
+.job-listing .form .field-item input[type="radio"],
+.job-listing .form .field-item input[type="checkbox"] {
   opacity: 0;
   position: absolute;
 }
 
-.job-listing .filters .form .field-item input[type="radio"]:checked + .checkmark,
-.job-listing .filters .form .field-item input[type="checkbox"]:checked + .checkmark {
+.job-listing .form .field-item input[type="radio"]:checked + .checkmark,
+.job-listing .form .field-item input[type="checkbox"]:checked + .checkmark {
   background: #0AD188;
   border-color: #0AD188;
   -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
 }
 
-.job-listing .filters .form .field-item input[type="radio"]:checked + .checkmark::after,
-.job-listing .filters .form .field-item input[type="checkbox"]:checked + .checkmark::after {
+.job-listing .form .field-item input[type="radio"]:checked + .checkmark::after,
+.job-listing .form .field-item input[type="checkbox"]:checked + .checkmark::after {
   display: block;
 }
 
-.job-listing .filters .form .field-item .checkmark {
+.job-listing .form .field-item .checkmark {
   display: inline-block;
   background: #FFFFFF;
   border: 1px solid rgba(60, 61, 107, 0.35);
@@ -1290,7 +1297,7 @@ a::before {
   top: -4px;
 }
 
-.job-listing .filters .form .field-item .checkmark:after {
+.job-listing .form .field-item .checkmark:after {
   content: "\2713\0020";
   position: absolute;
   left: 8px;
@@ -1300,7 +1307,7 @@ a::before {
   font-weight: 700;
 }
 
-.job-listing .filters .form .field-item .search {
+.job-listing .form .field-item .search {
   padding: 20px 30px;
   width: 99%;
   position: absolute;
@@ -1315,12 +1322,12 @@ a::before {
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters .form .field-item .search {
+  .job-listing .form .field-item .search {
     padding-left: 30px;
   }
 }
 
-.job-listing .filters .form .field-item .list-options {
+.job-listing .form .field-item .list-options {
   padding-top: 25px;
   margin: 0;
   margin-top: 70px;
@@ -1329,13 +1336,13 @@ a::before {
   text-align: left;
 }
 
-.job-listing .filters .form .field-item .list-options.states {
+.job-listing .form .field-item .list-options.states {
   max-height: 276px;
   overflow-y: scroll;
 }
 
 @media (max-width: 39.9375em) {
-  .job-listing .filters .form .field-item .list-options:not(.modal-list) {
+  .job-listing .form .field-item .list-options:not(.modal-list) {
     overflow-y: scroll;
     position: absolute;
     background: #fff;
@@ -1345,17 +1352,17 @@ a::before {
   }
 }
 
-.job-listing .filters .form .field-item .list-options li {
+.job-listing .form .field-item .list-options li {
   margin-bottom: 16px;
   font-weight: 400;
 }
 
-.job-listing .filters .form .field-item .list-options li .checkmark {
+.job-listing .form .field-item .list-options li .checkmark {
   -webkit-box-shadow: unset;
           box-shadow: unset;
 }
 
-.job-listing .filters .form .field-item .accordion-collapse.show .search {
+.job-listing .form .field-item .accordion-collapse.show .search {
   opacity: 1;
   z-index: 2;
 }
@@ -1454,7 +1461,7 @@ a::before {
 
 .job-listing .mob-triggers {
   position: fixed !important;
-  bottom: -2px;
+  bottom: -18px;
   left: 0;
   width: 100%;
   z-index: 7;
@@ -1938,6 +1945,14 @@ a::before {
 
 .cv-db.job-listing .table tr td.created, .cv-db.job-listing .table tr td.expired {
   font-weight: 400;
+}
+
+.cv-db.job-listing .table tr td:first-child {
+  padding-left: 14px;
+}
+
+.cv-db.job-listing .table tr td:last-child {
+  padding-right: 14px;
 }
 
 @media (max-width: 39.9375em) {
@@ -2541,6 +2556,38 @@ a::before {
   margin-right: 10px;
 }
 
+.job-detail .filters .form .form-control::-webkit-input-placeholder {
+  color: #3C3D6B;
+}
+
+.job-detail .filters .form .form-control:-ms-input-placeholder {
+  color: #3C3D6B;
+}
+
+.job-detail .filters .form .form-control::-ms-input-placeholder {
+  color: #3C3D6B;
+}
+
+.job-detail .filters .form .form-control::placeholder {
+  color: #3C3D6B;
+}
+
+.job-detail .filters .form .form-control input,
+.job-detail .filters .form .form-control textarea {
+  color: #3C3D6B;
+}
+
+.job-detail .filters .form .field-item {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.job-detail .filters .form .field-item .accordion-button {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 @media (min-width: 768px) {
   .admin-job-list .table .d-md-block {
     display: table-cell !important;
@@ -2802,7 +2849,7 @@ a::before {
   background: #E2E2E9;
   bottom: 56px;
   position: absolute;
-  left: 22px;
+  left: 25px;
   z-index: -1;
 }
 
@@ -3068,7 +3115,7 @@ a::before {
 }
 
 @media (max-width: 39.9375em) {
-  .post-a-job.jobs .main-content .form {
+  .post-a-job.jobs .main-content .form:not(.mob-mar) {
     margin: 0;
   }
 }
@@ -3526,7 +3573,7 @@ a::before {
 }
 
 @media (min-width: 40em) {
-  .post-a-job.jobs .main-content .form .accordion .accordion-button:after {
+  .post-a-job.jobs .main-content .form .accordion .accordion-button:not(.job-seek):after {
     background: none;
     content: 'HIDE';
     -webkit-transform: unset;
@@ -3536,9 +3583,20 @@ a::before {
 }
 
 @media (min-width: 40em) {
-  .post-a-job.jobs .main-content .form .accordion .accordion-button.collapsed:after {
+  .post-a-job.jobs .main-content .form .accordion .accordion-button:not(.job-seek).collapsed:after {
     content: 'SHOW';
   }
+}
+
+.post-a-job.jobs .main-content .form .accordion .accordion-button.job-seek {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: initial;
+}
+
+.post-a-job.jobs .main-content .form .accordion .accordion-button.job-seek:after {
+  height: 0.8rem;
 }
 
 .post-a-job.jobs .main-content .form .accordion .accordion-body {
