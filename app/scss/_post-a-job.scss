@@ -65,11 +65,11 @@
                 padding: 0;
                 text-align: left;
 
-                @include breakpoint-down(small) {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
+                // @include breakpoint-down(medium) {
+                //     display: flex;
+                //     justify-content: space-between;
+                //     align-items: center;
+                // }
 
                 .create-item {
                     z-index: 5;
@@ -151,6 +151,14 @@
                         border-radius: 50%;
                         color: vsPrimaryOpacity(0.5);
                         background: #E2E2E9;
+                        position: relative;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        i{
+                            position: absolute;
+                            margin: auto;
+                        }
                     }
                     .number-wrap{
                         width: 50px;
@@ -186,6 +194,47 @@
                         @include breakpoint-down(small) {
                             font-size: 16px;
                             line-height: 19px;
+                        }
+                    }
+
+                    &.p-a-j-1{
+                        .number{
+                            padding: 16px 25px;
+                            i{
+                                left: 33%;
+                            }
+                        }
+                    }
+                    &.p-a-j-2{
+                        &:before{
+                            height: 112%;
+                            @media(max-width:1200px){
+                                height: 100%;
+                            }
+                        }
+                        &.active:before{
+                            height: 126%;
+                        }
+                        .number{
+                            padding: 16px 18px;
+                            
+                            i{
+                                left: 40%;
+                            }
+                        }
+                    }
+                    &.p-a-j-3{
+                        &:before{
+                            height: 100%;
+                        }
+                        &.active:before{
+                            height: 116%;
+                        }
+                        .number{
+                            padding: 16px 25px;
+                            i{
+                                left: 30%;
+                            }
                         }
                     }
 
@@ -471,6 +520,9 @@
                                 display: block;
                                 margin-top: 10px;
                             }
+                            img{
+                                width: 100%;
+                            }
 
                         }
 
@@ -493,6 +545,16 @@
                         .col-md-2 {
                             @include breakpoint-down(small) {
                                 flex-basis: 48%;
+                            }
+                        }
+                        .padding-manage{
+                            @include breakpoint-down(small){
+                                &.first{
+                                    padding-left: 0;
+                                }
+                                &.last{
+                                    padding-right: 0;
+                                }
                             }
                         }
 
@@ -608,10 +670,15 @@
 
                         .visa {
                             padding-left: 0;
+                            .text{
+                                max-width: 70%;
+                                word-break: break-all;
+                                display: inline-block;
+                            }
 
                             .checkmark {
                                 left: unset;
-                                right: 16px;
+                                right: 0;
                             }
                         }
                     }

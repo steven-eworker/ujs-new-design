@@ -374,7 +374,7 @@
             padding: 25px 30px;
             margin-top: 20px;
 
-            @include breakpoint-down(small) {
+            @include breakpoint-down(medium) {
                 padding: 15px;
                 margin: 15px 30px;
             }
@@ -533,7 +533,7 @@
 
             &:not(.in-accordion) {
                 @include breakpoint-up(large) {
-                    width: 30%;
+                    // width: 30%;
                 }
             }
 

@@ -148,6 +148,13 @@ body.noscroll::before {
   z-index: 10;
 }
 
+@media (max-width: 1200px) {
+  .stop-sticky {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+
 select.form-control {
   position: relative;
   -webkit-appearance: none;
@@ -1260,6 +1267,7 @@ a::before {
   position: relative;
   padding-left: 42px;
   cursor: pointer;
+  word-break: break-all;
 }
 
 .job-listing .form .field-item input[type="radio"],
@@ -1334,6 +1342,8 @@ a::before {
   margin-left: -36px;
   list-style-type: none;
   text-align: left;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .job-listing .form .field-item .list-options.states {
@@ -2056,7 +2066,7 @@ a::before {
   margin-top: 20px;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .job-detail.jobs .list-sec {
     padding: 15px;
     margin: 15px 30px;
@@ -2241,12 +2251,6 @@ a::before {
   margin-top: 33px;
   margin-left: 14px;
   text-align: center;
-}
-
-@media (min-width: 64em) {
-  .job-detail.jobs .sidebar:not(.in-accordion) {
-    width: 30%;
-  }
 }
 
 @media (max-width: 87.4375em) {
@@ -2819,20 +2823,6 @@ a::before {
   text-align: left;
 }
 
-@media (max-width: 39.9375em) {
-  .post-a-job.jobs .sidebar .create {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 .post-a-job.jobs .sidebar .create .create-item {
   z-index: 5;
   position: relative;
@@ -2905,6 +2895,15 @@ a::before {
   border-radius: 50%;
   color: rgba(60, 61, 107, 0.5);
   background: #E2E2E9;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.post-a-job.jobs .sidebar .create .create-item .number i {
+  position: absolute;
+  margin: auto;
 }
 
 .post-a-job.jobs .sidebar .create .create-item .number-wrap {
@@ -2948,6 +2947,52 @@ a::before {
     font-size: 16px;
     line-height: 19px;
   }
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-1 .number {
+  padding: 16px 25px;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-1 .number i {
+  left: 33%;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-2:before {
+  height: 112%;
+}
+
+@media (max-width: 1200px) {
+  .post-a-job.jobs .sidebar .create .create-item.p-a-j-2:before {
+    height: 100%;
+  }
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-2.active:before {
+  height: 126%;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-2 .number {
+  padding: 16px 18px;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-2 .number i {
+  left: 40%;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-3:before {
+  height: 100%;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-3.active:before {
+  height: 116%;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-3 .number {
+  padding: 16px 25px;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.p-a-j-3 .number i {
+  left: 30%;
 }
 
 .post-a-job.jobs .main-content.profile {
@@ -3281,6 +3326,10 @@ a::before {
   margin-top: 10px;
 }
 
+.post-a-job.jobs .main-content .form.list-sec .form-control.custom-file-upload img {
+  width: 100%;
+}
+
 .post-a-job.jobs .main-content .form.list-sec .toggle-box {
   padding: 0;
   padding-top: 20px;
@@ -3294,6 +3343,15 @@ a::before {
   .post-a-job.jobs .main-content .form.list-sec .toggle-box .col-md-2 {
     -ms-flex-preferred-size: 48%;
         flex-basis: 48%;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .toggle-box .padding-manage.first {
+    padding-left: 0;
+  }
+  .post-a-job.jobs .main-content .form.list-sec .toggle-box .padding-manage.last {
+    padding-right: 0;
   }
 }
 
@@ -3411,9 +3469,15 @@ a::before {
   padding-left: 0;
 }
 
+.post-a-job.jobs .main-content .form.list-sec .row .visa .text {
+  max-width: 70%;
+  word-break: break-all;
+  display: inline-block;
+}
+
 .post-a-job.jobs .main-content .form.list-sec .row .visa .checkmark {
   left: unset;
-  right: 16px;
+  right: 0;
 }
 
 .post-a-job.jobs .main-content .form.list-sec input[type="radio"],

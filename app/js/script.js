@@ -62,20 +62,26 @@ if (mainEl.classList.contains('adjust-height')) {
     document.querySelector('.img-box').style.height = height.toString() + 'px';
 }
 
-var checkBoxes = document.querySelectorAll('.checks');
-if (checkBoxes != undefined)
-    checkBoxes.forEach(function (checks) {
-        checks.querySelectorAll('label').forEach(function (label) {
-            label.addEventListener('click', function (elm) {
-                if (elm.target.parentNode.classList.contains('selected')) {
-                    elm.target.parentNode.classList.remove('selected');
-                } else {
-                    elm.target.parentNode.classList.add('selected');
-                }
-                removeSelectedLabels();
-            });
+let checkBoxes = document.querySelectorAll('.checks');
+if (checkBoxes != undefined) {
+    checkBoxes.forEach(function (label) {
+        label.addEventListener('click', function (elm) {
+            if (elm.target.parentNode.classList.contains('selected')) {
+                elm.target.parentNode.classList.remove('selected');
+            } else {
+                elm.target.parentNode.classList.add('selected');
+            }
+            var summaryDiv = document.querySelector('.form.summary');
+            var target;
+            var targetPrice = elm.target.parentNode.dataset.price || elm.target.parentNode.parentNode.dataset.price;
+            if (summaryDiv) {
+                summaryPriceManager(summaryDiv, elm.target.parentNode, targetPrice);
+            }
+            removeSelectedLabels();
+            removeDuplicatesSummary(targetPrice);
         });
     });
+}
 
 function removeSelectedLabels() {
     checkBoxes.forEach(function (checks) {
@@ -87,6 +93,77 @@ function removeSelectedLabels() {
             }
         });
     });
+}
+
+function removeDuplicatesSummary(targetPrice) {
+    var duplicate = document.querySelectorAll('.form.summary .plural[data-price="' + targetPrice.toString() + '"]')[1];
+    if (duplicate) {
+        duplicate.remove();
+    }
+    var allPlurals = document.querySelectorAll('.checks.plural');
+    var price;
+    allPlurals.forEach(function (elm) {
+        price = elm.dataset.price || elm.parentNode.dataset.price;
+        if (elm.classList.contains('selected') === false && elm.parentNode.classList.contains('selected') === false) {
+            document.querySelector('.form.summary .plural[data-price="' + price.toString() + '"]').remove();
+        }
+    });
+}
+
+function summaryPriceManager(summaryDiv, parentEl, targetPrice) {
+    if (parentEl.classList.contains('singular') || parentEl.parentNode.classList.contains('singular')) {
+        if (summaryDiv.querySelector('.singular') == undefined || summaryDiv.querySelector('.singular') == null) {
+            var wrapperDiv = document.createElement('p');
+            wrapperDiv.classList.add('list');
+            wrapperDiv.classList.add('singular');
+            wrapperDiv.setAttribute("data-price", targetPrice.toString());
+
+            var textEl = document.createElement('span');
+            textEl.classList.add('first');
+            textEl.innerText = parentEl.innerText;
+
+            var textEl2 = document.createElement('span');
+            textEl2.classList.add('price');
+            textEl2.innerText = '$' + parseFloat(targetPrice).toFixed(2).toString();
+
+            wrapperDiv.appendChild(textEl);
+            wrapperDiv.appendChild(textEl2);
+
+            summaryDiv.insertBefore(wrapperDiv, summaryDiv.querySelector('.total'));
+        }
+        target = summaryDiv.querySelector('.singular');
+        target.setAttribute('data-price', targetPrice);
+        target.querySelector('.price').innerText = '$' + parseFloat(targetPrice).toFixed(2).toString();
+        target.querySelector('.first').innerText = parentEl.innerText;
+    }
+
+    if (parentEl.classList.contains('plural') || parentEl.parentNode.classList.contains('plural')) {
+        var wrapperDiv = document.createElement('p');
+        wrapperDiv.classList.add('list');
+        wrapperDiv.classList.add('plural');
+        wrapperDiv.setAttribute("data-price", targetPrice.toString());
+
+        var textEl = document.createElement('span');
+        textEl.classList.add('first');
+        textEl.innerText = parentEl.innerText;
+
+        var textEl2 = document.createElement('span');
+        textEl2.classList.add('price');
+        textEl2.innerText = '$' + parseFloat(targetPrice).toFixed(2).toString();
+
+        wrapperDiv.appendChild(textEl);
+        wrapperDiv.appendChild(textEl2);
+
+        summaryDiv.insertBefore(wrapperDiv, summaryDiv.querySelector('.total'));
+    }
+
+    setTimeout(() => {
+        var actualPrice = 0;
+        document.querySelectorAll('.form.summary .list').forEach(function(listEl){
+            actualPrice += parseFloat(listEl.dataset.price);
+        });
+        document.querySelector('.form.summary .total').innerText = '$'+ parseFloat(actualPrice).toFixed(2).toString();
+    }, 500);
 }
 
 var searchInputs = document.querySelectorAll('.search');
@@ -121,7 +198,7 @@ var scrollableSidebar = document.querySelector('.stickthis');
 if (header != undefined) {
     window.onscroll = scrollFunctions;
     var sticky = header.offsetTop;
-    if( scrollableSidebar != undefined ){
+    if (scrollableSidebar != undefined) {
         var sidebarOffset = scrollableSidebar.offsetTop;
     }
 
@@ -135,7 +212,7 @@ if (header != undefined) {
         }
 
         // Make Sidebar Sticky
-        if( scrollableSidebar != undefined ){
+        if (scrollableSidebar != undefined) {
 
             if (window.innerWidth > 991 && window.pageYOffset + 200 > sidebarOffset) {
                 scrollableSidebar.classList.add('sticky-sidebar');
@@ -154,31 +231,36 @@ if (header != undefined) {
         // });
     }
 
-    function highlightSectionsSidebar(sec){
+    function highlightSectionsSidebar(sec) {
         var section, sectionOffset, anchorTrigger;
         section = document.getElementById(sec);
-        if( section != undefined ){
+        if (section != undefined) {
             sectionOffset = section.offsetTop;
-            anchorTrigger = document.querySelector('a[href="#'+sec+'"]');
+            anchorTrigger = document.querySelectorAll('a[href="#' + sec + '"]');
             var windowScroll = window.scrollY + window.innerHeight - 200;
-            if( windowScroll > sectionOffset ){
-                anchorTrigger.classList.add('active');
-            } else{
-                anchorTrigger.classList.remove('active');
+            if (windowScroll > sectionOffset) {
+                anchorTrigger.forEach(function (btn) {
+                    btn.classList.add('active');
+                });
+                // anchorTrigger.classList.add('active');
+            } else {
+                anchorTrigger.forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+                // anchorTrigger.classList.remove('active');
             }
         }
     }
 
-    function offsetBottom(el, i) { 
-        i = i || 0; 
-        return document.querySelectorAll(el)[i].getBoundingClientRect().bottom 
+    function offsetBottom(el, i) {
+        i = i || 0;
+        return document.querySelectorAll(el)[i].getBoundingClientRect().bottom
     }
 }
 
 var showPassword = document.querySelectorAll('.show-password');
 showPassword.forEach(function (el) {
     el.addEventListener('click', function (toggle) {
-        console.log(toggle.target);
         var input = toggle.target.parentNode.querySelector('input');
         if (input.type === 'password') {
             input.type = 'text';
@@ -245,5 +327,13 @@ if (accessToggle != undefined) {
                 tgbtn.target.classList.add('submit');
             }
         });
+    });
+}
+
+var skipToCredits = document.querySelector('.skip-to-credits');
+if (skipToCredits) {
+    skipToCredits.addEventListener('click', function (btn) {
+        var top = section = document.getElementById('job-listing').offsetTop - 200;
+        window.scrollTo(0, top);
     });
 }
