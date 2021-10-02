@@ -97,7 +97,7 @@
 
     .job-list {
         @include breakpoint-down(small) {
-            padding: 0px 18px;
+            padding: 0px;
         }
 
         .job-item {

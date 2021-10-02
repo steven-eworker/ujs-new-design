@@ -343,6 +343,7 @@
                 opacity: 0;
                 z-index: -2;
                 color: $primary;
+                top: 54px;
 
                 @include breakpoint-down(small) {
                     padding-left: 30px;
@@ -358,6 +359,9 @@
                 text-align: left;
                 padding-left: 12px;
                 padding-right: 12px;
+                @include breakpoint-down(small){
+                    padding-left: 40px;
+                }
 
                 &.states {
                     max-height: 276px;

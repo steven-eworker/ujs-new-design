@@ -18,12 +18,11 @@
 
 <body>
     <main>
-        <header class="container navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
-            <div class="container-fluid">
+        <header class="container-fluid navbar navbar-expand-lg navbar-light site-header" aria-label="Header">
+            <div class="container">
                 <a class="navbar-brand" href="index.html"><img src="images/new-logo.png" alt="UJS Logo"></a>
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar"
+                    aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon d-flex flex-column justify-content-center">
                         <img src="images/hamburger-line.svg" alt="">
                         <img src="images/hamburger-line.svg" alt="">
@@ -82,8 +81,8 @@
         <section class="jobs job-listing job-detail post-a-job edit-job-listing">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 main-content job-listing job-detail post-a-job sidebar in-accordion">
-                        <div class="row note-check">
+                    <div class="col-xl-3 main-content job-listing job-detail post-a-job sidebar in-accordion padding-modal">
+                        <div class="row list-sec note-check shadow-none border-0 p-0">
                             <div class="col">
                                 <a href="#" class="greyed"><i class="fas fa-arrow-left mx-2"></i> Back to Job Listings</a>
                             </div>
@@ -103,8 +102,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row list-sec skip">
-                            <a href="javascript:void(0)"><i class="fas fa-level-down-alt mx-1"></i> Skip to add-ons</a>
+                        <div class="row list-sec skip border-0">
+                            <a href="#job-listing"><i class="fas fa-level-down-alt mx-1"></i> Skip to add-ons</a>
                         </div>
                         <div class="row list-sec detail form submit p-0 border-0">
                             <button class="submit" type="submit">
@@ -112,7 +111,7 @@
                             </button>
                         </div>
                     </div>
-                    <form class="col-lg-8 main-content" action="">
+                    <form class="col-xl-8 main-content filters modal-filters padding-modal" action="">
                         <div class="row list-sec detail form">
                             <h2>Job Details</h2>
                             <div class="label-wrap">
@@ -128,109 +127,287 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="label-wrap">
-                                        <select name="" id="city" class="form-control">
-                                            <option value="" selected>Roseburg</option>
-                                        </select>
+                                        <input type="text" name="city" class="form-control" id="city" placeholder="City">
                                         <label for="city">City</label>
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="label-wrap">
-                                        <select name="states" id="states" class="form-control">
-                                            <option>States</option>
-                                            <option>Alabama</option>
-                                            <option>Alaska</option>
-                                            <option>Arizona</option>
-                                            <option>Arkansas</option>
-                                            <option>California</option>
-                                            <option>Colorado</option>
-                                            <option>Connecticut</option>
-                                            <option>Delaware</option>
-                                            <option>Florida</option>
-                                            <option>Georgia</option>
-                                            <option>Hawaii</option>
-                                            <option>Idaho</option>
-                                            <option>Illinois</option>
-                                            <option>Indiana</option>
-                                            <option>Iowa</option>
-                                            <option>Kansas</option>
-                                            <option>Kentucky</option>
-                                            <option>Louisiana</option>
-                                            <option>Maine</option>
-                                            <option>Maryland</option>
-                                            <option>Massachusetts</option>
-                                            <option>Michigan</option>
-                                            <option>Minnesota</option>
-                                            <option>Mississippi</option>
-                                            <option>Missouri</option>
-                                            <option>Montana</option>
-                                            <option>Nebraska</option>
-                                            <option>Nevada</option>
-                                            <option>New Hampshire</option>
-                                            <option>New Jersey</option>
-                                            <option>New Mexico</option>
-                                            <option>New York</option>
-                                            <option>North Carolina</option>
-                                            <option>North Dakota</option>
-                                            <option>Ohio</option>
-                                            <option>Oklahoma</option>
-                                            <option selected>Oregon</option>
-                                            <option>Pennsylvania</option>
-                                            <option>Rhode Island</option>
-                                            <option>South Carolina</option>
-                                            <option>South Dakota</option>
-                                            <option>Tennessee</option>
-                                            <option>Texas</option>
-                                            <option>Utah</option>
-                                            <option>Vermont</option>
-                                            <option>Virginia</option>
-                                            <option>Washington</option>
-                                            <option>West Virginia</option>
-                                            <option>Wisconsin</option>
-                                            <option>Wyoming</option>
-                                        </select>
-                                        <label for="states">State(s)</label>
+                                    <div class="accordion fields" id="Accordionstate">
+                                        <div class="accordion-item shadow-none field-item">
+                                            <h2 class="accordion-header mb-0" id="headingOne">
+                                                <button class="accordion-button job-seek collapsed mb-0" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#modalcollapseOne" aria-expanded="false" aria-controls="modalcollapseOne">
+                                                    State(s)
+                                                </button>
+                                            </h2>
+                                            <div id="modalcollapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                                data-bs-parent="#Accordionstate">
+                                                <div class="accordion-body">
+                                                    <input class="search" type="text" name="" id="" placeholder="Search..."
+                                                        onkeyup="filterListSearch(0)">
+                                                    <ul class="list-options modal-list states">
+                                                        <li><label>Alabama<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Alaska<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Arizona<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Arkansas<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>California<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Colorado<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Connecticut<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Delaware<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>District of Columbia<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Florida<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Georgia<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Hawaii<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Idaho<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Illinois<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Indiana<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Iowa<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Kansas<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Kentucky<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Louisiana<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Maine<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Maryland<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Massachusetts<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Michigan<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Minnesota<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Mississippi<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Missouri<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Montana<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Nebraska<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Nevada<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>New Hampshire<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>New Jersey<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>New Mexico<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>New York<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>North Carolina<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>North Dakota<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Ohio<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Oklahoma<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Oregon<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Pennsylvania<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Rhode Island<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>South Carolina<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>South Dakota<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Tennessee<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Texas<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Utah<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Vermont<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Virginia<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Washington<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>West Virginia<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Wisconsin<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Wyoming<input type="checkbox" name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <div class="label-wrap">
-                                        <select name="practice" id="practice" class="form-control">
-                                            <option>Practice Type(s)</option>
-                                            <option>Hospital</option>
-                                            <option>Academic Institution</option>
-                                            <option selected>Group Practice</option>
-                                            <option>Solo Practice</option>
-                                            <option>Multispecialty Group</option>
-                                        </select>
-                                        <label for="practice">Practice Type(s)</label>
+                                    <div class="accordion fields" id="AccordionPractice">
+                                        <div class="accordion-item shadow-none field-item">
+                                            <h2 class="accordion-header mb-0" id="modalheadingTwo">
+                                                <button class="accordion-button job-seek mb-0 collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#modalcollapseTwo"
+                                                    aria-expanded="false" aria-controls="modalcollapseTwo">
+                                                    Practice Type(s)
+                                                </button>
+                                            </h2>
+                                            <div id="modalcollapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="modalheadingTwo" data-bs-parent="#AccordionPractice">
+                                                <div class="accordion-body">
+                                                    <ul class="list-options modal-list mt-0">
+                                                        <li><label>Hospital<input type="checkbox" name="confirmation"
+                                                                    value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Academic Institution<input type="checkbox"
+                                                                    name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Group Practice<input type="checkbox"
+                                                                    name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Solo Practice<input type="checkbox"
+                                                                    name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                        <li><label>Multispecialty Group<input type="checkbox"
+                                                                    name="confirmation" value="all">
+                                                                <span class="checkmark"></span>
+                                                            </label></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col form-control">
-                                    <label class="visa">Visa Candidates accepted?<input type="checkbox"
+                                <div class="col">
+                                    <div class="form-control" style="padding-right: 20px;">
+                                        <label class="visa"><span class="text">Visa Candidates accepted?</span><input type="checkbox"
                                             name="confirmation" value="all" checked>
-                                        <span class="checkmark"></span>
-                                    </label>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                                <select class="form-control" name="subspecialty" id="subspecialty">
-                                    <option>Subspecialty(s)</option>
-                                    <option>General Urology</option>
-                                    <option>Urologic Oncology</option>
-                                    <option>Pediatric Urology</option>
-                                    <option>Reconstructive Urology</option>
-                                    <option>FPMRS/Urogynecology</option>
-                                    <option>Robotic/Minimally Invasive Surgery</option>
-                                    <option>Endourology</option>
-                                    <option selected>Neurourology</option>
-                                    <option>Andrology/Men’s Health</option>
-                                </select>
+                            <div class="accordion fields p-0" id="AccordionSubspeciality">
+                                <div class="accordion-item shadow-none field-item mb-0">
+                                    <h2 class="accordion-header mb-0" id="headingThree">
+                                        <button class="accordion-button job-seek collapsed mb-0" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#modalcollapseThree" aria-expanded="false" aria-controls="modalcollapseThree">
+                                            Subspecialty(s)
+                                        </button>
+                                    </h2>
+                                    <div id="modalcollapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#AccordionSubspeciality">
+                                        <div class="accordion-body">
+                                            <input class="search" type="text" name="" id="" placeholder="Search..."
+                                                onkeyup="filterListSearch(1)">
+                                            <ul class="list-options modal-list states">
+                                                <li><label>General Urology<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>Urologic Oncology<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>Pediatric Urology<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>Reconstructive Urology<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>FPMRS/Urogynecology<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>Robotic/Minimally Invasive Surgery<input type="checkbox" name="confirmation"
+                                                            value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>Endourology<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>Neurourology<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                                <li><label>Andrology/Men’s Health<input type="checkbox" name="confirmation" value="all">
+                                                        <span class="checkmark"></span>
+                                                    </label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="row list-sec detail form">
                             <h2>Employer Details</h2>
                             <div class="row">
-                                <div class="col-md-9">
+                                <div class="col-md-9 px-3">
                                     <div class="label-wrap">
                                         <input type="text" id="name" class="form-control" placeholder="Name" value="Urology Job Search">
                                         <label for="name">Name</label>
@@ -241,7 +418,7 @@
                                         <label for="homepage">Home Page URL</label>
                                     </div>
                                 </div>
-                                <div class="col-md-3 d-flex align-items-center mb-4 upload-wrap">
+                                <div class="col-md-3 d-flex align-items-center mb-4 upload-wrap upload-logo">
                                     <label for="file-upload1" class="form-control custom-file-upload logo mb-0">
                                         <img class="w-100" src="images/new-logo.png" alt="">
                                     </label>
@@ -252,13 +429,13 @@
                         <div class="row list-sec detail form">
                             <h2>Videos</h2>
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 videos-left">
                                     <label for="file-upload2" class="form-control custom-file-upload">
-                                        <img class="w-100" src="images/upload-video.png" alt="">
+                                        <img src="images/upload-video.png" alt="">
                                     </label>
                                     <input id="file-upload2" type="file" />
                                 </div>
-                                <div class="col-md-8">
+                                <div class="col-md-8 videos-right">
                                     <div class="label-wrap">
                                         <input type="text" id="youTube" class="form-control"
                                             placeholder="YouTube Video URL" value="https://www.youtube.com/watch?v=4eiKspBoJ0A">
@@ -302,30 +479,30 @@
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit scelerisque in dictum non. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing. Mattis nunc sed blandit libero volutpat sed cras ornare arcu. Habitasse platea dictumst vestibulum rhoncus est. Faucibus purus in massa tempor nec feugiat nisl. Auctor eu augue ut lectus arcu bibendum at. Lectus nulla at volutpat diam ut. Laoreet non curabitur gravida arcu ac tortor dignissim convallis. Risus nec feugiat in fermentum posuere urna. Eu ultrices vitae auctor eu augue ut lectus. Habitant morbi tristique senectus et netus et. Urna et pharetra pharetra massa massa. Diam maecenas sed enim ut sem. Convallis tellus id interdum velit laoreet. Urna porttitor rhoncus dolor purus non enim. Fringilla ut morbi tincidunt augue.
                             </textarea>
                         </div>
-                        <div class="row list-sec detail form">
+                        <div class="row list-sec detail form" id="job-listing">
                             <h2>Increase visibility with these add-ons</h2>
-                            <div class="label checks">
+                            <div class="label checks plural" data-price="10">
                                 <label>Highlight my post in yellow (+$10)
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label checks">
+                            <div class="label checks plural" data-price="15">
                                 <label>Highlight my post with a custom brand color (+$15)
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
+                                    <span class="ticket-number">#323648</span>
                                 </label>
-                                <span class="ticket-number">#323648</span>
                             </div>
-                            <div class="label checks">
+                            <div class="label checks plural" data-price="100">
                                 <label>Sticky my post so it stays on the front page for 1 month (+$100)
                                     <input type="checkbox">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
-                            <div class="label checks">
+                            <div class="label checks plural selected" data-price="250">
                                 <label>Sticky my post so it stays on the front page for 3 months (+$250)
-                                    <input type="checkbox">
+                                    <input type="checkbox" checked>
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
@@ -344,7 +521,7 @@
                                     <div id="jobpreviewcollapse" class="accordion-collapse collapse job-list"
                                         aria-labelledby="flush-headingOne" data-bs-parent="#jobpreview">
                                         <div
-                                            class="accordion-body d-flex justify-content-start align-items-center job-item">
+                                            class="accordion-body d-flex justify-content-start align-items-center job-item p-4">
                                             <div class="d-flex justify-content-start align-items-center details">
                                                 <div class="img acc">
                                                     <img src="images/ad-placeholder.jpg" alt="">
@@ -393,49 +570,59 @@
                                     <!-- Redirect user to respective page instead of opening the accordion -->
                                     <div id="jobview" class="accordion-collapse collapse job-list"
                                         aria-labelledby="flush-headingOne" data-bs-parent="#jobdetail">
-                                        <div class="accordion-body">
+                                        <div class="accordion-body px-0">
                                             <section class="jobs job-detail">
-                                                <div class="container">
+                                                <div class="container p-0">
                                                     <div class="row">
-                                                        <div class="col-md-8 main-content">
+                                                        <div class="col-xl-7 main-content mt-0">
                                                             <div class="row list-sec">
-                                                                <div class="col-md-4">
-                                                                    <ul class="list-title">
-                                                                        <li>Job Title</li>
-                                                                        <li class="detail d-block d-sm-none">Full time
-                                                                            Urologist needed in beautiful Oregon</li>
-                                                                        <li>Employer</li>
-                                                                        <li class="detail d-block d-sm-none"><a href="#"
-                                                                                class="heading">UJS Health System</a>
-                                                                        </li>
-                                                                        <li>Type of Practice</li>
-                                                                        <li class="detail d-block d-sm-none"><a href="#"
-                                                                                class="tag">Hospital Employed</a></li>
-                                                                        <li>Location</li>
-                                                                        <li class="detail d-block d-sm-none">Bend,
-                                                                            Oregon</li>
-                                                                        <li>Subspecialty</li>
-                                                                        <li class="detail d-block d-sm-none"><a href="#"
-                                                                                class="tag">Neurology</a></li>
-                                                                        <li>Visa Candidates Accepted</li>
-                                                                        <li class="detail d-block d-sm-none">Yes</li>
-                                                                    </ul>
-                                                                </div>
-                                                                <div class="col-md-8 d-none d-sm-block">
-                                                                    <ul class="list-title">
-                                                                        <li class="detail">Full time Urologist needed in
-                                                                            beautiful Oregon</li>
-                                                                        <li class="detail"><a href="#"
-                                                                                class="heading">UJS Health System</a>
-                                                                        </li>
-                                                                        <li class="detail"><a href="#"
-                                                                                class="tag">Hospital Employed</a></li>
-                                                                        <li class="detail">Bend, Oregon</li>
-                                                                        <li class="detail"><a href="#"
-                                                                                class="tag">Neurology</a></li>
-                                                                        <li class="detail">Yes</li>
-                                                                    </ul>
-                                                                </div>
+                                                                <table class="table list-title">
+                                                                    <thead></thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Job Title</td>
+                                                                            <td class="col-desk detail">Full time Urologist needed in beautiful Oregon</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="col-mob detail">Full time Urologist needed in beautiful Oregon</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Employer</td>
+                                                                            <td class="col-desk detail"><a href="#" class="heading">UJS Health System</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="col-mob detail"><a href="#" class="heading">UJS Health System</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Type of Practice</td>
+                                                                            <td class="col-desk detail"><a href="#" class="tag">Hospital Employed</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="col-mob detail"><a href="#" class="tag">Hospital Employed</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Location</td>
+                                                                            <td class="col-desk detail">Bend, Oregon</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="col-mob detail">Bend, Oregon</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Subspecialty</td>
+                                                                            <td class="col-desk detail"><a href="#" class="tag">Neurology</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="col-mob detail"><a href="#" class="tag">Neurology</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Visa Candidates Accepted</td>
+                                                                            <td class="col-desk detail">Yes</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="col-mob detail">Yes</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                             </div>
                                                             <div
                                                                 class="d-flex justify-content-between align-items-center intro">
@@ -477,24 +664,8 @@
                                                                     allowfullscreen=""></iframe>
                                                             </div>
                                                         </div>
-                                                        <div class="col-md-3">
+                                                        <div class="col-xl-4">
                                                             <div class="job-listing job-detail list-sec sidebar in-accordion">
-                                                                <div class="mob-triggers title d-block d-sm-none">
-                                                                    <a class="filter-trigger" href="javascript:void(0)">
-                                                                        <i class="fas fa-envelope"></i>
-                                                                        <i class="fas fa-envelope-open toggle"></i>
-                                                                        <span>Apply</span>
-                                                                    </a>
-                                                                    <p class="results-count">
-                                                                        <a href="#">
-                                                                            <i class="far fa-star star"></i>
-                                                                        </a>
-                                                                        <a class="filter-trigger"
-                                                                            href="javascript:void(0)">
-                                                                            <i class="fas fa-share-alt"></i>
-                                                                        </a>
-                                                                    </p>
-                                                                </div>
                                                                 <div class="row">
                                                                     <button class="button green"><i
                                                                             class="fas fa-envelope"></i>Apply</button>
@@ -565,19 +736,19 @@
                                 <div id="pay-now" class="wrap pay now">
                                     <h3><i class="fas fa-credit-card"></i>Card Details</h3>
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-lg-8">
                                             <div class="label-wrap">
                                                 <input class="form-control" id="card-num" type="text" placeholder="Card Number" value="8544  5118  3697  1178">
                                                 <label for="card-num">Card Number</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-lg-2 padding-manage first">
                                             <div class="label-wrap">
                                                 <input class="form-control" id="card-date" type="text" placeholder="MM/YY" value="05/28">
                                                 <label for="card-date">MM/YY</label>
                                             </div>
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-lg-2 padding-manage last">
                                             <div class="label-wrap">
                                                 <input class="form-control" id="cvv-num" type="text" placeholder="CVV" value="214">
                                                 <label for="cvv-num">CVV</label>
@@ -611,7 +782,7 @@
                         </div>
                         <div class="row list-sec detail form summary">
                             <h2>Summary</h2>
-                            <p class="list">
+                            <p class="list plural" data-price="250">
                                 <span class='first'>Sticky my post so it stays on the front page for 3 months (+$250)</span>
                                 <span class="price">$250.00</span> 
                             </p>

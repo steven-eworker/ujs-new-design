@@ -491,6 +491,23 @@
                     &:not(:first-child) {
                         margin-top: 15px;
                     }
+                    .upload-logo{
+                        @media(max-width: 768px){
+                            margin-top: 12px;
+                        }
+                        @include breakpoint-down(small){
+                            padding: 0;
+                        }
+                    }
+                    .videos-left{
+                        padding: 0;
+                    }
+                    .videos-right{
+                        padding-right: 0;
+                        @media(max-width:768px){
+                            padding: 0;
+                        }
+                    }
 
                     .form-control {
                         margin-bottom: 20px;
@@ -542,13 +559,13 @@
                             }
                         }
 
-                        .col-md-2 {
-                            @include breakpoint-down(small) {
+                        .col-lg-2 {
+                            @include breakpoint-down(medium) {
                                 flex-basis: 48%;
                             }
                         }
                         .padding-manage{
-                            @include breakpoint-down(small){
+                            @include breakpoint-down(medium){
                                 &.first{
                                     padding-left: 0;
                                 }
@@ -670,8 +687,11 @@
 
                         .visa {
                             padding-left: 0;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: $primary;
                             .text{
-                                max-width: 70%;
+                                max-width: 80%;
                                 word-break: break-all;
                                 display: inline-block;
                             }
@@ -729,6 +749,18 @@
                             }
                         }
                     }
+                    .plural{
+                        label{
+                            .checkmark{
+                                @include breakpoint-down(medium){
+                                    top:2px;
+                                }
+                                @include breakpoint-down(small){
+                                    top:6px;
+                                }
+                            }
+                        }
+                    }
 
                     label {
                         color: vsPrimaryOpacity(0.5);
@@ -743,6 +775,13 @@
                             line-height: 18px;
                         }
                     }
+                    .plural{
+                        label{
+                            @include breakpoint-down(medium){
+                                line-height: 30px;
+                            }
+                        }
+                    }
 
                     .ticket-number {
                         font-size: 18px;
@@ -755,7 +794,7 @@
                         @include breakpoint-down(small) {
                             font-size: 14px;
                             line-height: 18px;
-                            display: none;
+                            // display: none;
                         }
                     }
 
@@ -860,6 +899,9 @@
 
                     .accordion-body {
                         background: $white;
+                        @include breakpoint-down(small){
+                            padding: 0;
+                        }
 
                         &.job-item {
                             background: $light-bg;
@@ -1043,6 +1085,9 @@
 
                 @include breakpoint-down(medium) {
                     padding: 40px;
+                }
+                @media(max-width: 768px){
+                    margin-bottom: 0 !important;
                 }
             }
 

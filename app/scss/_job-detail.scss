@@ -459,7 +459,7 @@
             line-height: 40px;
             padding: 0;
 
-            li {
+            li, td {
 
                 &.detail,
                 p,
@@ -471,7 +471,7 @@
                     color: vsPrimaryOpacity(0.65);
 
                     @include breakpoint-down(small) {
-                        line-height: 26px;
+                        line-height: 20px;
                     }
                 }
 
@@ -505,10 +505,29 @@
                 &.heading {
                     color: $primary;
                 }
+                &.col-desk, &.col-mob{
+                    display: table-cell;
+                }
+                &.col-desk{
+                    @media(max-width: 1024px){
+                        display: none;
+                    }
+                }
+                &.col-mob{
+                    @media(min-width: 1023px){
+                        display: none;
+                    }
+                }
+            }
+            td{
+                line-height: 20px;
+                &.detail{
+                    line-height: 26px;
+                }
             }
         }
 
-        .main-content:not(.modal-dialog) {
+        .main-content:not(.padding-modal) {
             margin-right: 14px;
 
             @include breakpoint-down(small) {
