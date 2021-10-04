@@ -159,10 +159,10 @@ function summaryPriceManager(summaryDiv, parentEl, targetPrice) {
 
     setTimeout(() => {
         var actualPrice = 0;
-        document.querySelectorAll('.form.summary .list').forEach(function(listEl){
+        document.querySelectorAll('.form.summary .list').forEach(function (listEl) {
             actualPrice += parseFloat(listEl.dataset.price);
         });
-        document.querySelector('.form.summary .total').innerText = '$'+ parseFloat(actualPrice).toFixed(2).toString();
+        document.querySelector('.form.summary .total').innerText = '$' + parseFloat(actualPrice).toFixed(2).toString();
     }, 500);
 }
 
@@ -336,4 +336,36 @@ if (skipToCredits) {
         var top = section = document.getElementById('job-listing').offsetTop - 200;
         window.scrollTo(0, top);
     });
+}
+
+var newPassword = document.getElementById('newPassword');
+var reTypePassword = document.getElementById('reTypePassword');
+if (newPassword) {
+    newPassword.addEventListener('keyup', function(ev){
+        var pw1 = reTypePassword;
+        var pw2 = ev.target;
+        var errorMessage = pw2.parentNode.parentNode.parentNode.querySelector('.error');
+        passwordMatchSame(pw1, pw2, errorMessage);
+    });
+
+    reTypePassword.addEventListener('keyup', function(ev){
+        var pw1 = newPassword;
+        var pw2 = ev.target;
+        var errorMessage = pw2.parentNode.parentNode.parentNode.querySelector('.error');
+        passwordMatchSame(pw1, pw2, errorMessage);
+    });
+
+    function passwordMatchSame(pw1, pw2, errorMessage){
+        var pw1 = pw1.value;
+        var pw2 = pw2.value;
+        if( pw1 != '' ){
+            if( pw1 != pw2 ){
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+            }
+        } else {
+            errorMessage.style.display = 'none';
+        }
+    }
 }

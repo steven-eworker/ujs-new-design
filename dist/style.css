@@ -126,6 +126,13 @@ body.noscroll::before {
   }
 }
 
+p.error {
+  display: none;
+  font-size: 14px;
+  font-style: italic;
+  color: red;
+}
+
 .form-control {
   color: #3C3D6B;
 }
@@ -1117,6 +1124,7 @@ a::before {
   padding: 25px 30px;
   margin-bottom: 15px;
   border: 1px solid rgba(0, 0, 0, 0.125);
+  position: relative;
 }
 
 .job-listing .form .field-item.btns {
@@ -3560,7 +3568,7 @@ a::before {
   display: block;
 }
 
-.post-a-job.jobs .main-content .form.list-sec input[type="radio"] + .checkmark {
+.post-a-job.jobs .main-content .form.list-sec input[type="radio"]:not(.checkbox) + .checkmark {
   border-radius: 50%;
 }
 

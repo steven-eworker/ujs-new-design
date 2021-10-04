@@ -717,7 +717,7 @@
                         }
                     }
 
-                    input[type="radio"]+.checkmark {
+                    input[type="radio"]:not(.checkbox)+.checkmark {
                         border-radius: 50%;
                     }
 

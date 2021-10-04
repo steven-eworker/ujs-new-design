@@ -126,6 +126,12 @@ p {
         font-size: 14px;
         line-height: 16px;
     }
+    &.error{
+        display: none;
+        font-size: 14px;
+        font-style: italic;
+        color: red;
+    }
 }
 
 .form-control {
