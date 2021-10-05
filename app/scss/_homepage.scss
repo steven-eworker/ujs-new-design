@@ -109,7 +109,7 @@
             position: relative;
             transition: all 250ms ease-in-out;
             &:hover{
-                background:#f8f9fa5e;
+                background:#ebecf2;
             }
 
             @include breakpoint-down(medium) {

@@ -197,6 +197,7 @@ var header = document.querySelector("header");
 var scrollableSidebar = document.querySelector('.stickthis');
 if (header != undefined) {
     window.onscroll = scrollFunctions;
+    window.resize = scrollFunctions;
     var sticky = header.offsetTop;
     if (scrollableSidebar != undefined) {
         var sidebarOffset = scrollableSidebar.offsetTop;

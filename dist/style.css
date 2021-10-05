@@ -544,7 +544,7 @@ a::before {
 }
 
 .jobs .job-list .job-item:hover {
-  background: #f8f9fa5e;
+  background: #ebecf2;
 }
 
 @media (max-width: 63.9375em) {
