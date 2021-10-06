@@ -2875,6 +2875,14 @@ a::before {
   width: 112%;
 }
 
+.post-a-job.jobs .sidebar .create .create-item.no-desc {
+  margin-bottom: 56px !important;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.no-desc:not(:first-child):before {
+  bottom: 56px;
+}
+
 .post-a-job.jobs .sidebar .create .create-item:not(:first-child):before {
   content: '';
   width: 2px;
@@ -2898,8 +2906,9 @@ a::before {
   }
 }
 
-.post-a-job.jobs .sidebar .create .create-item.emp-profile:not(:first-child):before {
-  bottom: 50px;
+.post-a-job.jobs .sidebar .create .create-item.no-desc:not(:first-child):before {
+  bottom: 51px;
+  height: 106%;
 }
 
 .post-a-job.jobs .sidebar .create .create-item.active .number {
@@ -2919,6 +2928,10 @@ a::before {
 
 .post-a-job.jobs .sidebar .create .create-item.active .number-wrap .icon {
   color: #ffffff;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.active.no-desc:not(:first-child):before {
+  bottom: 51px;
 }
 
 .post-a-job.jobs .sidebar .create .create-item:not(:last-child) {
@@ -2947,6 +2960,10 @@ a::before {
 .post-a-job.jobs .sidebar .create .create-item .number i {
   position: absolute;
   margin: auto;
+}
+
+.post-a-job.jobs .sidebar .create .create-item .number i.not-absolute {
+  position: relative;
 }
 
 .post-a-job.jobs .sidebar .create .create-item .number-wrap {
@@ -3036,6 +3053,10 @@ a::before {
 
 .post-a-job.jobs .sidebar .create .create-item.p-a-j-3 .number i {
   left: 30%;
+}
+
+.post-a-job.jobs .sidebar .create .create-item.e-p-1 .number {
+  padding: 14px 18px;
 }
 
 .post-a-job.jobs .main-content.profile {
@@ -4823,12 +4844,6 @@ a::before {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-}
-
-@media (min-width: 64em) {
-  .job-listing.emp-dashboard .emp-listing {
-    width: 70%;
-  }
 }
 
 @media (max-width: 39.9375em) {
