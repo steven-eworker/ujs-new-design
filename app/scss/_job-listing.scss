@@ -220,13 +220,13 @@
 
                 &::after {
                     background-image: url('../images/angle-up.svg');
-                    transform: rotate(-180deg);
+                    transform: rotate(-180deg) scale(0.85);
                     background-size: 16px;
                 }
 
                 &:not(.collapsed) {
                     &:after {
-                        transform: rotate(-360deg);
+                        transform: rotate(-360deg) scale(0.85);
                     }
                 }
             }

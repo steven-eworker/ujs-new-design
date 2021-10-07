@@ -525,6 +525,13 @@
                     line-height: 26px;
                 }
             }
+            tr{
+                td{
+                    &:first-child:not(.detail){
+                        color: $primary;
+                    }
+                }
+            }
         }
 
         .main-content:not(.padding-modal) {

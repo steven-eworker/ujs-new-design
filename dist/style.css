@@ -1209,14 +1209,14 @@ a::before {
 
 .job-listing .form .field-item .accordion-button::after {
   background-image: url("../images/angle-up.svg");
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg) scale(0.85);
+          transform: rotate(-180deg) scale(0.85);
   background-size: 16px;
 }
 
 .job-listing .form .field-item .accordion-button:not(.collapsed):after {
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg) scale(0.85);
+          transform: rotate(-360deg) scale(0.85);
 }
 
 .job-listing .form .field-item.green {
@@ -2270,6 +2270,10 @@ a::before {
 
 .job-detail.jobs .list-title td.detail {
   line-height: 26px;
+}
+
+.job-detail.jobs .list-title tr td:first-child:not(.detail) {
+  color: #3C3D6B;
 }
 
 .job-detail.jobs .main-content:not(.padding-modal) {
