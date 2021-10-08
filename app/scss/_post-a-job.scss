@@ -933,6 +933,19 @@
                             border: 1px solid #E2E2E9;
                             box-sizing: border-box;
                         }
+                        .tags{
+                            @include breakpoint-down(small){
+                            }
+                            .tag{
+                                @include breakpoint-down(small){
+                                    font-size: 10px;
+                                    padding: 6px 10px;
+                                    &:last-child{
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
 
                         .job-detail {
                             padding: 0;

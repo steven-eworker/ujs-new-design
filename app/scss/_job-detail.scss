@@ -281,6 +281,12 @@
             padding: 0;
         }
     }
+    .form-control{
+        font-size: 1rem;
+        &::placeholder{
+            color: $primary;
+        }
+    }
 
     &.banner {
         @include breakpoint-down(small) {
@@ -373,6 +379,9 @@
             border-radius: 8px;
             padding: 25px 30px;
             margin-top: 20px;
+            &.filters{
+                padding: 25px;
+            }
 
             @include breakpoint-down(medium) {
                 padding: 15px;
@@ -672,7 +681,7 @@
                     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
                     border-radius: 8px;
                     color: $white;
-                    padding: 11px 30px;
+                    padding: 11px 22px;
 
                     @include breakpoint-down(large) {
                         padding: 11px 20px;
@@ -723,6 +732,7 @@
                     display: block;
                     color: $primary;
                     word-break: break-all;
+                    font-size: 16px;
 
                     &:first-child {
                         margin-top: 12px;

@@ -68,6 +68,10 @@ if (checkBoxes != undefined) {
         label.addEventListener('click', function (elm) {
             if (elm.target.parentNode.classList.contains('selected')) {
                 elm.target.parentNode.classList.remove('selected');
+                var checkedRadio = elm.target.parentNode.querySelector('input[type="radio"]:checked');
+                if( checkedRadio != null ){
+                    checkedRadio.checked = false;
+                }
             } else {
                 elm.target.parentNode.classList.add('selected');
             }
