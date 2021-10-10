@@ -113,15 +113,13 @@
                     }
                     .check-wrap{
                         padding: 8px 12px;
-                        .label{
-                            &.checks{
+                            .checks{
                                 display: inline-block;
                                 margin: 10px 0;
                                 label{
                                     line-height: 26px;
                                     padding-left: 36px;
                                 }
-                            }
                         }
                     }
                 }

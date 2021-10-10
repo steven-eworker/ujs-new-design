@@ -60,6 +60,11 @@
                     }
                 }
             }
+            .create-wrap{
+                @media(max-width:1200px){
+                    display: none !important;
+                }
+            }
 
             .create {
                 padding: 0;
@@ -97,7 +102,7 @@
                         width: 2px;
                         height: 100%;
                         background: #E2E2E9;
-                        bottom: 56px;
+                        bottom: 91%;
                         position: absolute;
                         left: 25px;
                         z-index: -1;
@@ -227,9 +232,10 @@
                     }
                     &.p-a-j-2{
                         &:before{
-                            height: 112%;
-                            @media(max-width:1200px){
-                                height: 100%;
+                            height: 117%;
+                            @media(max-width:1400px){
+                                height: 93%;
+                                bottom: 75%;
                             }
                         }
                         &.active:before{
@@ -245,10 +251,22 @@
                     }
                     &.p-a-j-3{
                         &:before{
-                            height: 100%;
+                            height: 89%;
+                            bottom: 83%;
+                            @media(max-width: 1400px){
+                                height: 103%;
+                                bottom: 77%;
+                            }
                         }
                         &.active:before{
-                            height: 116%;
+                            height: 89%;
+                            bottom: 83%;
+
+                            @media(max-width: 1400px){
+                                height: 103%;
+                                bottom: 77%;
+
+                            }
                         }
                         .number{
                             padding: 16px 25px;
@@ -270,6 +288,13 @@
         .main-content {
             &.profile {
                 margin-bottom: 16px;
+            }
+            .form{
+                @media(max-width:1200px){
+                    &.first-block{
+                        margin-top: 15px !important;
+                    }
+                }
             }
 
             &.col-md-6 {
@@ -612,11 +637,17 @@
                                 border: none;
 
                                 .cstm-tooltip {
-                                    width: 30vw;
-                                    left: -13.5vw;
+                                    width: 230px;
+                                    left: -94px;
                                     background: #000;
                                     top: unset;
                                     bottom: 130%;
+                                    padding: 10px;
+                                    @media(max-width:992px){
+                                        font-size: 11px;
+                                        left: -44px;
+                                        width: 130px;
+                                    }
 
                                     &:before {
                                         top: 100%;
@@ -740,6 +771,9 @@
                                 display: block;
                             }
                         }
+                        &:checked + .checkmark + .label-text{
+                            color:$primary;
+                        }
                     }
 
                     input[type="radio"]:not(.checkbox)+.checkmark {
@@ -755,7 +789,7 @@
                         width: 30px;
                         height: 30px;
                         position: absolute;
-                        left: 0;
+                        left: 12px;
                         top: -4px;
 
                         &:after {
@@ -775,7 +809,7 @@
                         }
                     }
                     .plural{
-                        label{
+                        label, .label{
                             .checkmark{
                                 @include breakpoint-down(medium){
                                     top:2px;
@@ -787,13 +821,14 @@
                         }
                     }
 
-                    label {
+                    label, .label {
                         color: vsPrimaryOpacity(0.5);
                         font-size: 18px;
                         line-height: 21px;
                         position: relative;
-                        padding-left: 42px;
+                        padding-left: 40px;
                         cursor: pointer;
+                        user-select: none;
 
                         @include breakpoint-down(small) {
                             font-size: 14px;
@@ -803,7 +838,7 @@
                     .plural{
                         label{
                             @include breakpoint-down(medium){
-                                line-height: 30px;
+                                // line-height: 30px;
                             }
                         }
                     }
@@ -816,16 +851,17 @@
                         box-sizing: border-box;
                         border-radius: 8px;
 
+                        @include breakpoint-down(medium) {
+                            line-height: 50px;
+                        }
                         @include breakpoint-down(small) {
                             font-size: 14px;
-                            line-height: 18px;
-                            // display: none;
                         }
                     }
 
                     .selected {
 
-                        label {
+                        &.label {
                             color: $primary;
                         }
 
@@ -982,6 +1018,9 @@
                             padding: 16px;
                             margin: 0;
                             background: $light-bg;
+                            @media(max-width:1200px){
+                                margin-top: 20px;
+                            }
 
                             .button {
                                 padding: 10px 0;
@@ -995,7 +1034,7 @@
 
                             .share-text {
                                 font-size: 10px;
-                                line-height: 12px;
+                                line-height: 20px;
 
                                 span {
                                     background: $light-bg;

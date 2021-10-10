@@ -2217,6 +2217,10 @@ a::before {
   padding: 0;
 }
 
+.job-detail.jobs .list-title li, .job-detail.jobs .list-title td {
+  vertical-align: middle;
+}
+
 .job-detail.jobs .list-title li.detail,
 .job-detail.jobs .list-title li p,
 .job-detail.jobs .list-title li a, .job-detail.jobs .list-title li.heading, .job-detail.jobs .list-title td.detail,
@@ -2890,6 +2894,12 @@ a::before {
   background-color: #0AD188;
 }
 
+@media (max-width: 1200px) {
+  .post-a-job.jobs .sidebar .create-wrap {
+    display: none !important;
+  }
+}
+
 .post-a-job.jobs .sidebar .create {
   padding: 0;
   text-align: left;
@@ -2917,7 +2927,7 @@ a::before {
   width: 2px;
   height: 100%;
   background: #E2E2E9;
-  bottom: 56px;
+  bottom: 91%;
   position: absolute;
   left: 25px;
   z-index: -1;
@@ -3047,12 +3057,13 @@ a::before {
 }
 
 .post-a-job.jobs .sidebar .create .create-item.p-a-j-2:before {
-  height: 112%;
+  height: 117%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .post-a-job.jobs .sidebar .create .create-item.p-a-j-2:before {
-    height: 100%;
+    height: 93%;
+    bottom: 75%;
   }
 }
 
@@ -3069,11 +3080,27 @@ a::before {
 }
 
 .post-a-job.jobs .sidebar .create .create-item.p-a-j-3:before {
-  height: 100%;
+  height: 89%;
+  bottom: 83%;
+}
+
+@media (max-width: 1400px) {
+  .post-a-job.jobs .sidebar .create .create-item.p-a-j-3:before {
+    height: 103%;
+    bottom: 77%;
+  }
 }
 
 .post-a-job.jobs .sidebar .create .create-item.p-a-j-3.active:before {
-  height: 116%;
+  height: 89%;
+  bottom: 83%;
+}
+
+@media (max-width: 1400px) {
+  .post-a-job.jobs .sidebar .create .create-item.p-a-j-3.active:before {
+    height: 103%;
+    bottom: 77%;
+  }
 }
 
 .post-a-job.jobs .sidebar .create .create-item.p-a-j-3 .number {
@@ -3090,6 +3117,12 @@ a::before {
 
 .post-a-job.jobs .main-content.profile {
   margin-bottom: 16px;
+}
+
+@media (max-width: 1200px) {
+  .post-a-job.jobs .main-content .form.first-block {
+    margin-top: 15px !important;
+  }
 }
 
 .post-a-job.jobs .main-content.col-md-6 {
@@ -3488,11 +3521,20 @@ a::before {
 }
 
 .post-a-job.jobs .main-content .form.list-sec .toggle-box .later-wrap a .cstm-tooltip {
-  width: 30vw;
-  left: -13.5vw;
+  width: 230px;
+  left: -94px;
   background: #000;
   top: unset;
   bottom: 130%;
+  padding: 10px;
+}
+
+@media (max-width: 992px) {
+  .post-a-job.jobs .main-content .form.list-sec .toggle-box .later-wrap a .cstm-tooltip {
+    font-size: 11px;
+    left: -44px;
+    width: 130px;
+  }
 }
 
 .post-a-job.jobs .main-content .form.list-sec .toggle-box .later-wrap a .cstm-tooltip:before {
@@ -3618,6 +3660,11 @@ a::before {
   display: block;
 }
 
+.post-a-job.jobs .main-content .form.list-sec input[type="radio"]:checked + .checkmark + .label-text,
+.post-a-job.jobs .main-content .form.list-sec input[type="checkbox"]:checked + .checkmark + .label-text {
+  color: #3C3D6B;
+}
+
 .post-a-job.jobs .main-content .form.list-sec input[type="radio"]:not(.checkbox) + .checkmark {
   border-radius: 50%;
 }
@@ -3632,7 +3679,7 @@ a::before {
   width: 30px;
   height: 30px;
   position: absolute;
-  left: 0;
+  left: 12px;
   top: -4px;
 }
 
@@ -3655,36 +3702,34 @@ a::before {
 }
 
 @media (max-width: 63.9375em) {
-  .post-a-job.jobs .main-content .form.list-sec .plural label .checkmark {
+  .post-a-job.jobs .main-content .form.list-sec .plural label .checkmark, .post-a-job.jobs .main-content .form.list-sec .plural .label .checkmark {
     top: 2px;
   }
 }
 
 @media (max-width: 39.9375em) {
-  .post-a-job.jobs .main-content .form.list-sec .plural label .checkmark {
+  .post-a-job.jobs .main-content .form.list-sec .plural label .checkmark, .post-a-job.jobs .main-content .form.list-sec .plural .label .checkmark {
     top: 6px;
   }
 }
 
-.post-a-job.jobs .main-content .form.list-sec label {
+.post-a-job.jobs .main-content .form.list-sec label, .post-a-job.jobs .main-content .form.list-sec .label {
   color: rgba(60, 61, 107, 0.5);
   font-size: 18px;
   line-height: 21px;
   position: relative;
-  padding-left: 42px;
+  padding-left: 40px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (max-width: 39.9375em) {
-  .post-a-job.jobs .main-content .form.list-sec label {
+  .post-a-job.jobs .main-content .form.list-sec label, .post-a-job.jobs .main-content .form.list-sec .label {
     font-size: 14px;
     line-height: 18px;
-  }
-}
-
-@media (max-width: 63.9375em) {
-  .post-a-job.jobs .main-content .form.list-sec .plural label {
-    line-height: 30px;
   }
 }
 
@@ -3698,14 +3743,19 @@ a::before {
   border-radius: 8px;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   .post-a-job.jobs .main-content .form.list-sec .ticket-number {
-    font-size: 14px;
-    line-height: 18px;
+    line-height: 50px;
   }
 }
 
-.post-a-job.jobs .main-content .form.list-sec .selected label {
+@media (max-width: 39.9375em) {
+  .post-a-job.jobs .main-content .form.list-sec .ticket-number {
+    font-size: 14px;
+  }
+}
+
+.post-a-job.jobs .main-content .form.list-sec .selected.label {
   color: #3C3D6B;
 }
 
@@ -3857,6 +3907,12 @@ a::before {
   background: #F8F9FA;
 }
 
+@media (max-width: 1200px) {
+  .post-a-job.jobs .main-content .form .accordion .accordion-body .sidebar {
+    margin-top: 20px;
+  }
+}
+
 .post-a-job.jobs .main-content .form .accordion .accordion-body .sidebar .button {
   padding: 10px 0;
   font-size: 12px;
@@ -3869,7 +3925,7 @@ a::before {
 
 .post-a-job.jobs .main-content .form .accordion .accordion-body .sidebar .share-text {
   font-size: 10px;
-  line-height: 12px;
+  line-height: 20px;
 }
 
 .post-a-job.jobs .main-content .form .accordion .accordion-body .sidebar .share-text span {
@@ -4750,7 +4806,7 @@ a::before {
   border-color: #E2E2E9;
 }
 
-.login .form-box label {
+.login .form-box label, .login .form-box .label {
   color: #3C3D6B;
   font-size: 18px;
   line-height: 21px;
@@ -6207,12 +6263,12 @@ a::before {
   padding: 8px 12px;
 }
 
-.jobs.job-listing.settings .main-content .row .p-check .check-wrap .label.checks {
+.jobs.job-listing.settings .main-content .row .p-check .check-wrap .checks {
   display: inline-block;
   margin: 10px 0;
 }
 
-.jobs.job-listing.settings .main-content .row .p-check .check-wrap .label.checks label {
+.jobs.job-listing.settings .main-content .row .p-check .check-wrap .checks label {
   line-height: 26px;
   padding-left: 36px;
 }
