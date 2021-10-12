@@ -1075,7 +1075,7 @@ a::before {
   line-height: 16px;
 }
 
-@media (max-width: 39.9375em) {
+@media (max-width: 1200px) {
   .job-listing .filters:not(.modal-filters) {
     opacity: 0;
     z-index: -5;
@@ -1096,12 +1096,6 @@ a::before {
 
 .job-listing .title {
   margin-bottom: 15px;
-}
-
-@media (max-width: 39.9375em) {
-  .job-listing .title {
-    display: none !important;
-  }
 }
 
 .job-listing .results-count {
@@ -1270,12 +1264,11 @@ a::before {
 
 .job-listing .form .field-item label {
   color: #3C3D6B !important;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 21px;
   position: relative;
   padding-left: 42px;
   cursor: pointer;
-  word-break: break-all;
 }
 
 .job-listing .form .field-item input[type="radio"],
@@ -1357,7 +1350,7 @@ a::before {
 
 @media (max-width: 39.9375em) {
   .job-listing .form .field-item .list-options {
-    padding-left: 40px;
+    padding-left: 14px;
   }
 }
 
@@ -2501,6 +2494,18 @@ a::before {
   font-size: 16px;
 }
 
+@media (max-width: 1400px) {
+  .job-detail.jobs .sidebar .contact-info a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .job-detail.jobs .sidebar .contact-info a {
+    font-size: 16px;
+  }
+}
+
 .job-detail.jobs .sidebar .contact-info a:first-child {
   margin-top: 12px;
 }
@@ -2531,6 +2536,14 @@ a::before {
 
 @media (max-width: 39.9375em) {
   .job-detail.jobs .sidebar.job-detail .mob-triggers {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .job-detail.jobs .sidebar.job-detail .mob-triggers.detail-filters {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;

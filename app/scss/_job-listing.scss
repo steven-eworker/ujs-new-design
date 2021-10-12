@@ -109,7 +109,7 @@
     .filters {
         &:not(.modal-filters) {
 
-            @include breakpoint-down(small) {
+            @media(max-width: 1200px) {
                 opacity: 0;
                 z-index: -5;
                 position: fixed;
@@ -133,7 +133,7 @@
         margin-bottom: 15px;
 
         @include breakpoint-down(small) {
-            display: none !important;
+            // display: none !important;
         }
     }
 
@@ -282,12 +282,13 @@
 
             label {
                 color: $primary !important;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 21px;
                 position: relative;
                 padding-left: 42px;
                 cursor: pointer;
-                word-break: break-all;
+                // word-break: break-all;
+                
             }
 
             input[type="radio"],
@@ -361,7 +362,7 @@
                 padding-left: 12px;
                 padding-right: 12px;
                 @include breakpoint-down(small){
-                    padding-left: 40px;
+                    padding-left: 14px;
                 }
 
                 &.states {

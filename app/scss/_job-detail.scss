@@ -733,6 +733,12 @@
                     color: $primary;
                     word-break: break-all;
                     font-size: 16px;
+                    @media(max-width: 1400px){
+                        font-size: 13px;
+                    }
+                    @media(max-width: 1200px){
+                        font-size: 16px;
+                    }
 
                     &:first-child {
                         margin-top: 12px;
@@ -769,6 +775,11 @@
 
                     @include breakpoint-down(small) {
                         display: flex !important;
+                    }
+                    &.detail-filters{
+                        @media(max-width:1200px){
+                            display: flex !important;
+                        }
                     }
 
                     .filter-trigger:first-child {
