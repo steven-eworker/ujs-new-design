@@ -748,7 +748,7 @@
                             color: $primary;
                             .text{
                                 max-width: 80%;
-                                word-break: break-all;
+                                // word-break: break-all;
                                 display: inline-block;
                             }
 
@@ -762,6 +762,7 @@
                     input[type="radio"],
                     input[type="checkbox"] {
                         opacity: 0;
+                        position: absolute;
 
                         &:checked+.checkmark {
                             background: $success;
@@ -773,6 +774,10 @@
                         }
                         &:checked + .checkmark + .label-text{
                             color:$primary;
+                        }
+
+                        &:checked + .checkmark + .label-text + .ticket-number{
+                            color: $primary;
                         }
                     }
 
@@ -826,9 +831,12 @@
                         font-size: 18px;
                         line-height: 21px;
                         position: relative;
-                        padding-left: 40px;
+                        padding-left: 54px;
                         cursor: pointer;
                         user-select: none;
+                        .label-text{
+                            color: vsPrimaryOpacity(0.5);
+                        }
 
                         @include breakpoint-down(small) {
                             font-size: 14px;

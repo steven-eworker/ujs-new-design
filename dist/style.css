@@ -3648,7 +3648,6 @@ a::before {
 
 .post-a-job.jobs .main-content .form.list-sec .row .visa .text {
   max-width: 80%;
-  word-break: break-all;
   display: inline-block;
 }
 
@@ -3660,6 +3659,7 @@ a::before {
 .post-a-job.jobs .main-content .form.list-sec input[type="radio"],
 .post-a-job.jobs .main-content .form.list-sec input[type="checkbox"] {
   opacity: 0;
+  position: absolute;
 }
 
 .post-a-job.jobs .main-content .form.list-sec input[type="radio"]:checked + .checkmark,
@@ -3675,6 +3675,11 @@ a::before {
 
 .post-a-job.jobs .main-content .form.list-sec input[type="radio"]:checked + .checkmark + .label-text,
 .post-a-job.jobs .main-content .form.list-sec input[type="checkbox"]:checked + .checkmark + .label-text {
+  color: #3C3D6B;
+}
+
+.post-a-job.jobs .main-content .form.list-sec input[type="radio"]:checked + .checkmark + .label-text + .ticket-number,
+.post-a-job.jobs .main-content .form.list-sec input[type="checkbox"]:checked + .checkmark + .label-text + .ticket-number {
   color: #3C3D6B;
 }
 
@@ -3731,12 +3736,16 @@ a::before {
   font-size: 18px;
   line-height: 21px;
   position: relative;
-  padding-left: 40px;
+  padding-left: 54px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.post-a-job.jobs .main-content .form.list-sec label .label-text, .post-a-job.jobs .main-content .form.list-sec .label .label-text {
+  color: rgba(60, 61, 107, 0.5);
 }
 
 @media (max-width: 39.9375em) {
